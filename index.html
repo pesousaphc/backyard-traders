@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Backyard Traders</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .catalogo {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .produto {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .produto img {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #eee;
+    }
+
+    .produto h2 {
+      font-size: 18px;
+      margin: 12px 0 8px;
+    }
+
+    .preco {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .disponibilidade {
+      margin-bottom: 14px;
+    }
+
+    .botao {
+      display: block;
+      text-align: center;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 11px;
+      border-radius: 6px;
+    }
+
+    .botao:hover {
+      background: #333;
+    }
+
+    .mensagem {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Backyard Traders</h1>
+  <p>Artigos disponíveis</p>
+</header>
+
+<div id="mensagem" class="mensagem">A carregar artigos...</div>
+<div id="catalogo" class="catalogo"></div>
+
+<script>
+const CSV_URL =
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vRbU1RthfXL6QBD0NgNVJYVgxBwIm4mldrzXSZRsjd8TQIhCOf4YeOiq1NiOW1oaNRysD173Y_ZXBJN/pub?gid=0&single=true&output=csv";
+
+function parseCSV(texto) {
+  const linhas = [];
+  let linha = [];
+  let campo = "";
+  let entreAspas = false;
+
+  for (let i = 0; i < texto.length; i++) {
+    const char = texto[i];
+    const proximo = texto[i + 1];
+
+    if (char === '"' && entreAspas && proximo === '"') {
+      campo += '"';
+      i++;
+    } else if (char === '"') {
+      entreAspas = !entreAspas;
+    } else if (char === ',' && !entreAspas) {
+      linha.push(campo);
+      campo = "";
+    } else if ((char === '\n' || char === '\r') && !entreAspas) {
+      if (char === '\r' && proximo === '\n') {
+        i++;
+      }
+
+      linha.push(campo);
+      campo = "";
+
+      if (linha.some(valor => valor.trim() !== "")) {
+        linhas.push(linha);
+      }
+
+      linha = [];
+    } else {
+      campo += char;
+    }
+  }
+
+  linha.push(campo);
+
+  if (linha.some(valor => valor.trim() !== "")) {
+    linhas.push(linha);
+  }
+
+  return linhas;
+}
+
+fetch(CSV_URL)
+  .then(resposta => {
+    if (!resposta.ok) {
+      throw new Error("Não foi possível carregar a folha.");
+    }
+
+    return resposta.text();
+  })
+  .then(texto => {
+    const dados = parseCSV(texto);
+
+    if (dados.length < 2) {
+      throw new Error("A folha não contém produtos.");
+    }
+
+    const cabecalhos = dados[0].map(c => c.trim());
+
+    const catalogo = document.getElementById("catalogo");
+    const mensagem = document.getElementById("mensagem");
+
+    mensagem.textContent = "";
+
+    dados.slice(1).forEach(valores => {
+      const produto = {};
+
+      cabecalhos.forEach((cabecalho, i) => {
+        produto[cabecalho] = (valores[i] || "").trim();
+      });
+
+      const disponibilidade = produto["Disponibilidade"] || "";
+
+      if (
+        disponibilidade &&
+        disponibilidade.toLowerCase() !== "disponível"
+      ) {
+        return;
+      }
+
+      const nome = produto["Produto"] || "";
+      const preco = produto["Preço venda"] || "";
+      const imagem = produto["Imagem"] || "";
+      const linkVenda = produto["Link Venda"] || "";
+
+      if (!nome) {
+        return;
+      }
+
+      const card = document.createElement("div");
+      card.className = "produto";
+
+      card.innerHTML = `
+        ${imagem ? `
+          <img
+            src="${imagem}"
+            alt="${nome}"
+            onerror="this.style.display='none'"
+          >
+        ` : ""}
+
+        <h2>${nome}</h2>
+
+        <div class="preco">
+          ${preco}
+        </div>
+
+        <div class="disponibilidade">
+          ${disponibilidade || "Disponível"}
+        </div>
+
+        ${linkVenda ? `
+          <a
+            class="botao"
+            href="${linkVenda}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver artigo
+          </a>
+        ` : ""}
+      `;
+
+      catalogo.appendChild(card);
+    });
+
+    if (!catalogo.children.length) {
+      mensagem.textContent = "Ainda não existem artigos disponíveis.";
+    }
+  })
+  .catch(erro => {
+    document.getElementById("mensagem").textContent =
+      "Erro ao carregar os artigos.";
+    console.error(erro);
+  });
+</script>
+
+</body>
+</html>
