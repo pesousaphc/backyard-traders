@@ -8,225 +8,225 @@
 
   <style>
     :root {
-      --bg: #f6f6f4;
-      --surface: #ffffff;
-      --text: #1d1d1f;
-      --muted: #707070;
+      --background: #f6f6f4;
+      --card: #ffffff;
+      --text: #181818;
+      --muted: #777;
       --border: #e8e8e5;
 
-      --accent: #c89328;
-      --accent-dark: #9e7018;
+      --gold: #d09a23;
+      --gold-hover: #b58117;
 
-      --success-bg: #eaf7ef;
-      --success: #287548;
+      --dark: #111214;
+      --dark-soft: #1b1c1f;
+
+      --green-bg: #e9f7ee;
+      --green: #27834f;
 
       --radius: 18px;
-      --shadow: 0 8px 30px rgba(0,0,0,.06);
     }
 
     * {
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Arial,
-        sans-serif;
-
-      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--background);
       color: var(--text);
     }
 
-    /* ==========================
-       CABEÇALHO
-    ========================== */
+    /* =========================
+       HERO / CABEÇALHO
+    ========================= */
 
-    .topo {
+    .hero {
       background:
-        linear-gradient(
-          135deg,
-          #ffffff 0%,
-          #fbf8f0 100%
+        radial-gradient(
+          circle at 20% 20%,
+          #2b2c30 0,
+          #17181b 35%,
+          #0e0f11 75%
         );
 
-      border-bottom: 1px solid var(--border);
+      color: white;
+      border-bottom: 3px solid var(--gold);
     }
 
-    .topo-conteudo {
-      max-width: 1250px;
-      margin: auto;
-      padding: 38px 24px 34px;
+    .hero-inner {
+      max-width: 1220px;
+      margin: 0 auto;
+
+      min-height: 240px;
+      padding: 34px 24px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 35px;
     }
 
-    .marca {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 22px;
+      gap: 28px;
+    }
+
+    .logo-box {
+      width: 155px;
+      height: 155px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
     }
 
     .logo {
-      width: 110px;
-      height: 110px;
-
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-
-      border-radius: 50%;
-      background: white;
-
-      box-shadow:
-        0 6px 25px rgba(0,0,0,.10);
 
       display: none;
     }
 
-    .marca-texto h1 {
+    .brand-text h1 {
+      margin: 0 0 10px;
+
+      font-size: clamp(32px, 5vw, 48px);
+      line-height: 1;
+      letter-spacing: -1.5px;
+    }
+
+    .brand-text p {
       margin: 0;
 
-      font-size: clamp(28px, 4vw, 42px);
-      letter-spacing: -1.2px;
+      font-size: 18px;
+      color: #d6d6d6;
+      max-width: 560px;
+      line-height: 1.5;
     }
 
-    .marca-texto p {
-      margin: 8px 0 0;
-
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .contacto-topo {
+    .contact-area {
       text-align: right;
+      display: none;
     }
 
-    .contacto-topo small {
-      color: var(--muted);
+    .contact-area small {
       display: block;
-      margin-bottom: 5px;
+      color: #aaa;
+      margin-bottom: 6px;
     }
 
-    .contacto-topo span {
-      font-weight: 600;
+    .contact-area strong {
+      color: white;
+      font-size: 16px;
     }
 
-    /* ==========================
+    /* =========================
        CONTEÚDO
-    ========================== */
+    ========================= */
 
     .container {
-      max-width: 1250px;
-      margin: auto;
-      padding: 34px 24px 60px;
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 38px 24px 65px;
     }
 
-    .barra {
+    .catalog-header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      gap: 30px;
 
-      gap: 18px;
-      margin-bottom: 28px;
+      margin-bottom: 34px;
     }
 
-    .info-catalogo h2 {
+    .catalog-title h2 {
       margin: 0;
       font-size: 25px;
     }
 
-    .contador {
+    .counter {
+      margin-top: 7px;
       color: var(--muted);
       font-size: 14px;
-      margin-top: 6px;
     }
 
-    /* ==========================
+    /* =========================
        PESQUISA
-    ========================== */
+    ========================= */
 
-    .pesquisa {
-      width: min(380px, 100%);
-      position: relative;
+    .search {
+      width: min(390px, 100%);
     }
 
-    .pesquisa input {
+    .search input {
       width: 100%;
+      padding: 14px 19px;
 
       border: 1px solid var(--border);
-      background: white;
-
-      padding: 14px 18px;
-
       border-radius: 30px;
 
+      background: white;
       font-size: 15px;
+
       outline: none;
 
-      transition: .2s;
+      transition: 0.2s;
     }
 
-    .pesquisa input:focus {
-      border-color: var(--accent);
-
-      box-shadow:
-        0 0 0 3px rgba(200,147,40,.12);
+    .search input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(208,154,35,0.12);
     }
 
-    /* ==========================
-       CATÁLOGO
-    ========================== */
+    /* =========================
+       GRELHA DE PRODUTOS
+    ========================= */
 
-    .catalogo {
+    .catalog {
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fill, minmax(240px, 1fr));
+        repeat(auto-fill, minmax(245px, 1fr));
 
-      gap: 24px;
+      gap: 22px;
     }
 
-    .produto {
-      background: var(--surface);
+    .product {
+      background: white;
 
       border: 1px solid var(--border);
       border-radius: var(--radius);
 
       overflow: hidden;
 
-      box-shadow: var(--shadow);
-
       display: flex;
       flex-direction: column;
 
+      box-shadow:
+        0 5px 22px rgba(0,0,0,0.05);
+
       transition:
-        transform .22s ease,
-        box-shadow .22s ease;
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
     }
 
-    .produto:hover {
+    .product:hover {
       transform: translateY(-5px);
 
       box-shadow:
-        0 15px 40px rgba(0,0,0,.10);
+        0 14px 36px rgba(0,0,0,0.10);
     }
 
-    .imagem-wrapper {
+    .image-box {
       width: 100%;
       aspect-ratio: 1 / 1;
 
-      background: #f2f2f0;
+      background: #f0f0ee;
 
       display: flex;
       align-items: center;
@@ -235,26 +235,25 @@
       overflow: hidden;
     }
 
-    .imagem-wrapper img {
+    .image-box img {
       width: 100%;
       height: 100%;
-
       object-fit: cover;
 
-      transition: transform .35s ease;
+      transition: transform 0.3s ease;
     }
 
-    .produto:hover img {
+    .product:hover .image-box img {
       transform: scale(1.025);
     }
 
-    .sem-imagem {
+    .no-image {
       color: #999;
       font-size: 14px;
     }
 
-    .produto-conteudo {
-      padding: 18px;
+    .product-body {
+      padding: 17px;
 
       display: flex;
       flex-direction: column;
@@ -262,151 +261,159 @@
       flex: 1;
     }
 
-    .produto h3 {
-      margin: 0 0 12px;
+    .product-name {
+      margin: 0 0 16px;
 
-      font-size: 17px;
-      font-weight: 600;
-
-      line-height: 1.35;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 650;
     }
 
-    .linha-preco {
+    .product-bottom {
+      margin-top: auto;
+    }
+
+    .price-row {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       gap: 10px;
 
-      margin-top: auto;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
-    .preco {
-      font-size: 22px;
+    .price {
+      font-size: 21px;
       font-weight: 750;
     }
 
-    .estado {
-      background: var(--success-bg);
-      color: var(--success);
-
+    .status {
       padding: 6px 10px;
 
       border-radius: 20px;
 
-      font-size: 12px;
-      font-weight: 600;
+      background: var(--green-bg);
+      color: var(--green);
+
+      font-size: 11px;
+      font-weight: 650;
     }
 
-    .botao {
+    .button {
+      display: block;
+
       width: 100%;
 
-      border: none;
-      border-radius: 12px;
+      padding: 12px 15px;
 
-      padding: 13px 15px;
+      border-radius: 11px;
 
-      text-align: center;
-
-      background: var(--accent);
+      background: var(--gold);
       color: white;
 
-      font-weight: 650;
+      text-decoration: none;
+      text-align: center;
+
+      font-weight: bold;
       font-size: 14px;
 
-      text-decoration: none;
-
-      transition:
-        background .2s,
-        transform .2s;
+      transition: 0.2s;
     }
 
-    .botao:hover {
-      background: var(--accent-dark);
+    .button:hover {
+      background: var(--gold-hover);
     }
 
-    /* ==========================
+    /* =========================
        MENSAGENS
-    ========================== */
+    ========================= */
 
-    .mensagem {
-      padding: 40px;
+    .message {
       text-align: center;
-
       color: var(--muted);
+      padding: 35px 10px;
     }
 
-    /* ==========================
+    /* =========================
        RODAPÉ
-    ========================== */
+    ========================= */
 
     footer {
-      border-top: 1px solid var(--border);
-
-      text-align: center;
+      background: var(--dark);
+      color: #aaa;
 
       padding: 30px 20px;
 
-      color: var(--muted);
+      text-align: center;
       font-size: 13px;
     }
 
-    /* ==========================
+    footer strong {
+      color: white;
+    }
+
+    /* =========================
        MOBILE
-    ========================== */
+    ========================= */
 
-    @media (max-width: 700px) {
+    @media (max-width: 750px) {
 
-      .topo-conteudo {
+      .hero-inner {
         flex-direction: column;
         text-align: center;
       }
 
-      .marca {
+      .brand {
         flex-direction: column;
       }
 
-      .contacto-topo {
+      .logo-box {
+        width: 135px;
+        height: 135px;
+      }
+
+      .contact-area {
         text-align: center;
       }
 
-      .barra {
+      .catalog-header {
         flex-direction: column;
         align-items: stretch;
       }
 
-      .pesquisa {
+      .search {
         width: 100%;
       }
 
-      .catalogo {
+      .catalog {
         grid-template-columns:
           repeat(2, minmax(0, 1fr));
 
         gap: 12px;
       }
 
-      .produto-conteudo {
+      .product-body {
         padding: 13px;
       }
 
-      .produto h3 {
+      .product-name {
         font-size: 14px;
       }
 
-      .preco {
+      .price {
         font-size: 18px;
       }
 
-      .estado {
+      .status {
         display: none;
       }
+
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 420px) {
 
-      .catalogo {
+      .catalog {
         grid-template-columns: 1fr;
       }
 
@@ -417,248 +424,255 @@
 
 <body>
 
-  <!-- CABEÇALHO -->
+<header class="hero">
 
-  <header class="topo">
+  <div class="hero-inner">
 
-    <div class="topo-conteudo">
+    <div class="brand">
 
-      <div class="marca">
-
+      <div class="logo-box">
         <img
           id="logo"
           class="logo"
-          alt="Logótipo"
+          alt="Logótipo da loja"
         >
+      </div>
 
-        <div class="marca-texto">
+      <div class="brand-text">
 
-          <h1 id="nomeLoja">
-            Backyard Traders
-          </h1>
+        <h1 id="storeName">
+          Backyard Traders
+        </h1>
 
-          <p id="subtitulo">
-            Artigos disponíveis
-          </p>
-
-        </div>
+        <p id="subtitle">
+          Artigos selecionados a bons preços
+        </p>
 
       </div>
 
+    </div>
+
+
+    <div
+      id="contactArea"
+      class="contact-area"
+    >
+
+      <small>Contacto</small>
+
+      <strong id="contact"></strong>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<main class="container">
+
+  <div class="catalog-header">
+
+    <div class="catalog-title">
+
+      <h2>Os nossos artigos</h2>
 
       <div
-        id="areaContacto"
-        class="contacto-topo"
-        style="display:none"
+        id="counter"
+        class="counter"
+      >
+        A carregar catálogo...
+      </div>
+
+    </div>
+
+
+    <div class="search">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Pesquisar artigos..."
       >
 
-        <small>Contacto</small>
-
-        <span id="contacto"></span>
-
-      </div>
-
     </div>
 
-  </header>
+  </div>
 
 
-  <!-- CONTEÚDO -->
-
-  <main class="container">
-
-    <div class="barra">
-
-      <div class="info-catalogo">
-
-        <h2>Os nossos artigos</h2>
-
-        <div
-          id="contador"
-          class="contador"
-        >
-          A carregar catálogo...
-        </div>
-
-      </div>
+  <div
+    id="message"
+    class="message"
+  >
+    A carregar artigos...
+  </div>
 
 
-      <div class="pesquisa">
+  <section
+    id="catalog"
+    class="catalog"
+  ></section>
 
-        <input
-          id="pesquisa"
-          type="search"
-          placeholder="Pesquisar artigos..."
-        >
-
-      </div>
-
-    </div>
+</main>
 
 
-    <div
-      id="mensagem"
-      class="mensagem"
-    >
-      A carregar artigos...
-    </div>
 
+<footer>
 
-    <div
-      id="catalogo"
-      class="catalogo"
-    ></div>
+  <strong id="footerName">
+    Backyard Traders
+  </strong>
 
-  </main>
+  · Catálogo online
 
-
-  <footer>
-
-    <span id="rodapeLoja">
-      Backyard Traders
-    </span>
-
-    · Catálogo online
-
-  </footer>
+</footer>
 
 
 
 <script>
 
-/* ======================================================
-   LINKS GOOGLE SHEETS
-====================================================== */
+/* =====================================================
+   GOOGLE SHEETS
+===================================================== */
 
-const CSV_PRODUTOS =
+
+/*
+   ESTE É O TEU LINK ATUAL DOS PRODUTOS.
+   NÃO ALTERAR.
+*/
+
+const CSV_PRODUCTS =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbU1RthfXL6QBD0NgNVJYVgxBwIm4mldrzXSZRsjd8TQIhCOf4YeOiq1NiOW1oaNRysD173Y_ZXBJN/pub?gid=0&single=true&output=csv";
 
 
 /*
-  IMPORTANTE:
-
-  Substitui o texto abaixo pelo URL CSV
-  da tua aba CONFIG.
+   AQUI VAIS COLOCAR O NOVO LINK CSV
+   DA ABA CONFIG.
 */
 
 const CSV_CONFIG =
-"COLOCA_AQUI_O_LINK_CSV_DA_CONFIG";
+"https://docs.google.com/spreadsheets/d/e/2PACX-1vRbU1RthfXL6QBD0NgNVJYVgxBwIm4mldrzXSZRsjd8TQIhCOf4YeOiq1NiOW1oaNRysD173Y_ZXBJN/pub?gid=374003126&single=true&output=csv";
 
 
-/* ======================================================
-   LEITOR CSV
-====================================================== */
 
-function parseCSV(texto) {
+/* =====================================================
+   LER CSV
+===================================================== */
 
-  const linhas = [];
+function parseCSV(text) {
 
-  let linha = [];
-  let campo = "";
-  let entreAspas = false;
+  const rows = [];
+
+  let row = [];
+  let field = "";
+  let quoted = false;
 
 
-  for (let i = 0; i < texto.length; i++) {
+  for (let i = 0; i < text.length; i++) {
 
-    const char = texto[i];
-    const proximo = texto[i + 1];
+    const char = text[i];
+    const next = text[i + 1];
 
 
     if (
       char === '"' &&
-      entreAspas &&
-      proximo === '"'
+      quoted &&
+      next === '"'
     ) {
 
-      campo += '"';
+      field += '"';
       i++;
 
     }
 
     else if (char === '"') {
 
-      entreAspas = !entreAspas;
+      quoted = !quoted;
 
     }
 
     else if (
       char === "," &&
-      !entreAspas
+      !quoted
     ) {
 
-      linha.push(campo);
-      campo = "";
+      row.push(field);
+      field = "";
 
     }
 
     else if (
       (char === "\n" || char === "\r") &&
-      !entreAspas
+      !quoted
     ) {
 
       if (
         char === "\r" &&
-        proximo === "\n"
+        next === "\n"
       ) {
+
         i++;
+
       }
 
 
-      linha.push(campo);
+      row.push(field);
 
-      campo = "";
+      field = "";
 
 
       if (
-        linha.some(
-          valor =>
-            valor.trim() !== ""
+        row.some(
+          value =>
+            value.trim() !== ""
         )
       ) {
 
-        linhas.push(linha);
+        rows.push(row);
 
       }
 
-      linha = [];
+
+      row = [];
 
     }
 
     else {
 
-      campo += char;
+      field += char;
 
     }
 
   }
 
 
-  linha.push(campo);
+  row.push(field);
 
 
   if (
-    linha.some(
-      valor =>
-        valor.trim() !== ""
+    row.some(
+      value =>
+        value.trim() !== ""
     )
   ) {
 
-    linhas.push(linha);
+    rows.push(row);
 
   }
 
 
-  return linhas;
+  return rows;
 
 }
 
 
 
-/* ======================================================
-   CONFIGURAÇÃO DA LOJA
-====================================================== */
+/* =====================================================
+   CONFIG
+===================================================== */
 
-async function carregarConfig() {
+async function loadConfig() {
 
   if (
     !CSV_CONFIG ||
@@ -667,6 +681,10 @@ async function carregarConfig() {
     )
   ) {
 
+    console.warn(
+      "Ainda não foi definido CSV_CONFIG."
+    );
+
     return;
 
   }
@@ -674,37 +692,56 @@ async function carregarConfig() {
 
   try {
 
-    const resposta =
+    const response =
       await fetch(CSV_CONFIG);
 
 
-    const texto =
-      await resposta.text();
+    if (!response.ok) {
+
+      throw new Error(
+        "Erro ao carregar Config."
+      );
+
+    }
 
 
-    const dados =
-      parseCSV(texto);
+    const text =
+      await response.text();
+
+
+    const rows =
+      parseCSV(text);
 
 
     const config = {};
 
 
-    dados.forEach(linha => {
+    /*
+      FORMATO ESPERADO:
 
-      const campo =
-        (linha[0] || "")
+      Nome da loja | Backyard Traders
+      Logotipo     | logo.png
+      Subtítulo    | ...
+      Contacto     | ...
+    */
+
+
+    rows.forEach(row => {
+
+      const key =
+        (row[0] || "")
           .trim()
           .toLowerCase();
 
 
-      const valor =
-        (linha[1] || "")
+      const value =
+        (row[1] || "")
           .trim();
 
 
-      if (campo) {
+      if (key) {
 
-        config[campo] = valor;
+        config[key] = value;
 
       }
 
@@ -712,18 +749,18 @@ async function carregarConfig() {
 
 
 
-    /* NOME DA LOJA */
+    /* NOME */
 
     if (config["nome da loja"]) {
 
       document.getElementById(
-        "nomeLoja"
+        "storeName"
       ).textContent =
         config["nome da loja"];
 
 
       document.getElementById(
-        "rodapeLoja"
+        "footerName"
       ).textContent =
         config["nome da loja"];
 
@@ -740,7 +777,7 @@ async function carregarConfig() {
     if (config["subtítulo"]) {
 
       document.getElementById(
-        "subtitulo"
+        "subtitle"
       ).textContent =
         config["subtítulo"];
 
@@ -762,8 +799,21 @@ async function carregarConfig() {
         config["logotipo"];
 
 
-      logo.style.display =
-        "block";
+      logo.onload = () => {
+
+        logo.style.display =
+          "block";
+
+      };
+
+
+      logo.onerror = () => {
+
+        console.warn(
+          "Não foi possível carregar o logótipo."
+        );
+
+      };
 
     }
 
@@ -774,13 +824,13 @@ async function carregarConfig() {
     if (config["contacto"]) {
 
       document.getElementById(
-        "contacto"
+        "contact"
       ).textContent =
         config["contacto"];
 
 
       document.getElementById(
-        "areaContacto"
+        "contactArea"
       ).style.display =
         "block";
 
@@ -788,11 +838,11 @@ async function carregarConfig() {
 
   }
 
-  catch (erro) {
+  catch (error) {
 
     console.warn(
-      "Não foi possível carregar Config:",
-      erro
+      "Erro na configuração:",
+      error
     );
 
   }
@@ -801,88 +851,93 @@ async function carregarConfig() {
 
 
 
-/* ======================================================
+/* =====================================================
    PRODUTOS
-====================================================== */
+===================================================== */
 
-let produtosGlobais = [];
+let allProducts = [];
 
 
-async function carregarProdutos() {
+async function loadProducts() {
 
   try {
 
-    const resposta =
-      await fetch(CSV_PRODUTOS);
+    const response =
+      await fetch(CSV_PRODUCTS);
 
 
-    if (!resposta.ok) {
+    if (!response.ok) {
 
       throw new Error(
-        "Não foi possível carregar a folha."
+        "Erro ao carregar produtos."
       );
 
     }
 
 
-    const texto =
-      await resposta.text();
+    const text =
+      await response.text();
 
 
-    const dados =
-      parseCSV(texto);
+    const rows =
+      parseCSV(text);
 
 
-    if (dados.length < 2) {
+    if (rows.length < 2) {
 
       throw new Error(
-        "A folha não contém artigos."
+        "Não existem produtos."
       );
 
     }
 
 
-    const cabecalhos =
-      dados[0].map(
-        campo => campo.trim()
+    const headers =
+      rows[0].map(
+        header =>
+          header.trim()
       );
 
 
-    produtosGlobais =
-      dados
+    allProducts =
+      rows
         .slice(1)
-        .map(valores => {
 
-          const produto = {};
+        .map(values => {
+
+          const product = {};
 
 
-          cabecalhos.forEach(
-            (cabecalho, i) => {
+          headers.forEach(
+            (header, index) => {
 
-              produto[cabecalho] =
-                (valores[i] || "")
-                  .trim();
+              product[header] =
+                (
+                  values[index]
+                  || ""
+                ).trim();
 
             }
           );
 
 
-          return produto;
+          return product;
 
         })
 
-        .filter(produto => {
+        .filter(product => {
 
-          const nome =
-            produto["Produto"] || "";
-
-
-          const disponibilidade =
-            produto["Disponibilidade"]
+          const name =
+            product["Produto"]
             || "";
 
 
-          if (!nome) {
+          const status =
+            product["Disponibilidade"]
+            || "";
+
+
+          if (!name) {
 
             return false;
 
@@ -890,8 +945,8 @@ async function carregarProdutos() {
 
 
           if (
-            disponibilidade &&
-            disponibilidade
+            status &&
+            status
               .toLowerCase() !==
               "disponível"
           ) {
@@ -906,27 +961,27 @@ async function carregarProdutos() {
         });
 
 
-    mostrarProdutos(
-      produtosGlobais
+    renderProducts(
+      allProducts
     );
 
   }
 
-  catch (erro) {
+  catch (error) {
 
     document.getElementById(
-      "mensagem"
+      "message"
     ).textContent =
       "Não foi possível carregar os artigos.";
 
 
     document.getElementById(
-      "contador"
+      "counter"
     ).textContent =
       "";
 
 
-    console.error(erro);
+    console.error(error);
 
   }
 
@@ -934,51 +989,54 @@ async function carregarProdutos() {
 
 
 
-/* ======================================================
-   CRIAR CARTÕES
-====================================================== */
+/* =====================================================
+   MOSTRAR PRODUTOS
+===================================================== */
 
-function mostrarProdutos(produtos) {
+function renderProducts(products) {
 
-  const catalogo =
+  const catalog =
     document.getElementById(
-      "catalogo"
+      "catalog"
     );
 
 
-  const mensagem =
+  const message =
     document.getElementById(
-      "mensagem"
+      "message"
     );
 
 
-  catalogo.innerHTML = "";
+  catalog.innerHTML = "";
+
+  message.textContent = "";
 
 
-  mensagem.textContent = "";
+  products.forEach(product => {
+
+    const name =
+      product["Produto"]
+      || "";
 
 
-  produtos.forEach(produto => {
-
-    const nome =
-      produto["Produto"] || "";
-
-
-    const preco =
-      produto["Preço venda"] || "";
+    const price =
+      product["Preço venda"]
+      || "";
 
 
-    const imagem =
-      produto["Imagem"] || "";
+    const image =
+      product["Imagem"]
+      || "";
 
 
-    const disponibilidade =
-      produto["Disponibilidade"]
+    const status =
+      product["Disponibilidade"]
       || "Disponível";
 
 
-    const linkVenda =
-      produto["Link Venda"] || "";
+    const salesLink =
+      product["Link Venda"]
+      || "";
 
 
     const card =
@@ -988,22 +1046,23 @@ function mostrarProdutos(produtos) {
 
 
     card.className =
-      "produto";
+      "product";
+
 
 
     /* IMAGEM */
 
-    const imagemWrapper =
+    const imageBox =
       document.createElement(
         "div"
       );
 
 
-    imagemWrapper.className =
-      "imagem-wrapper";
+    imageBox.className =
+      "image-box";
 
 
-    if (imagem) {
+    if (image) {
 
       const img =
         document.createElement(
@@ -1011,22 +1070,22 @@ function mostrarProdutos(produtos) {
         );
 
 
-      img.src = imagem;
+      img.src = image;
 
-      img.alt = nome;
+      img.alt = name;
 
       img.loading = "lazy";
 
 
       img.onerror = () => {
 
-        imagemWrapper.innerHTML =
-          '<span class="sem-imagem">Imagem indisponível</span>';
+        imageBox.innerHTML =
+          '<span class="no-image">Imagem indisponível</span>';
 
       };
 
 
-      imagemWrapper.appendChild(
+      imageBox.appendChild(
         img
       );
 
@@ -1034,149 +1093,168 @@ function mostrarProdutos(produtos) {
 
     else {
 
-      imagemWrapper.innerHTML =
-        '<span class="sem-imagem">Sem imagem</span>';
+      imageBox.innerHTML =
+        '<span class="no-image">Sem imagem</span>';
 
     }
 
 
 
-    /* CONTEÚDO */
+    /* CORPO */
 
-    const conteudo =
+    const body =
       document.createElement(
         "div"
       );
 
 
-    conteudo.className =
-      "produto-conteudo";
+    body.className =
+      "product-body";
 
 
 
-    const titulo =
+    const title =
       document.createElement(
         "h3"
       );
 
 
-    titulo.textContent =
-      nome;
+    title.className =
+      "product-name";
+
+
+    title.textContent =
+      name;
 
 
 
-    const linhaPreco =
+    const bottom =
       document.createElement(
         "div"
       );
 
 
-    linhaPreco.className =
-      "linha-preco";
+    bottom.className =
+      "product-bottom";
 
 
 
-    const precoEl =
+    const priceRow =
+      document.createElement(
+        "div"
+      );
+
+
+    priceRow.className =
+      "price-row";
+
+
+
+    const priceElement =
       document.createElement(
         "span"
       );
 
 
-    precoEl.className =
-      "preco";
+    priceElement.className =
+      "price";
 
 
-    precoEl.textContent =
-      preco;
+    priceElement.textContent =
+      price;
 
 
 
-    const estado =
+    const statusElement =
       document.createElement(
         "span"
       );
 
 
-    estado.className =
-      "estado";
+    statusElement.className =
+      "status";
 
 
-    estado.textContent =
-      disponibilidade;
+    statusElement.textContent =
+      status;
 
 
 
-    linhaPreco.appendChild(
-      precoEl
+    priceRow.appendChild(
+      priceElement
     );
 
 
-    linhaPreco.appendChild(
-      estado
+    priceRow.appendChild(
+      statusElement
     );
 
 
-
-    conteudo.appendChild(
-      titulo
-    );
-
-
-    conteudo.appendChild(
-      linhaPreco
+    bottom.appendChild(
+      priceRow
     );
 
 
 
-    /* BOTÃO */
+    /* LINK */
 
-    if (linkVenda) {
+    if (salesLink) {
 
-      const botao =
+      const button =
         document.createElement(
           "a"
         );
 
 
-      botao.className =
-        "botao";
+      button.className =
+        "button";
 
 
-      botao.href =
-        linkVenda;
+      button.href =
+        salesLink;
 
 
-      botao.target =
+      button.target =
         "_blank";
 
 
-      botao.rel =
+      button.rel =
         "noopener noreferrer";
 
 
-      botao.textContent =
+      button.textContent =
         "Ver artigo";
 
 
-      conteudo.appendChild(
-        botao
+      bottom.appendChild(
+        button
       );
 
     }
 
 
 
-    card.appendChild(
-      imagemWrapper
+    body.appendChild(
+      title
+    );
+
+
+    body.appendChild(
+      bottom
     );
 
 
     card.appendChild(
-      conteudo
+      imageBox
     );
 
 
-    catalogo.appendChild(
+    card.appendChild(
+      body
+    );
+
+
+    catalog.appendChild(
       card
     );
 
@@ -1184,14 +1262,14 @@ function mostrarProdutos(produtos) {
 
 
 
-  atualizarContador(
-    produtos.length
+  updateCounter(
+    products.length
   );
 
 
-  if (!produtos.length) {
+  if (!products.length) {
 
-    mensagem.textContent =
+    message.textContent =
       "Não foram encontrados artigos.";
 
   }
@@ -1200,57 +1278,47 @@ function mostrarProdutos(produtos) {
 
 
 
-/* ======================================================
+/* =====================================================
    CONTADOR
-====================================================== */
+===================================================== */
 
-function atualizarContador(total) {
+function updateCounter(number) {
 
-  const contador =
-    document.getElementById(
-      "contador"
-    );
+  document.getElementById(
+    "counter"
+  ).textContent =
 
+    number === 1
 
-  if (total === 1) {
+      ? "1 artigo disponível"
 
-    contador.textContent =
-      "1 artigo disponível";
-
-  }
-
-  else {
-
-    contador.textContent =
-      total +
-      " artigos disponíveis";
-
-  }
+      : number +
+        " artigos disponíveis";
 
 }
 
 
 
-/* ======================================================
+/* =====================================================
    PESQUISA
-====================================================== */
+===================================================== */
 
 document.getElementById(
-  "pesquisa"
+  "searchInput"
 ).addEventListener(
   "input",
   function () {
 
-    const termo =
+    const query =
       this.value
         .trim()
         .toLowerCase();
 
 
-    if (!termo) {
+    if (!query) {
 
-      mostrarProdutos(
-        produtosGlobais
+      renderProducts(
+        allProducts
       );
 
       return;
@@ -1258,27 +1326,27 @@ document.getElementById(
     }
 
 
-    const resultados =
-      produtosGlobais.filter(
-        produto => {
+    const results =
+      allProducts.filter(
+        product => {
 
-          const nome =
+          const name =
             (
-              produto["Produto"]
+              product["Produto"]
               || ""
             ).toLowerCase();
 
 
-          return nome.includes(
-            termo
+          return name.includes(
+            query
           );
 
         }
       );
 
 
-    mostrarProdutos(
-      resultados
+    renderProducts(
+      results
     );
 
   }
@@ -1286,16 +1354,15 @@ document.getElementById(
 
 
 
-/* ======================================================
-   INICIAR
-====================================================== */
+/* =====================================================
+   INICIAR SITE
+===================================================== */
 
-carregarConfig();
+loadConfig();
 
-carregarProdutos();
+loadProducts();
 
 </script>
-
 
 </body>
 </html>
