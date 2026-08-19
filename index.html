@@ -3,237 +3,1299 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Backyard Traders</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-      color: #222;
+    :root {
+      --bg: #f6f6f4;
+      --surface: #ffffff;
+      --text: #1d1d1f;
+      --muted: #707070;
+      --border: #e8e8e5;
+
+      --accent: #c89328;
+      --accent-dark: #9e7018;
+
+      --success-bg: #eaf7ef;
+      --success: #287548;
+
+      --radius: 18px;
+      --shadow: 0 8px 30px rgba(0,0,0,.06);
     }
 
-    header {
-      background: #111;
-      color: white;
-      padding: 24px;
-      text-align: center;
+    * {
+      box-sizing: border-box;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ==========================
+       CABEÇALHO
+    ========================== */
+
+    .topo {
+      background:
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #fbf8f0 100%
+        );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topo-conteudo {
+      max-width: 1250px;
+      margin: auto;
+      padding: 38px 24px 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+
+      object-fit: contain;
+
+      border-radius: 50%;
+      background: white;
+
+      box-shadow:
+        0 6px 25px rgba(0,0,0,.10);
+
+      display: none;
+    }
+
+    .marca-texto h1 {
+      margin: 0;
+
+      font-size: clamp(28px, 4vw, 42px);
+      letter-spacing: -1.2px;
+    }
+
+    .marca-texto p {
+      margin: 8px 0 0;
+
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .contacto-topo {
+      text-align: right;
+    }
+
+    .contacto-topo small {
+      color: var(--muted);
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .contacto-topo span {
+      font-weight: 600;
+    }
+
+    /* ==========================
+       CONTEÚDO
+    ========================== */
+
+    .container {
+      max-width: 1250px;
+      margin: auto;
+      padding: 34px 24px 60px;
+    }
+
+    .barra {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .info-catalogo h2 {
+      margin: 0;
+      font-size: 25px;
+    }
+
+    .contador {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    /* ==========================
+       PESQUISA
+    ========================== */
+
+    .pesquisa {
+      width: min(380px, 100%);
+      position: relative;
+    }
+
+    .pesquisa input {
+      width: 100%;
+
+      border: 1px solid var(--border);
+      background: white;
+
+      padding: 14px 18px;
+
+      border-radius: 30px;
+
+      font-size: 15px;
+      outline: none;
+
+      transition: .2s;
+    }
+
+    .pesquisa input:focus {
+      border-color: var(--accent);
+
+      box-shadow:
+        0 0 0 3px rgba(200,147,40,.12);
+    }
+
+    /* ==========================
+       CATÁLOGO
+    ========================== */
 
     .catalogo {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 20px;
+
+      grid-template-columns:
+        repeat(auto-fill, minmax(240px, 1fr));
+
+      gap: 24px;
     }
 
     .produto {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      overflow: hidden;
+
+      box-shadow: var(--shadow);
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        transform .22s ease,
+        box-shadow .22s ease;
     }
 
-    .produto img {
+    .produto:hover {
+      transform: translateY(-5px);
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.10);
+    }
+
+    .imagem-wrapper {
       width: 100%;
-      height: 220px;
-      object-fit: contain;
-      border-radius: 8px;
-      background: #eee;
+      aspect-ratio: 1 / 1;
+
+      background: #f2f2f0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
     }
 
-    .produto h2 {
-      font-size: 18px;
-      margin: 12px 0 8px;
+    .imagem-wrapper img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition: transform .35s ease;
+    }
+
+    .produto:hover img {
+      transform: scale(1.025);
+    }
+
+    .sem-imagem {
+      color: #999;
+      font-size: 14px;
+    }
+
+    .produto-conteudo {
+      padding: 18px;
+
+      display: flex;
+      flex-direction: column;
+
+      flex: 1;
+    }
+
+    .produto h3 {
+      margin: 0 0 12px;
+
+      font-size: 17px;
+      font-weight: 600;
+
+      line-height: 1.35;
+    }
+
+    .linha-preco {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 10px;
+
+      margin-top: auto;
+      margin-bottom: 15px;
     }
 
     .preco {
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 8px;
+      font-size: 22px;
+      font-weight: 750;
     }
 
-    .disponibilidade {
-      margin-bottom: 14px;
+    .estado {
+      background: var(--success-bg);
+      color: var(--success);
+
+      padding: 6px 10px;
+
+      border-radius: 20px;
+
+      font-size: 12px;
+      font-weight: 600;
     }
 
     .botao {
-      display: block;
+      width: 100%;
+
+      border: none;
+      border-radius: 12px;
+
+      padding: 13px 15px;
+
       text-align: center;
-      background: #111;
+
+      background: var(--accent);
       color: white;
+
+      font-weight: 650;
+      font-size: 14px;
+
       text-decoration: none;
-      padding: 11px;
-      border-radius: 6px;
+
+      transition:
+        background .2s,
+        transform .2s;
     }
 
     .botao:hover {
-      background: #333;
+      background: var(--accent-dark);
     }
 
+    /* ==========================
+       MENSAGENS
+    ========================== */
+
     .mensagem {
-      max-width: 1200px;
-      margin: 30px auto;
-      padding: 0 20px;
+      padding: 40px;
+      text-align: center;
+
+      color: var(--muted);
+    }
+
+    /* ==========================
+       RODAPÉ
+    ========================== */
+
+    footer {
+      border-top: 1px solid var(--border);
+
+      text-align: center;
+
+      padding: 30px 20px;
+
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* ==========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 700px) {
+
+      .topo-conteudo {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .marca {
+        flex-direction: column;
+      }
+
+      .contacto-topo {
+        text-align: center;
+      }
+
+      .barra {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .pesquisa {
+        width: 100%;
+      }
+
+      .catalogo {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+      }
+
+      .produto-conteudo {
+        padding: 13px;
+      }
+
+      .produto h3 {
+        font-size: 14px;
+      }
+
+      .preco {
+        font-size: 18px;
+      }
+
+      .estado {
+        display: none;
+      }
+    }
+
+    @media (max-width: 400px) {
+
+      .catalogo {
+        grid-template-columns: 1fr;
+      }
+
     }
   </style>
 </head>
 
+
 <body>
 
-<header>
-  <h1>Backyard Traders</h1>
-  <p>Artigos disponíveis</p>
-</header>
+  <!-- CABEÇALHO -->
 
-<div id="mensagem" class="mensagem">A carregar artigos...</div>
-<div id="catalogo" class="catalogo"></div>
+  <header class="topo">
+
+    <div class="topo-conteudo">
+
+      <div class="marca">
+
+        <img
+          id="logo"
+          class="logo"
+          alt="Logótipo"
+        >
+
+        <div class="marca-texto">
+
+          <h1 id="nomeLoja">
+            Backyard Traders
+          </h1>
+
+          <p id="subtitulo">
+            Artigos disponíveis
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="areaContacto"
+        class="contacto-topo"
+        style="display:none"
+      >
+
+        <small>Contacto</small>
+
+        <span id="contacto"></span>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- CONTEÚDO -->
+
+  <main class="container">
+
+    <div class="barra">
+
+      <div class="info-catalogo">
+
+        <h2>Os nossos artigos</h2>
+
+        <div
+          id="contador"
+          class="contador"
+        >
+          A carregar catálogo...
+        </div>
+
+      </div>
+
+
+      <div class="pesquisa">
+
+        <input
+          id="pesquisa"
+          type="search"
+          placeholder="Pesquisar artigos..."
+        >
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="mensagem"
+      class="mensagem"
+    >
+      A carregar artigos...
+    </div>
+
+
+    <div
+      id="catalogo"
+      class="catalogo"
+    ></div>
+
+  </main>
+
+
+  <footer>
+
+    <span id="rodapeLoja">
+      Backyard Traders
+    </span>
+
+    · Catálogo online
+
+  </footer>
+
+
 
 <script>
-const CSV_URL =
+
+/* ======================================================
+   LINKS GOOGLE SHEETS
+====================================================== */
+
+const CSV_PRODUTOS =
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbU1RthfXL6QBD0NgNVJYVgxBwIm4mldrzXSZRsjd8TQIhCOf4YeOiq1NiOW1oaNRysD173Y_ZXBJN/pub?gid=0&single=true&output=csv";
 
+
+/*
+  IMPORTANTE:
+
+  Substitui o texto abaixo pelo URL CSV
+  da tua aba CONFIG.
+*/
+
+const CSV_CONFIG =
+"COLOCA_AQUI_O_LINK_CSV_DA_CONFIG";
+
+
+/* ======================================================
+   LEITOR CSV
+====================================================== */
+
 function parseCSV(texto) {
+
   const linhas = [];
+
   let linha = [];
   let campo = "";
   let entreAspas = false;
 
+
   for (let i = 0; i < texto.length; i++) {
+
     const char = texto[i];
     const proximo = texto[i + 1];
 
-    if (char === '"' && entreAspas && proximo === '"') {
+
+    if (
+      char === '"' &&
+      entreAspas &&
+      proximo === '"'
+    ) {
+
       campo += '"';
       i++;
-    } else if (char === '"') {
+
+    }
+
+    else if (char === '"') {
+
       entreAspas = !entreAspas;
-    } else if (char === ',' && !entreAspas) {
+
+    }
+
+    else if (
+      char === "," &&
+      !entreAspas
+    ) {
+
       linha.push(campo);
       campo = "";
-    } else if ((char === '\n' || char === '\r') && !entreAspas) {
-      if (char === '\r' && proximo === '\n') {
+
+    }
+
+    else if (
+      (char === "\n" || char === "\r") &&
+      !entreAspas
+    ) {
+
+      if (
+        char === "\r" &&
+        proximo === "\n"
+      ) {
         i++;
       }
 
+
       linha.push(campo);
+
       campo = "";
 
-      if (linha.some(valor => valor.trim() !== "")) {
+
+      if (
+        linha.some(
+          valor =>
+            valor.trim() !== ""
+        )
+      ) {
+
         linhas.push(linha);
+
       }
 
       linha = [];
-    } else {
-      campo += char;
+
     }
+
+    else {
+
+      campo += char;
+
+    }
+
   }
+
 
   linha.push(campo);
 
-  if (linha.some(valor => valor.trim() !== "")) {
+
+  if (
+    linha.some(
+      valor =>
+        valor.trim() !== ""
+    )
+  ) {
+
     linhas.push(linha);
+
   }
 
+
   return linhas;
+
 }
 
-fetch(CSV_URL)
-  .then(resposta => {
-    if (!resposta.ok) {
-      throw new Error("Não foi possível carregar a folha.");
-    }
 
-    return resposta.text();
-  })
-  .then(texto => {
-    const dados = parseCSV(texto);
 
-    if (dados.length < 2) {
-      throw new Error("A folha não contém produtos.");
-    }
+/* ======================================================
+   CONFIGURAÇÃO DA LOJA
+====================================================== */
 
-    const cabecalhos = dados[0].map(c => c.trim());
+async function carregarConfig() {
 
-    const catalogo = document.getElementById("catalogo");
-    const mensagem = document.getElementById("mensagem");
+  if (
+    !CSV_CONFIG ||
+    CSV_CONFIG.includes(
+      "COLOCA_AQUI"
+    )
+  ) {
 
-    mensagem.textContent = "";
+    return;
 
-    dados.slice(1).forEach(valores => {
-      const produto = {};
+  }
 
-      cabecalhos.forEach((cabecalho, i) => {
-        produto[cabecalho] = (valores[i] || "").trim();
-      });
 
-      const disponibilidade = produto["Disponibilidade"] || "";
+  try {
 
-      if (
-        disponibilidade &&
-        disponibilidade.toLowerCase() !== "disponível"
-      ) {
-        return;
+    const resposta =
+      await fetch(CSV_CONFIG);
+
+
+    const texto =
+      await resposta.text();
+
+
+    const dados =
+      parseCSV(texto);
+
+
+    const config = {};
+
+
+    dados.forEach(linha => {
+
+      const campo =
+        (linha[0] || "")
+          .trim()
+          .toLowerCase();
+
+
+      const valor =
+        (linha[1] || "")
+          .trim();
+
+
+      if (campo) {
+
+        config[campo] = valor;
+
       }
 
-      const nome = produto["Produto"] || "";
-      const preco = produto["Preço venda"] || "";
-      const imagem = produto["Imagem"] || "";
-      const linkVenda = produto["Link Venda"] || "";
-
-      if (!nome) {
-        return;
-      }
-
-      const card = document.createElement("div");
-      card.className = "produto";
-
-      card.innerHTML = `
-        ${imagem ? `
-          <img
-            src="${imagem}"
-            alt="${nome}"
-            onerror="this.style.display='none'"
-          >
-        ` : ""}
-
-        <h2>${nome}</h2>
-
-        <div class="preco">
-          ${preco}
-        </div>
-
-        <div class="disponibilidade">
-          ${disponibilidade || "Disponível"}
-        </div>
-
-        ${linkVenda ? `
-          <a
-            class="botao"
-            href="${linkVenda}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Ver artigo
-          </a>
-        ` : ""}
-      `;
-
-      catalogo.appendChild(card);
     });
 
-    if (!catalogo.children.length) {
-      mensagem.textContent = "Ainda não existem artigos disponíveis.";
+
+
+    /* NOME DA LOJA */
+
+    if (config["nome da loja"]) {
+
+      document.getElementById(
+        "nomeLoja"
+      ).textContent =
+        config["nome da loja"];
+
+
+      document.getElementById(
+        "rodapeLoja"
+      ).textContent =
+        config["nome da loja"];
+
+
+      document.title =
+        config["nome da loja"];
+
     }
-  })
-  .catch(erro => {
-    document.getElementById("mensagem").textContent =
-      "Erro ao carregar os artigos.";
+
+
+
+    /* SUBTÍTULO */
+
+    if (config["subtítulo"]) {
+
+      document.getElementById(
+        "subtitulo"
+      ).textContent =
+        config["subtítulo"];
+
+    }
+
+
+
+    /* LOGÓTIPO */
+
+    if (config["logotipo"]) {
+
+      const logo =
+        document.getElementById(
+          "logo"
+        );
+
+
+      logo.src =
+        config["logotipo"];
+
+
+      logo.style.display =
+        "block";
+
+    }
+
+
+
+    /* CONTACTO */
+
+    if (config["contacto"]) {
+
+      document.getElementById(
+        "contacto"
+      ).textContent =
+        config["contacto"];
+
+
+      document.getElementById(
+        "areaContacto"
+      ).style.display =
+        "block";
+
+    }
+
+  }
+
+  catch (erro) {
+
+    console.warn(
+      "Não foi possível carregar Config:",
+      erro
+    );
+
+  }
+
+}
+
+
+
+/* ======================================================
+   PRODUTOS
+====================================================== */
+
+let produtosGlobais = [];
+
+
+async function carregarProdutos() {
+
+  try {
+
+    const resposta =
+      await fetch(CSV_PRODUTOS);
+
+
+    if (!resposta.ok) {
+
+      throw new Error(
+        "Não foi possível carregar a folha."
+      );
+
+    }
+
+
+    const texto =
+      await resposta.text();
+
+
+    const dados =
+      parseCSV(texto);
+
+
+    if (dados.length < 2) {
+
+      throw new Error(
+        "A folha não contém artigos."
+      );
+
+    }
+
+
+    const cabecalhos =
+      dados[0].map(
+        campo => campo.trim()
+      );
+
+
+    produtosGlobais =
+      dados
+        .slice(1)
+        .map(valores => {
+
+          const produto = {};
+
+
+          cabecalhos.forEach(
+            (cabecalho, i) => {
+
+              produto[cabecalho] =
+                (valores[i] || "")
+                  .trim();
+
+            }
+          );
+
+
+          return produto;
+
+        })
+
+        .filter(produto => {
+
+          const nome =
+            produto["Produto"] || "";
+
+
+          const disponibilidade =
+            produto["Disponibilidade"]
+            || "";
+
+
+          if (!nome) {
+
+            return false;
+
+          }
+
+
+          if (
+            disponibilidade &&
+            disponibilidade
+              .toLowerCase() !==
+              "disponível"
+          ) {
+
+            return false;
+
+          }
+
+
+          return true;
+
+        });
+
+
+    mostrarProdutos(
+      produtosGlobais
+    );
+
+  }
+
+  catch (erro) {
+
+    document.getElementById(
+      "mensagem"
+    ).textContent =
+      "Não foi possível carregar os artigos.";
+
+
+    document.getElementById(
+      "contador"
+    ).textContent =
+      "";
+
+
     console.error(erro);
+
+  }
+
+}
+
+
+
+/* ======================================================
+   CRIAR CARTÕES
+====================================================== */
+
+function mostrarProdutos(produtos) {
+
+  const catalogo =
+    document.getElementById(
+      "catalogo"
+    );
+
+
+  const mensagem =
+    document.getElementById(
+      "mensagem"
+    );
+
+
+  catalogo.innerHTML = "";
+
+
+  mensagem.textContent = "";
+
+
+  produtos.forEach(produto => {
+
+    const nome =
+      produto["Produto"] || "";
+
+
+    const preco =
+      produto["Preço venda"] || "";
+
+
+    const imagem =
+      produto["Imagem"] || "";
+
+
+    const disponibilidade =
+      produto["Disponibilidade"]
+      || "Disponível";
+
+
+    const linkVenda =
+      produto["Link Venda"] || "";
+
+
+    const card =
+      document.createElement(
+        "article"
+      );
+
+
+    card.className =
+      "produto";
+
+
+    /* IMAGEM */
+
+    const imagemWrapper =
+      document.createElement(
+        "div"
+      );
+
+
+    imagemWrapper.className =
+      "imagem-wrapper";
+
+
+    if (imagem) {
+
+      const img =
+        document.createElement(
+          "img"
+        );
+
+
+      img.src = imagem;
+
+      img.alt = nome;
+
+      img.loading = "lazy";
+
+
+      img.onerror = () => {
+
+        imagemWrapper.innerHTML =
+          '<span class="sem-imagem">Imagem indisponível</span>';
+
+      };
+
+
+      imagemWrapper.appendChild(
+        img
+      );
+
+    }
+
+    else {
+
+      imagemWrapper.innerHTML =
+        '<span class="sem-imagem">Sem imagem</span>';
+
+    }
+
+
+
+    /* CONTEÚDO */
+
+    const conteudo =
+      document.createElement(
+        "div"
+      );
+
+
+    conteudo.className =
+      "produto-conteudo";
+
+
+
+    const titulo =
+      document.createElement(
+        "h3"
+      );
+
+
+    titulo.textContent =
+      nome;
+
+
+
+    const linhaPreco =
+      document.createElement(
+        "div"
+      );
+
+
+    linhaPreco.className =
+      "linha-preco";
+
+
+
+    const precoEl =
+      document.createElement(
+        "span"
+      );
+
+
+    precoEl.className =
+      "preco";
+
+
+    precoEl.textContent =
+      preco;
+
+
+
+    const estado =
+      document.createElement(
+        "span"
+      );
+
+
+    estado.className =
+      "estado";
+
+
+    estado.textContent =
+      disponibilidade;
+
+
+
+    linhaPreco.appendChild(
+      precoEl
+    );
+
+
+    linhaPreco.appendChild(
+      estado
+    );
+
+
+
+    conteudo.appendChild(
+      titulo
+    );
+
+
+    conteudo.appendChild(
+      linhaPreco
+    );
+
+
+
+    /* BOTÃO */
+
+    if (linkVenda) {
+
+      const botao =
+        document.createElement(
+          "a"
+        );
+
+
+      botao.className =
+        "botao";
+
+
+      botao.href =
+        linkVenda;
+
+
+      botao.target =
+        "_blank";
+
+
+      botao.rel =
+        "noopener noreferrer";
+
+
+      botao.textContent =
+        "Ver artigo";
+
+
+      conteudo.appendChild(
+        botao
+      );
+
+    }
+
+
+
+    card.appendChild(
+      imagemWrapper
+    );
+
+
+    card.appendChild(
+      conteudo
+    );
+
+
+    catalogo.appendChild(
+      card
+    );
+
   });
+
+
+
+  atualizarContador(
+    produtos.length
+  );
+
+
+  if (!produtos.length) {
+
+    mensagem.textContent =
+      "Não foram encontrados artigos.";
+
+  }
+
+}
+
+
+
+/* ======================================================
+   CONTADOR
+====================================================== */
+
+function atualizarContador(total) {
+
+  const contador =
+    document.getElementById(
+      "contador"
+    );
+
+
+  if (total === 1) {
+
+    contador.textContent =
+      "1 artigo disponível";
+
+  }
+
+  else {
+
+    contador.textContent =
+      total +
+      " artigos disponíveis";
+
+  }
+
+}
+
+
+
+/* ======================================================
+   PESQUISA
+====================================================== */
+
+document.getElementById(
+  "pesquisa"
+).addEventListener(
+  "input",
+  function () {
+
+    const termo =
+      this.value
+        .trim()
+        .toLowerCase();
+
+
+    if (!termo) {
+
+      mostrarProdutos(
+        produtosGlobais
+      );
+
+      return;
+
+    }
+
+
+    const resultados =
+      produtosGlobais.filter(
+        produto => {
+
+          const nome =
+            (
+              produto["Produto"]
+              || ""
+            ).toLowerCase();
+
+
+          return nome.includes(
+            termo
+          );
+
+        }
+      );
+
+
+    mostrarProdutos(
+      resultados
+    );
+
+  }
+);
+
+
+
+/* ======================================================
+   INICIAR
+====================================================== */
+
+carregarConfig();
+
+carregarProdutos();
+
 </script>
+
 
 </body>
 </html>
