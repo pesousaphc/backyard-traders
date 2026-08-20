@@ -16,11 +16,8 @@
   <title>Backyard Traders</title>
 
   <style>
-
     :root {
       --ink: #101113;
-      --ink-soft: #1b1c1f;
-
       --gold: #d59a1f;
       --gold-light: #f2c75c;
       --gold-dark: #a96f08;
@@ -36,6 +33,15 @@
       --green: #287c50;
       --green-bg: #e7f6ed;
 
+      --blue: #2768a8;
+      --blue-bg: #eaf3fb;
+
+      --orange: #a86615;
+      --orange-bg: #fff3de;
+
+      --red: #a73d3d;
+      --red-bg: #fdecec;
+
       --radius: 20px;
 
       --shadow:
@@ -45,16 +51,13 @@
         0 18px 46px rgba(0,0,0,.11);
     }
 
-
     * {
       box-sizing: border-box;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       margin: 0;
@@ -74,23 +77,15 @@
       -webkit-font-smoothing: antialiased;
     }
 
-
     button,
     input,
     select {
       font: inherit;
     }
 
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
+    /* HERO */
 
     .hero {
-      position: relative;
-      overflow: hidden;
-
       color: white;
 
       background:
@@ -98,11 +93,6 @@
           circle at 82% 12%,
           rgba(213,154,31,.20),
           transparent 31%
-        ),
-        radial-gradient(
-          circle at 15% 85%,
-          rgba(255,255,255,.06),
-          transparent 30%
         ),
         linear-gradient(
           135deg,
@@ -115,7 +105,6 @@
         2px solid rgba(213,154,31,.65);
     }
 
-
     .hero-shell {
       max-width: 1240px;
       margin: auto;
@@ -124,7 +113,6 @@
         24px 25px
         52px;
     }
-
 
     .topbar {
       display: flex;
@@ -140,13 +128,13 @@
         1px solid rgba(255,255,255,.10);
     }
 
-
     .mini-brand {
       display: flex;
       align-items: center;
       gap: 9px;
 
-      color: rgba(255,255,255,.70);
+      color:
+        rgba(255,255,255,.70);
 
       text-transform: uppercase;
       letter-spacing: .12em;
@@ -154,7 +142,6 @@
       font-size: 11px;
       font-weight: 800;
     }
-
 
     .mini-dot {
       width: 8px;
@@ -168,6 +155,11 @@
         0 0 14px rgba(213,154,31,.9);
     }
 
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
 
     .contact {
       display: none;
@@ -179,15 +171,40 @@
 
       border-radius: 999px;
 
-      color:
-        rgba(255,255,255,.82);
-
       background:
         rgba(255,255,255,.05);
 
       font-size: 12px;
     }
 
+    .internal-button {
+      border:
+        1px solid rgba(255,255,255,.15);
+
+      border-radius: 999px;
+
+      padding: 9px 14px;
+
+      background:
+        rgba(255,255,255,.06);
+
+      color: white;
+
+      cursor: pointer;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .internal-button.logged {
+      background:
+        rgba(213,154,31,.15);
+
+      border-color:
+        rgba(213,154,31,.55);
+
+      color: var(--gold-light);
+    }
 
     .hero-main {
       display: grid;
@@ -200,7 +217,6 @@
 
       gap: 65px;
     }
-
 
     .eyebrow {
       display: flex;
@@ -219,7 +235,6 @@
       font-weight: 850;
     }
 
-
     .eyebrow::before {
       content: "";
 
@@ -229,10 +244,7 @@
       background: var(--gold);
     }
 
-
     .hero-copy h1 {
-      max-width: 740px;
-
       margin: 0;
 
       font-size:
@@ -245,11 +257,9 @@
       font-weight: 850;
     }
 
-
     .hero-copy h1 span {
       color: var(--gold-light);
     }
-
 
     .hero-copy p {
       max-width: 640px;
@@ -265,7 +275,6 @@
       font-size: 17px;
     }
 
-
     .hero-actions {
       margin-top: 27px;
 
@@ -275,7 +284,6 @@
 
       gap: 14px;
     }
-
 
     .hero-button {
       display: inline-flex;
@@ -302,15 +310,7 @@
 
       font-size: 13px;
       font-weight: 850;
-
-      transition: .2s;
     }
-
-
-    .hero-button:hover {
-      transform: translateY(-2px);
-    }
-
 
     .hero-total {
       color:
@@ -319,17 +319,12 @@
       font-size: 12px;
     }
 
-
-
-    /* =====================================================
-       LOGÓTIPO
-    ===================================================== */
+    /* LOGO */
 
     .crest-area {
       display: flex;
       justify-content: center;
     }
-
 
     .crest {
       width: 235px;
@@ -355,7 +350,6 @@
         0 0 0 8px rgba(213,154,31,.06);
     }
 
-
     .crest-inner {
       width: 100%;
       height: 100%;
@@ -364,13 +358,8 @@
 
       border-radius: 50%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
       background: #111;
     }
-
 
     .crest img {
       width: 100%;
@@ -380,16 +369,10 @@
 
       border-radius: 50%;
 
-      transform: scale(1.04);
-
       display: none;
     }
 
-
-
-    /* =====================================================
-       CONTROLOS
-    ===================================================== */
+    /* SEARCH */
 
     .controls-wrap {
       position: sticky;
@@ -406,7 +389,6 @@
         1px solid rgba(0,0,0,.06);
     }
 
-
     .controls {
       max-width: 1240px;
       margin: auto;
@@ -414,7 +396,6 @@
       padding:
         16px 25px;
     }
-
 
     .controls-row {
       display: grid;
@@ -428,15 +409,11 @@
       align-items: center;
     }
 
-
     .catalog-info h2 {
       margin: 0;
 
       font-size: 22px;
-
-      letter-spacing: -.02em;
     }
-
 
     .counter {
       margin-top: 5px;
@@ -446,32 +423,16 @@
       font-size: 12px;
     }
 
-
     .search-box {
       position: relative;
     }
-
-
-    .search-box span {
-      position: absolute;
-
-      left: 16px;
-      top: 50%;
-
-      transform:
-        translateY(-50%);
-
-      opacity: .45;
-    }
-
 
     .search-box input {
       width: 100%;
       height: 47px;
 
       padding:
-        0 18px
-        0 44px;
+        0 18px;
 
       border:
         1px solid var(--border);
@@ -481,25 +442,9 @@
       outline: none;
 
       background: white;
-
-      box-shadow:
-        0 3px 13px rgba(0,0,0,.03);
     }
 
-
-    .search-box input:focus {
-      border-color: var(--gold);
-
-      box-shadow:
-        0 0 0 4px
-        rgba(213,154,31,.10);
-    }
-
-
-
-    /* =====================================================
-       FILTROS + ORDENAÇÃO
-    ===================================================== */
+    /* TOOLBAR */
 
     .toolbar {
       max-width: 1240px;
@@ -510,32 +455,46 @@
 
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
 
       gap: 20px;
     }
 
+    .filter-area {
+      flex: 1;
+      min-width: 0;
+    }
 
-    .categories {
+    .filter-label {
+      margin-bottom: 7px;
+
+      color: var(--muted);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .categories,
+    .conditions {
       display: flex;
-      gap: 8px;
+      gap: 7px;
 
       overflow-x: auto;
-
-      scrollbar-width: none;
     }
 
-
-    .categories::-webkit-scrollbar {
-      display: none;
+    .conditions {
+      margin-top: 8px;
     }
 
-
-    .category-button {
+    .category-button,
+    .condition-button {
       flex: 0 0 auto;
 
       padding:
-        9px 14px;
+        8px 13px;
 
       border:
         1px solid var(--border);
@@ -544,50 +503,31 @@
 
       background: white;
 
-      color: #555;
-
       cursor: pointer;
 
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 650;
     }
 
-
-    .category-button.active {
+    .category-button.active,
+    .condition-button.active {
       background: var(--ink);
       color: white;
 
       border-color: var(--ink);
     }
 
-
     .selectors {
       display: flex;
-      align-items: center;
-
       gap: 9px;
 
-      flex-shrink: 0;
+      padding-top: 19px;
     }
-
-
-    .select-wrap {
-      display: flex;
-      align-items: center;
-
-      gap: 7px;
-
-      color: var(--muted);
-
-      font-size: 11px;
-    }
-
 
     select {
       height: 38px;
 
       padding:
-        0 32px
         0 12px;
 
       border:
@@ -596,19 +536,9 @@
       border-radius: 10px;
 
       background: white;
-
-      color: var(--text);
-
-      cursor: pointer;
-
-      outline: none;
     }
 
-
-
-    /* =====================================================
-       CATÁLOGO
-    ===================================================== */
+    /* CATALOG */
 
     .main {
       max-width: 1240px;
@@ -619,7 +549,6 @@
         26px 25px
         65px;
     }
-
 
     .catalog {
       display: grid;
@@ -634,21 +563,15 @@
         23px 20px;
     }
 
-
-
-    /* =====================================================
-       CARTÃO
-    ===================================================== */
+    /* PRODUCT */
 
     .product {
-      position: relative;
-
       overflow: hidden;
 
       display: flex;
       flex-direction: column;
 
-      background: var(--surface);
+      background: white;
 
       border:
         1px solid var(--border);
@@ -660,18 +583,13 @@
       transition: .22s;
     }
 
-
     .product:hover {
       transform:
         translateY(-4px);
 
       box-shadow:
         var(--shadow-hover);
-
-      border-color:
-        #dfd8c8;
     }
-
 
     .image-box {
       position: relative;
@@ -688,28 +606,17 @@
         var(--surface-soft);
     }
 
-
     .image-box img {
       width: 100%;
       height: 100%;
 
       object-fit: cover;
-
-      transition:
-        transform .4s;
     }
 
-
-    .product:hover img {
-      transform:
-        scale(1.035);
-    }
-
-
-    .category-badge {
+    .category-badge,
+    .quantity-badge {
       position: absolute;
 
-      left: 12px;
       top: 12px;
 
       z-index: 2;
@@ -718,66 +625,37 @@
         6px 9px;
 
       border-radius: 999px;
-
-      background:
-        rgba(15,16,18,.78);
-
-      color: white;
-
-      backdrop-filter:
-        blur(8px);
 
       font-size: 10px;
       font-weight: 700;
     }
 
-
-    .quantity-badge {
-      position: absolute;
-
-      right: 12px;
-      top: 12px;
-
-      z-index: 2;
-
-      padding:
-        6px 9px;
-
-      border-radius: 999px;
+    .category-badge {
+      left: 12px;
 
       background:
-        linear-gradient(
-          135deg,
-          var(--gold-light),
-          var(--gold)
-        );
+        rgba(15,16,18,.78);
+
+      color: white;
+    }
+
+    .quantity-badge {
+      right: 12px;
+
+      background:
+        var(--gold);
 
       color: #241b09;
-
-      box-shadow:
-        0 5px 15px rgba(0,0,0,.15);
-
-      font-size: 10px;
-      font-weight: 850;
     }
-
-
-    .no-image {
-      color: #999;
-
-      font-size: 13px;
-    }
-
 
     .product-body {
-      min-height: 175px;
+      min-height: 195px;
 
       padding: 16px;
 
       display: flex;
       flex-direction: column;
     }
-
 
     .product-name {
       margin:
@@ -786,15 +664,11 @@
       font-size: 15px;
 
       line-height: 1.42;
-
-      font-weight: 680;
     }
-
 
     .product-footer {
       margin-top: auto;
     }
-
 
     .price-row {
       display: flex;
@@ -803,50 +677,119 @@
 
       gap: 10px;
 
-      margin-bottom: 13px;
+      margin-bottom: 8px;
     }
-
 
     .price {
       font-size: 21px;
       font-weight: 850;
-
-      letter-spacing: -.025em;
     }
 
-
     .status {
-      display: inline-flex;
-      align-items: center;
-
-      gap: 5px;
-
       padding:
         6px 9px;
 
       border-radius: 999px;
 
-      background:
-        var(--green-bg);
-
+      background: var(--green-bg);
       color: var(--green);
 
       font-size: 10px;
       font-weight: 750;
     }
 
+    .condition-row {
+      min-height: 27px;
 
-    .status::before {
-      content: "";
-
-      width: 5px;
-      height: 5px;
-
-      border-radius: 50%;
-
-      background: currentColor;
+      margin-bottom: 10px;
     }
 
+    .condition-tag {
+      display: inline-flex;
+
+      padding:
+        5px 9px;
+
+      border-radius: 999px;
+
+      background:
+        var(--blue-bg);
+
+      color: var(--blue);
+
+      font-size: 10px;
+      font-weight: 750;
+    }
+
+    .condition-tag.selado,
+    .condition-tag.grade-a {
+      background:
+        var(--green-bg);
+
+      color:
+        var(--green);
+    }
+
+    .condition-tag.grade-b {
+      background:
+        var(--orange-bg);
+
+      color:
+        var(--orange);
+    }
+
+    .condition-tag.grade-c {
+      background:
+        var(--red-bg);
+
+      color:
+        var(--red);
+    }
+
+    /* INTERNAL */
+
+    .internal-price-box {
+      display: none;
+
+      margin:
+        3px 0 11px;
+
+      padding:
+        10px;
+
+      border:
+        1px dashed #d6b664;
+
+      border-radius: 10px;
+
+      background:
+        #fffaf0;
+
+      font-size: 11px;
+    }
+
+    body.internal-mode
+    .internal-price-box {
+      display: block;
+    }
+
+    .internal-line {
+      display: flex;
+      justify-content: space-between;
+
+      padding:
+        2px 0;
+    }
+
+    .internal-line span {
+      color:
+        var(--muted);
+    }
+
+    .internal-line.margin strong {
+      color:
+        var(--green);
+    }
 
     .product-button {
       width: 100%;
@@ -878,17 +821,6 @@
       font-weight: 800;
     }
 
-
-    .product-button:hover {
-      background:
-        linear-gradient(
-          135deg,
-          #d59a1f,
-          #a96f08
-        );
-    }
-
-
     .links-list {
       display: none;
 
@@ -900,13 +832,11 @@
         1px solid var(--border);
     }
 
-
     .links-list.open {
       display: grid;
 
       gap: 6px;
     }
-
 
     .links-list a {
       padding:
@@ -917,45 +847,27 @@
 
       border-radius: 8px;
 
-      color: #4d4d4d;
-
-      background: #fafafa;
-
       text-decoration: none;
 
       font-size: 11px;
     }
 
-
-    .links-list a:hover {
-      border-color: var(--gold);
-    }
-
-
-
-    /* =====================================================
-       PAGINAÇÃO
-    ===================================================== */
+    /* PAGINATION */
 
     .pagination {
       margin-top: 38px;
 
       display: flex;
       justify-content: center;
-      align-items: center;
 
       gap: 7px;
 
       flex-wrap: wrap;
     }
 
-
     .page-button {
       min-width: 39px;
       height: 39px;
-
-      padding:
-        0 11px;
 
       border:
         1px solid var(--border);
@@ -964,182 +876,172 @@
 
       background: white;
 
-      color: #444;
-
       cursor: pointer;
-
-      font-size: 12px;
-      font-weight: 650;
     }
-
-
-    .page-button:hover {
-      border-color: var(--gold);
-    }
-
 
     .page-button.active {
       background: var(--ink);
       color: white;
-
-      border-color: var(--ink);
     }
 
+    /* LOGIN */
 
-    .page-button:disabled {
-      opacity: .35;
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
 
-      cursor: default;
+      z-index: 100;
+
+      display: none;
+      justify-content: center;
+      align-items: center;
+
+      padding: 20px;
+
+      background:
+        rgba(0,0,0,.65);
+
+      backdrop-filter:
+        blur(8px);
     }
 
+    .modal-overlay.open {
+      display: flex;
+    }
 
+    .login-modal {
+      width:
+        min(390px,100%);
 
-    /* =====================================================
-       MENSAGEM
-    ===================================================== */
+      padding: 27px;
 
-    .message {
+      border-radius: 20px;
+
+      background: white;
+    }
+
+    .login-modal h3 {
+      margin:
+        0 0 7px;
+    }
+
+    .login-modal p {
+      color:
+        var(--muted);
+
+      font-size: 12px;
+    }
+
+    .login-field {
+      margin-bottom: 13px;
+    }
+
+    .login-field label {
+      display: block;
+
+      margin-bottom: 5px;
+
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .login-field input {
+      width: 100%;
+      height: 43px;
+
       padding:
-        40px 10px;
+        0 12px;
 
-      color: var(--muted);
+      border:
+        1px solid var(--border);
 
-      text-align: center;
+      border-radius: 10px;
     }
 
+    .login-error {
+      min-height: 20px;
 
+      color:
+        var(--red);
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+      font-size: 11px;
+    }
+
+    .login-actions {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 9px;
+    }
+
+    .login-actions button {
+      min-height: 42px;
+
+      border-radius: 10px;
+
+      cursor: pointer;
+    }
+
+    .cancel-login {
+      border:
+        1px solid var(--border);
+
+      background: white;
+    }
+
+    .submit-login {
+      border: 0;
+
+      background:
+        var(--ink);
+
+      color: white;
+    }
 
     footer {
       padding:
         32px 20px;
 
-      background: var(--ink);
+      background:
+        var(--ink);
 
       color:
         rgba(255,255,255,.45);
 
       text-align: center;
-
-      border-top:
-        2px solid rgba(213,154,31,.6);
-
-      font-size: 12px;
     }
-
-
-    footer strong {
-      color:
-        rgba(255,255,255,.85);
-    }
-
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
 
     @media (max-width: 850px) {
-
       .hero-main {
         grid-template-columns: 1fr;
 
         text-align: center;
       }
 
-
       .crest-area {
         order: 1;
       }
-
 
       .hero-copy {
         order: 2;
       }
 
-
-      .eyebrow {
-        justify-content: center;
-      }
-
-
-      .hero-copy p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-
-      .hero-actions {
-        justify-content: center;
-      }
-
-
-      .crest {
-        width: 185px;
-        height: 185px;
-      }
-
-
       .controls-row {
         grid-template-columns: 1fr;
       }
 
-
       .toolbar {
         flex-direction: column;
-        align-items: stretch;
       }
-
 
       .selectors {
-        justify-content: space-between;
+        padding-top: 0;
       }
-
     }
 
-
     @media (max-width: 650px) {
-
-      .hero-shell {
-        padding:
-          17px 17px
-          38px;
-      }
-
-
-      .hero-copy h1 {
-        font-size: 42px;
-      }
-
-
-      .hero-copy p {
-        font-size: 15px;
-      }
-
-
-      .controls {
-        padding:
-          14px 15px;
-      }
-
-
-      .toolbar {
-        padding:
-          15px 15px
-          2px;
-      }
-
-
-      .main {
-        padding:
-          20px 14px
-          55px;
-      }
-
-
       .catalog {
         grid-template-columns:
           repeat(
@@ -1150,49 +1052,20 @@
         gap: 12px;
       }
 
-
-      .product {
-        border-radius: 15px;
-      }
-
-
       .product-body {
-        min-height: 155px;
-
         padding: 12px;
       }
-
-
-      .product-name {
-        font-size: 13px;
-      }
-
-
-      .price {
-        font-size: 18px;
-      }
-
 
       .status {
         display: none;
       }
-
-
-      .select-wrap label {
-        display: none;
-      }
-
     }
 
-
     @media (max-width: 390px) {
-
       .catalog {
         grid-template-columns: 1fr;
       }
-
     }
-
   </style>
 </head>
 
@@ -1200,43 +1073,40 @@
 <body>
 
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <header class="hero">
 
   <div class="hero-shell">
 
-
     <div class="topbar">
 
       <div class="mini-brand">
-
         <span class="mini-dot"></span>
-
         Catálogo independente
-
       </div>
 
+      <div class="top-actions">
 
-      <div
-        id="contactArea"
-        class="contact"
-      >
+        <div
+          id="contactArea"
+          class="contact"
+        >
+          Contacto:
+          <strong id="contact"></strong>
+        </div>
 
-        Contacto:
-        <strong id="contact"></strong>
+        <button
+          id="internalButton"
+          class="internal-button"
+        >
+          🔒 Área interna
+        </button>
 
       </div>
 
     </div>
 
 
-
     <div class="hero-main">
-
 
       <div class="hero-copy">
 
@@ -1244,18 +1114,14 @@
           Backyard Traders
         </div>
 
-
         <h1 id="storeName">
           Backyard
           <span>Traders</span>
         </h1>
 
-
         <p id="subtitle">
-          Artigos selecionados
-          a bons preços
+          Artigos selecionados a bons preços
         </p>
-
 
         <div class="hero-actions">
 
@@ -1265,7 +1131,6 @@
           >
             Explorar artigos ↓
           </a>
-
 
           <span
             id="heroTotal"
@@ -1277,7 +1142,6 @@
         </div>
 
       </div>
-
 
 
       <div class="crest-area">
@@ -1297,7 +1161,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -1305,10 +1168,6 @@
 </header>
 
 
-
-<!-- =====================================================
-     PESQUISA
-===================================================== -->
 
 <section
   id="shop"
@@ -1318,7 +1177,6 @@
   <div class="controls">
 
     <div class="controls-row">
-
 
       <div class="catalog-info">
 
@@ -1335,22 +1193,16 @@
 
       </div>
 
-
-
       <div class="search-box">
-
-        <span>⌕</span>
 
         <input
           id="searchInput"
           type="search"
           placeholder="Pesquisar no catálogo..."
-          autocomplete="off"
         >
 
       </div>
 
-
     </div>
 
   </div>
@@ -1359,102 +1211,103 @@
 
 
 
-<!-- =====================================================
-     FILTROS / ORDENAÇÃO
-===================================================== -->
-
 <section class="toolbar">
 
+  <div class="filter-area">
 
-  <div
-    id="categories"
-    class="categories"
-  ></div>
+    <div class="filter-label">
+      Categoria
+    </div>
+
+    <div
+      id="categories"
+      class="categories"
+    ></div>
+
+    <div
+      id="conditionBlock"
+      style="display:none"
+    >
+
+      <div
+        class="filter-label"
+        style="margin-top:12px"
+      >
+        Condição
+      </div>
+
+      <div
+        id="conditions"
+        class="conditions"
+      ></div>
+
+    </div>
+
+  </div>
 
 
   <div class="selectors">
 
+    <select id="sortSelect">
 
-    <div class="select-wrap">
+      <option value="default">
+        Relevância
+      </option>
 
-      <label for="sortSelect">
-        Ordenar:
-      </label>
+      <option value="price-asc">
+        Preço: mais barato
+      </option>
 
-      <select id="sortSelect">
+      <option value="price-desc">
+        Preço: mais caro
+      </option>
 
-        <option value="default">
-          Relevância
-        </option>
+      <option value="name-asc">
+        Nome A → Z
+      </option>
 
-        <option value="price-asc">
-          Preço: mais barato
-        </option>
-
-        <option value="price-desc">
-          Preço: mais caro
-        </option>
-
-        <option value="name-asc">
-          Nome: A → Z
-        </option>
-
-      </select>
-
-    </div>
+    </select>
 
 
+    <select id="pageSizeSelect">
 
-    <div class="select-wrap">
+      <option value="20">
+        20
+      </option>
 
-      <label for="pageSizeSelect">
-        Mostrar:
-      </label>
+      <option value="50">
+        50
+      </option>
 
-      <select id="pageSizeSelect">
+      <option value="100">
+        100
+      </option>
 
-        <option value="20">
-          20
-        </option>
-
-        <option value="50">
-          50
-        </option>
-
-        <option value="100">
-          100
-        </option>
-
-      </select>
-
-    </div>
-
+    </select>
 
   </div>
 
 </section>
 
 
-
-<!-- =====================================================
-     CATÁLOGO
-===================================================== -->
 
 <main class="main">
 
   <div
     id="message"
-    class="message"
+    style="
+      text-align:center;
+      color:#777;
+      padding:40px;
+    "
   >
     A carregar artigos...
   </div>
-
 
   <section
     id="catalog"
     class="catalog"
   ></section>
-
 
   <div
     id="pagination"
@@ -1477,10 +1330,81 @@
 
 
 
+<div
+  id="loginOverlay"
+  class="modal-overlay"
+>
+
+  <div class="login-modal">
+
+    <h3>
+      Área interna
+    </h3>
+
+    <p>
+      Introduz as credenciais definidas
+      na folha Config.
+    </p>
+
+    <div class="login-field">
+
+      <label>
+        Utilizador
+      </label>
+
+      <input
+        id="loginUser"
+        type="text"
+      >
+
+    </div>
+
+    <div class="login-field">
+
+      <label>
+        Password
+      </label>
+
+      <input
+        id="loginPassword"
+        type="password"
+      >
+
+    </div>
+
+    <div
+      id="loginError"
+      class="login-error"
+    ></div>
+
+    <div class="login-actions">
+
+      <button
+        id="cancelLogin"
+        class="cancel-login"
+      >
+        Cancelar
+      </button>
+
+      <button
+        id="submitLogin"
+        class="submit-login"
+      >
+        Entrar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
 <script>
 
 /* =====================================================
-   GOOGLE SHEETS
+   SHEETS
 ===================================================== */
 
 const CSV_PRODUCTS =
@@ -1493,22 +1417,43 @@ const CSV_CONFIG =
 
 
 /* =====================================================
-   ESTADO
+   STATE
 ===================================================== */
 
-let allProducts = [];
+let configuredUser =
+  "";
 
-let filteredProducts = [];
+let configuredPassword =
+  "";
 
-let activeCategory = "Todos";
+let allProducts =
+  [];
 
-let searchQuery = "";
+let filteredProducts =
+  [];
 
-let sortMode = "default";
+let activeCategory =
+  "Todos";
 
-let pageSize = 20;
+let activeCondition =
+  "Todos";
 
-let currentPage = 1;
+let searchQuery =
+  "";
+
+let sortMode =
+  "default";
+
+let pageSize =
+  20;
+
+let currentPage =
+  1;
+
+let internalMode =
+  sessionStorage.getItem(
+    "backyard_internal"
+  ) === "1";
 
 
 
@@ -1531,8 +1476,11 @@ function parseCSV(text) {
     i++
   ) {
 
-    const char = text[i];
-    const next = text[i + 1];
+    const char =
+      text[i];
+
+    const next =
+      text[i + 1];
 
 
     if (
@@ -1551,7 +1499,8 @@ function parseCSV(text) {
       char === '"'
     ) {
 
-      quoted = !quoted;
+      quoted =
+        !quoted;
 
     }
 
@@ -1570,7 +1519,8 @@ function parseCSV(text) {
       (
         char === "\n" ||
         char === "\r"
-      ) &&
+      )
+      &&
       !quoted
     ) {
 
@@ -1578,9 +1528,7 @@ function parseCSV(text) {
         char === "\r" &&
         next === "\n"
       ) {
-
         i++;
-
       }
 
 
@@ -1635,13 +1583,11 @@ function parseCSV(text) {
 
 
 
-/* =====================================================
-   NORMALIZAÇÃO
-===================================================== */
-
 function normalizeText(value) {
 
-  return (value || "")
+  return (
+    value || ""
+  )
     .trim()
     .toLowerCase()
     .normalize("NFD")
@@ -1658,10 +1604,6 @@ function normalizeText(value) {
 
 
 
-/* =====================================================
-   PREÇO
-===================================================== */
-
 function parsePrice(value) {
 
   if (!value) {
@@ -1671,18 +1613,48 @@ function parsePrice(value) {
 
   const cleaned =
     value
-      .replace(/[^\d,.-]/g, "")
-      .replace(/\./g, "")
-      .replace(",", ".");
+      .replace(
+        /[^\d,.-]/g,
+        ""
+      )
+      .replace(
+        /\./g,
+        ""
+      )
+      .replace(
+        ",",
+        "."
+      );
 
 
-  const number =
-    parseFloat(cleaned);
+  const result =
+    parseFloat(
+      cleaned
+    );
 
 
-  return Number.isFinite(number)
-    ? number
+  return Number.isFinite(
+    result
+  )
+    ? result
     : 0;
+
+}
+
+
+
+function formatEUR(number) {
+
+  return number
+    .toLocaleString(
+      "pt-PT",
+      {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }
+    )
+    +
+    " €";
 
 }
 
@@ -1697,7 +1669,9 @@ async function loadConfig() {
   try {
 
     const response =
-      await fetch(CSV_CONFIG);
+      await fetch(
+        CSV_CONFIG
+      );
 
 
     const text =
@@ -1705,42 +1679,53 @@ async function loadConfig() {
 
 
     const rows =
-      parseCSV(text);
+      parseCSV(
+        text
+      );
 
 
-    const config = {};
+    const config =
+      {};
 
 
-    rows.forEach(row => {
+    rows.forEach(
+      row => {
 
-      const key =
-        normalizeText(
-          row[0]
-        );
-
-
-      const value =
-        (row[1] || "")
-          .trim();
+        const key =
+          normalizeText(
+            row[0]
+          );
 
 
-      if (key) {
+        const value =
+          (
+            row[1] || ""
+          ).trim();
 
-        config[key] =
-          value;
+
+        if (key) {
+
+          config[key] =
+            value;
+
+        }
 
       }
+    );
 
-    });
 
-
+    /* NOME */
 
     if (
-      config["nome da loja"]
+      config[
+        "nome da loja"
+      ]
     ) {
 
       const name =
-        config["nome da loja"];
+        config[
+          "nome da loja"
+        ];
 
 
       document.title =
@@ -1762,24 +1747,12 @@ async function loadConfig() {
     }
 
 
+    /* LOGO */
 
     if (
-      config["subtitulo"]
-    ) {
-
-      document
-        .getElementById(
-          "subtitle"
-        )
-        .textContent =
-          config["subtitulo"];
-
-    }
-
-
-
-    if (
-      config["logotipo"]
+      config[
+        "logotipo"
+      ]
     ) {
 
       const logo =
@@ -1790,7 +1763,9 @@ async function loadConfig() {
 
 
       logo.src =
-        config["logotipo"];
+        config[
+          "logotipo"
+        ];
 
 
       logo.onload =
@@ -1804,9 +1779,32 @@ async function loadConfig() {
     }
 
 
+    /* SUBTITULO */
 
     if (
-      config["contacto"]
+      config[
+        "subtitulo"
+      ]
+    ) {
+
+      document
+        .getElementById(
+          "subtitle"
+        )
+        .textContent =
+          config[
+            "subtitulo"
+          ];
+
+    }
+
+
+    /* CONTACTO */
+
+    if (
+      config[
+        "contacto"
+      ]
     ) {
 
       document
@@ -1814,7 +1812,9 @@ async function loadConfig() {
           "contact"
         )
         .textContent =
-          config["contacto"];
+          config[
+            "contacto"
+          ];
 
 
       document
@@ -1826,12 +1826,47 @@ async function loadConfig() {
 
     }
 
+
+    /* USER */
+
+    if (
+      config[
+        "user"
+      ]
+    ) {
+
+      configuredUser =
+        config[
+          "user"
+        ];
+
+    }
+
+
+    /* PASSWORD */
+
+    if (
+      config[
+        "password"
+      ]
+    ) {
+
+      configuredPassword =
+        config[
+          "password"
+        ];
+
+    }
+
+
+    updateInternalUI();
+
   }
 
   catch (error) {
 
-    console.warn(
-      "Config não carregada.",
+    console.error(
+      "Erro Config",
       error
     );
 
@@ -1844,7 +1879,9 @@ async function loadConfig() {
 function renderStoreName(name) {
 
   const words =
-    name.trim().split(/\s+/);
+    name
+      .trim()
+      .split(/\s+/);
 
 
   const last =
@@ -1862,13 +1899,7 @@ function renderStoreName(name) {
     .innerHTML =
       first
       +
-      (
-        first
-          ? " "
-          : ""
-      )
-      +
-      "<span>"
+      " <span>"
       +
       last
       +
@@ -1879,7 +1910,257 @@ function renderStoreName(name) {
 
 
 /* =====================================================
-   CARREGAR PRODUTOS
+   LOGIN
+===================================================== */
+
+function updateInternalUI() {
+
+  const button =
+    document
+      .getElementById(
+        "internalButton"
+      );
+
+
+  if (
+    internalMode
+  ) {
+
+    document.body
+      .classList
+      .add(
+        "internal-mode"
+      );
+
+
+    button
+      .classList
+      .add(
+        "logged"
+      );
+
+
+    button.textContent =
+      "🔓 Modo interno · Sair";
+
+  }
+
+  else {
+
+    document.body
+      .classList
+      .remove(
+        "internal-mode"
+      );
+
+
+    button
+      .classList
+      .remove(
+        "logged"
+      );
+
+
+    button.textContent =
+      "🔒 Área interna";
+
+  }
+
+}
+
+
+
+document
+  .getElementById(
+    "internalButton"
+  )
+  .onclick =
+    () => {
+
+      if (
+        internalMode
+      ) {
+
+        internalMode =
+          false;
+
+
+        sessionStorage
+          .removeItem(
+            "backyard_internal"
+          );
+
+
+        updateInternalUI();
+
+        renderPage();
+
+        return;
+
+      }
+
+
+      document
+        .getElementById(
+          "loginOverlay"
+        )
+        .classList
+        .add(
+          "open"
+        );
+
+    };
+
+
+
+function closeLogin() {
+
+  document
+    .getElementById(
+      "loginOverlay"
+    )
+    .classList
+    .remove(
+      "open"
+    );
+
+
+  document
+    .getElementById(
+      "loginPassword"
+    )
+    .value =
+      "";
+
+
+  document
+    .getElementById(
+      "loginError"
+    )
+    .textContent =
+      "";
+
+}
+
+
+
+function submitLogin() {
+
+  const user =
+    document
+      .getElementById(
+        "loginUser"
+      )
+      .value
+      .trim();
+
+
+  const password =
+    document
+      .getElementById(
+        "loginPassword"
+      )
+      .value;
+
+
+  const userOK =
+    normalizeText(
+      user
+    )
+    ===
+    normalizeText(
+      configuredUser
+    );
+
+
+  const passwordOK =
+    password ===
+    configuredPassword;
+
+
+  if (
+    userOK &&
+    passwordOK &&
+    configuredUser &&
+    configuredPassword
+  ) {
+
+    internalMode =
+      true;
+
+
+    sessionStorage
+      .setItem(
+        "backyard_internal",
+        "1"
+      );
+
+
+    closeLogin();
+
+    updateInternalUI();
+
+    renderPage();
+
+  }
+
+  else {
+
+    document
+      .getElementById(
+        "loginError"
+      )
+      .textContent =
+        "Utilizador ou password incorretos.";
+
+  }
+
+}
+
+
+
+document
+  .getElementById(
+    "cancelLogin"
+  )
+  .onclick =
+    closeLogin;
+
+
+
+document
+  .getElementById(
+    "submitLogin"
+  )
+  .onclick =
+    submitLogin;
+
+
+
+document
+  .getElementById(
+    "loginPassword"
+  )
+  .addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key ===
+        "Enter"
+      ) {
+
+        submitLogin();
+
+      }
+
+    }
+  );
+
+
+
+/* =====================================================
+   PRODUCTS
 ===================================================== */
 
 async function loadProducts() {
@@ -1897,92 +2178,107 @@ async function loadProducts() {
 
 
     const rows =
-      parseCSV(text);
-
-
-    const headers =
-      rows[0].map(
-        header =>
-          header.trim()
+      parseCSV(
+        text
       );
 
 
-    const rawProducts =
+    const headers =
+      rows[0]
+        .map(
+          h =>
+            h.trim()
+        );
+
+
+    const products =
       rows
         .slice(1)
 
-        .map(values => {
+        .map(
+          values => {
 
-          const product = {};
+            const product =
+              {};
 
 
-          headers.forEach(
-            (
-              header,
-              index
-            ) => {
+            headers.forEach(
+              (
+                header,
+                index
+              ) => {
 
-              product[header] =
-                (
-                  values[index]
-                  || ""
-                ).trim();
+                product[
+                  header
+                ] =
+                  (
+                    values[
+                      index
+                    ] || ""
+                  ).trim();
+
+              }
+            );
+
+
+            return product;
+
+          }
+        )
+
+        .filter(
+          product => {
+
+            const name =
+              product[
+                "Produto"
+              ] || "";
+
+
+            const status =
+              product[
+                "Disponibilidade"
+              ] || "";
+
+
+            if (!name) {
+
+              return false;
 
             }
-          );
 
 
-          return product;
-
-        })
-
-        .filter(product => {
-
-          const name =
-            product[
-              "Produto"
-            ] || "";
-
-
-          const status =
-            product[
-              "Disponibilidade"
-            ] || "";
-
-
-          if (!name) {
-            return false;
-          }
-
-
-          if (
-            status &&
-            normalizeText(status)
+            if (
+              status &&
+              normalizeText(
+                status
+              )
               !==
               "disponivel"
-          ) {
+            ) {
 
-            return false;
+              return false;
+
+            }
+
+
+            return true;
 
           }
-
-
-          return true;
-
-        });
+        );
 
 
     allProducts =
       groupDuplicates(
-        rawProducts
+        products
       );
 
 
     buildCategories();
 
+    buildConditions();
 
     applyFilters();
-
 
     updateHeroTotal();
 
@@ -1992,14 +2288,6 @@ async function loadProducts() {
 
     console.error(error);
 
-
-    document
-      .getElementById(
-        "message"
-      )
-      .textContent =
-        "Não foi possível carregar os artigos.";
-
   }
 
 }
@@ -2007,7 +2295,7 @@ async function loadProducts() {
 
 
 /* =====================================================
-   AGRUPAR REPETIDOS
+   GROUP DUPLICATES
 ===================================================== */
 
 function groupDuplicates(products) {
@@ -2016,124 +2304,188 @@ function groupDuplicates(products) {
     new Map();
 
 
-  products.forEach(product => {
+  products.forEach(
+    product => {
 
-    const name =
-      normalizeText(
+      const name =
+        normalizeText(
+          product[
+            "Produto"
+          ]
+        );
+
+
+      const description =
+        normalizeText(
+          product[
+            "Descrição"
+          ]
+        );
+
+
+      const key =
+        description
+          ?
+            name
+            +
+            "|"
+            +
+            description
+          :
+            name;
+
+
+      if (
+        !groups.has(
+          key
+        )
+      ) {
+
+        groups.set(
+          key,
+          {
+            ...product,
+
+            quantity: 0,
+
+            links: [],
+
+            prices: [],
+
+            costs: [],
+
+            margins: [],
+
+            images: [],
+
+            conditions: []
+          }
+        );
+
+      }
+
+
+      const group =
+        groups.get(
+          key
+        );
+
+
+      group.quantity++;
+
+
+      const link =
         product[
-          "Produto"
-        ]
-      );
+          "Link Venda"
+        ];
 
 
-    const description =
-      normalizeText(
+      if (
+        link &&
+        !group.links
+          .includes(
+            link
+          )
+      ) {
+
+        group.links.push(
+          link
+        );
+
+      }
+
+
+      const price =
+        parsePrice(
+          product[
+            "Preço venda"
+          ]
+        );
+
+
+      const cost =
+        parsePrice(
+          product[
+            "Preço custo"
+          ]
+        );
+
+
+      if (price > 0) {
+
+        group.prices.push(
+          price
+        );
+
+      }
+
+
+      if (cost > 0) {
+
+        group.costs.push(
+          cost
+        );
+
+      }
+
+
+      if (
+        price > 0 &&
+        cost > 0
+      ) {
+
+        group.margins.push(
+          price - cost
+        );
+
+      }
+
+
+      const image =
         product[
-          "Descrição"
-        ]
-      );
+          "Imagem"
+        ];
 
 
-    /*
-      Se existir Descrição,
-      também entra na comparação.
+      if (
+        image &&
+        !group.images
+          .includes(
+            image
+          )
+      ) {
 
-      Caso não exista,
-      basta o nome Produto.
-    */
+        group.images.push(
+          image
+        );
 
-    const key =
-      description
-        ? name + "|" + description
-        : name;
-
-
-    if (
-      !groups.has(key)
-    ) {
-
-      groups.set(
-        key,
-        {
-          ...product,
-
-          quantity: 0,
-
-          links: [],
-
-          prices: [],
-
-          images: []
-        }
-      );
-
-    }
+      }
 
 
-    const group =
-      groups.get(key);
+      const condition =
+        (
+          product[
+            "Condição"
+          ] || ""
+        ).trim();
 
 
-    group.quantity++;
+      if (
+        condition &&
+        !group.conditions
+          .includes(
+            condition
+          )
+      ) {
 
+        group.conditions.push(
+          condition
+        );
 
-    const salesLink =
-      product[
-        "Link Venda"
-      ];
-
-
-    if (
-      salesLink &&
-      !group.links.includes(
-        salesLink
-      )
-    ) {
-
-      group.links.push(
-        salesLink
-      );
+      }
 
     }
-
-
-    const price =
-      parsePrice(
-        product[
-          "Preço venda"
-        ]
-      );
-
-
-    if (
-      Number.isFinite(price)
-    ) {
-
-      group.prices.push(
-        price
-      );
-
-    }
-
-
-    const image =
-      product["Imagem"];
-
-
-    if (
-      image &&
-      !group.images.includes(
-        image
-      )
-    ) {
-
-      group.images.push(
-        image
-      );
-
-    }
-
-  });
+  );
 
 
   return [
@@ -2145,63 +2497,215 @@ function groupDuplicates(products) {
 
 
 /* =====================================================
-   CATEGORIAS
+   FILTERS
 ===================================================== */
 
 function buildCategories() {
 
-  const container =
-    document
-      .getElementById(
-        "categories"
-      );
+  buildFilter(
+    "categories",
+    "Categoria",
+    "category"
+  );
+
+}
 
 
-  const categories =
+
+function buildConditions() {
+
+  const values =
+    [
+      ...new Set(
+
+        allProducts
+          .flatMap(
+            p =>
+              p.conditions || []
+          )
+
+      )
+    ]
+    .filter(Boolean);
+
+
+  if (
+    !values.length
+  ) {
+
+    return;
+
+  }
+
+
+  document
+    .getElementById(
+      "conditionBlock"
+    )
+    .style.display =
+      "block";
+
+
+  createButtons(
+    "conditions",
+    values,
+    "condition"
+  );
+
+}
+
+
+
+function buildFilter(
+  id,
+  field,
+  type
+) {
+
+  const values =
     [
       ...new Set(
 
         allProducts
           .map(
-            product =>
+            p =>
               (
-                product[
-                  "Categoria"
-                ] || ""
+                p[field] || ""
               ).trim()
           )
-          .filter(Boolean)
 
       )
     ]
-    .sort(
-      (a,b) =>
-        a.localeCompare(
-          b,
-          "pt"
-        )
-    );
+    .filter(Boolean);
+
+
+  createButtons(
+    id,
+    values,
+    type
+  );
+
+}
+
+
+
+function createButtons(
+  id,
+  values,
+  type
+) {
+
+  const container =
+    document
+      .getElementById(
+        id
+      );
 
 
   container.innerHTML =
     "";
 
 
-  createCategoryButton(
-    "Todos",
-    container,
-    true
-  );
+  const all =
+    [
+      "Todos",
+      ...values
+    ];
 
 
-  categories.forEach(
-    category => {
+  all.forEach(
+    value => {
 
-      createCategoryButton(
-        category,
-        container,
-        false
-      );
+      const button =
+        document
+          .createElement(
+            "button"
+          );
+
+
+      button.textContent =
+        value;
+
+
+      button.className =
+        type ===
+          "category"
+
+          ?
+            "category-button"
+
+          :
+            "condition-button";
+
+
+      if (
+        value ===
+        "Todos"
+      ) {
+
+        button
+          .classList
+          .add(
+            "active"
+          );
+
+      }
+
+
+      button.onclick =
+        () => {
+
+          if (
+            type ===
+            "category"
+          ) {
+
+            activeCategory =
+              value;
+
+          }
+
+          else {
+
+            activeCondition =
+              value;
+
+          }
+
+
+          container
+            .querySelectorAll(
+              "button"
+            )
+            .forEach(
+              b =>
+                b.classList
+                  .remove(
+                    "active"
+                  )
+            );
+
+
+          button
+            .classList
+            .add(
+              "active"
+            );
+
+
+          currentPage =
+            1;
+
+
+          applyFilters();
+
+        };
+
+
+      container
+        .appendChild(
+          button
+        );
 
     }
   );
@@ -2210,77 +2714,8 @@ function buildCategories() {
 
 
 
-function createCategoryButton(
-  category,
-  container,
-  active
-) {
-
-  const button =
-    document
-      .createElement(
-        "button"
-      );
-
-
-  button.className =
-    "category-button"
-    +
-    (
-      active
-        ? " active"
-        : ""
-    );
-
-
-  button.textContent =
-    category;
-
-
-  button.onclick =
-    () => {
-
-      activeCategory =
-        category;
-
-
-      currentPage =
-        1;
-
-
-      document
-        .querySelectorAll(
-          ".category-button"
-        )
-        .forEach(
-          element =>
-            element.classList
-              .remove(
-                "active"
-              )
-        );
-
-
-      button.classList.add(
-        "active"
-      );
-
-
-      applyFilters();
-
-    };
-
-
-  container.appendChild(
-    button
-  );
-
-}
-
-
-
 /* =====================================================
-   FILTRAR
+   FILTER + SORT
 ===================================================== */
 
 function applyFilters() {
@@ -2327,23 +2762,82 @@ function applyFilters() {
 
         const categoryMatch =
           activeCategory ===
-            "Todos"
+          "Todos"
           ||
           category ===
-            activeCategory;
+          activeCategory;
+
+
+        const conditionMatch =
+          activeCondition ===
+          "Todos"
+          ||
+          (
+            product.conditions
+            || []
+          )
+          .includes(
+            activeCondition
+          );
 
 
         return (
           searchMatch
           &&
           categoryMatch
+          &&
+          conditionMatch
         );
 
       }
     );
 
 
-  sortProducts();
+  if (
+    sortMode ===
+    "price-asc"
+  ) {
+
+    filteredProducts.sort(
+      (a,b) =>
+        getPrice(a)
+        -
+        getPrice(b)
+    );
+
+  }
+
+
+  if (
+    sortMode ===
+    "price-desc"
+  ) {
+
+    filteredProducts.sort(
+      (a,b) =>
+        getPrice(b)
+        -
+        getPrice(a)
+    );
+
+  }
+
+
+  if (
+    sortMode ===
+    "name-asc"
+  ) {
+
+    filteredProducts.sort(
+      (a,b) =>
+        a["Produto"]
+          .localeCompare(
+            b["Produto"],
+            "pt"
+          )
+    );
+
+  }
 
 
   renderPage();
@@ -2352,165 +2846,30 @@ function applyFilters() {
 
 
 
-/* =====================================================
-   ORDENAÇÃO
-===================================================== */
+function getPrice(product) {
 
-function getProductPrice(product) {
+  return product.prices
+    ?.length
 
-  if (
-    product.prices &&
-    product.prices.length
-  ) {
+    ?
+      Math.min(
+        ...product.prices
+      )
 
-    return Math.min(
-      ...product.prices
-    );
-
-  }
-
-
-  return parsePrice(
-    product[
-      "Preço venda"
-    ]
-  );
-
-}
-
-
-
-function sortProducts() {
-
-  if (
-    sortMode ===
-      "price-asc"
-  ) {
-
-    filteredProducts.sort(
-      (a,b) =>
-        getProductPrice(a)
-        -
-        getProductPrice(b)
-    );
-
-  }
-
-
-  else if (
-    sortMode ===
-      "price-desc"
-  ) {
-
-    filteredProducts.sort(
-      (a,b) =>
-        getProductPrice(b)
-        -
-        getProductPrice(a)
-    );
-
-  }
-
-
-  else if (
-    sortMode ===
-      "name-asc"
-  ) {
-
-    filteredProducts.sort(
-      (a,b) =>
-        (
-          a["Produto"] || ""
-        )
-        .localeCompare(
-          b["Produto"] || "",
-          "pt"
-        )
-    );
-
-  }
+    :
+      0;
 
 }
 
 
 
 /* =====================================================
-   PREÇO VISUAL
-===================================================== */
-
-function formatNumberEUR(number) {
-
-  return number.toLocaleString(
-    "pt-PT",
-    {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2
-    }
-  )
-  +
-  " €";
-
-}
-
-
-
-function getPriceLabel(product) {
-
-  const prices =
-    product.prices || [];
-
-
-  if (!prices.length) {
-
-    return (
-      product[
-        "Preço venda"
-      ] || ""
-    );
-
-  }
-
-
-  const min =
-    Math.min(...prices);
-
-
-  const max =
-    Math.max(...prices);
-
-
-  if (
-    Math.abs(
-      max - min
-    ) < 0.001
-  ) {
-
-    return formatNumberEUR(
-      min
-    );
-
-  }
-
-
-  return (
-    formatNumberEUR(min)
-    +
-    " – "
-    +
-    formatNumberEUR(max)
-  );
-
-}
-
-
-
-/* =====================================================
-   RENDER DA PÁGINA
+   RENDER
 ===================================================== */
 
 function renderPage() {
 
-  const totalPages =
+  const pages =
     Math.max(
       1,
       Math.ceil(
@@ -2523,11 +2882,11 @@ function renderPage() {
 
   if (
     currentPage >
-      totalPages
+    pages
   ) {
 
     currentPage =
-      totalPages;
+      pages;
 
   }
 
@@ -2540,20 +2899,16 @@ function renderPage() {
     pageSize;
 
 
-  const products =
+  renderProducts(
     filteredProducts.slice(
       start,
       start + pageSize
-    );
-
-
-  renderProducts(
-    products
+    )
   );
 
 
   renderPagination(
-    totalPages
+    pages
   );
 
 
@@ -2563,9 +2918,45 @@ function renderPage() {
 
 
 
-/* =====================================================
-   CARTÕES
-===================================================== */
+function rangeLabel(values) {
+
+  if (
+    !values ||
+    !values.length
+  ) {
+
+    return "—";
+
+  }
+
+
+  const min =
+    Math.min(
+      ...values
+    );
+
+
+  const max =
+    Math.max(
+      ...values
+    );
+
+
+  return min === max
+
+    ?
+      formatEUR(min)
+
+    :
+      formatEUR(min)
+      +
+      " – "
+      +
+      formatEUR(max);
+
+}
+
+
 
 function renderProducts(products) {
 
@@ -2591,50 +2982,8 @@ function renderProducts(products) {
     "";
 
 
-  if (
-    !products.length
-  ) {
-
-    message.textContent =
-      "Não encontrámos artigos com esses critérios.";
-
-    return;
-
-  }
-
-
   products.forEach(
     product => {
-
-
-      const name =
-        product[
-          "Produto"
-        ] || "";
-
-
-      const category =
-        product[
-          "Categoria"
-        ] || "";
-
-
-      const status =
-        product[
-          "Disponibilidade"
-        ] || "Disponível";
-
-
-      const image =
-        (
-          product.images &&
-          product.images[0]
-        )
-        ||
-        product["Imagem"]
-        ||
-        "";
-
 
       const card =
         document
@@ -2647,9 +2996,6 @@ function renderProducts(products) {
         "product";
 
 
-
-      /* IMAGEM */
-
       const imageBox =
         document
           .createElement(
@@ -2661,7 +3007,11 @@ function renderProducts(products) {
         "image-box";
 
 
-      if (category) {
+      if (
+        product[
+          "Categoria"
+        ]
+      ) {
 
         const badge =
           document
@@ -2675,19 +3025,22 @@ function renderProducts(products) {
 
 
         badge.textContent =
-          category;
+          product[
+            "Categoria"
+          ];
 
 
-        imageBox.appendChild(
-          badge
-        );
+        imageBox
+          .appendChild(
+            badge
+          );
 
       }
 
 
-
       if (
-        product.quantity > 1
+        product.quantity >
+        1
       ) {
 
         const quantity =
@@ -2707,12 +3060,16 @@ function renderProducts(products) {
           " unidades";
 
 
-        imageBox.appendChild(
-          quantity
-        );
+        imageBox
+          .appendChild(
+            quantity
+          );
 
       }
 
+
+      const image =
+        product.images?.[0];
 
 
       if (image) {
@@ -2728,78 +3085,13 @@ function renderProducts(products) {
           image;
 
 
-        img.alt =
-          name;
-
-
-        img.loading =
-          "lazy";
-
-
-        img.decoding =
-          "async";
-
-
-        img.onerror =
-          () => {
-
-            img.remove();
-
-
-            const fallback =
-              document
-                .createElement(
-                  "span"
-                );
-
-
-            fallback.className =
-              "no-image";
-
-
-            fallback.textContent =
-              "Imagem indisponível";
-
-
-            imageBox.appendChild(
-              fallback
-            );
-
-          };
-
-
-        imageBox.appendChild(
-          img
-        );
+        imageBox
+          .appendChild(
+            img
+          );
 
       }
 
-      else {
-
-        const noImage =
-          document
-            .createElement(
-              "span"
-            );
-
-
-        noImage.className =
-          "no-image";
-
-
-        noImage.textContent =
-          "Sem imagem";
-
-
-        imageBox.appendChild(
-          noImage
-        );
-
-      }
-
-
-
-      /* CORPO */
 
       const body =
         document
@@ -2824,7 +3116,9 @@ function renderProducts(products) {
 
 
       title.textContent =
-        name;
+        product[
+          "Produto"
+        ];
 
 
       const footer =
@@ -2861,50 +3155,125 @@ function renderProducts(products) {
 
 
       price.textContent =
-        getPriceLabel(
-          product
+        rangeLabel(
+          product.prices
         );
 
 
-      const statusElement =
+      const status =
         document
           .createElement(
             "span"
           );
 
 
-      statusElement.className =
+      status.className =
         "status";
 
 
-      statusElement.textContent =
-        status;
+      status.textContent =
+        "Disponível";
 
 
-      priceRow.appendChild(
-        price
+      priceRow.append(
+        price,
+        status
       );
 
 
-      priceRow.appendChild(
-        statusElement
-      );
+      footer
+        .appendChild(
+          priceRow
+        );
 
 
-      footer.appendChild(
-        priceRow
-      );
+      const conditionRow =
+        document
+          .createElement(
+            "div"
+          );
 
 
-
-      /* LINKS */
-
-      const links =
-        product.links || [];
+      conditionRow.className =
+        "condition-row";
 
 
       if (
-        links.length === 1
+        product.conditions
+        ?.length
+      ) {
+
+        const condition =
+          document
+            .createElement(
+              "span"
+            );
+
+
+        condition.className =
+          "condition-tag";
+
+
+        condition.textContent =
+          product.conditions
+            .join(
+              " · "
+            );
+
+
+        conditionRow
+          .appendChild(
+            condition
+          );
+
+      }
+
+
+      footer
+        .appendChild(
+          conditionRow
+        );
+
+
+      const internal =
+        document
+          .createElement(
+            "div"
+          );
+
+
+      internal.className =
+        "internal-price-box";
+
+
+      internal.innerHTML =
+        `
+        <div class="internal-line">
+          <span>Custo</span>
+          <strong>${rangeLabel(product.costs)}</strong>
+        </div>
+
+        <div class="internal-line">
+          <span>Venda</span>
+          <strong>${rangeLabel(product.prices)}</strong>
+        </div>
+
+        <div class="internal-line margin">
+          <span>Margem</span>
+          <strong>${rangeLabel(product.margins)}</strong>
+        </div>
+        `;
+
+
+      footer
+        .appendChild(
+          internal
+        );
+
+
+      if (
+        product.links.length ===
+        1
       ) {
 
         const button =
@@ -2919,148 +3288,41 @@ function renderProducts(products) {
 
 
         button.href =
-          links[0];
+          product.links[0];
 
 
         button.target =
           "_blank";
 
 
-        button.rel =
-          "noopener noreferrer";
-
-
         button.textContent =
           "Ver artigo ↗";
 
 
-        footer.appendChild(
-          button
-        );
+        footer
+          .appendChild(
+            button
+          );
 
       }
 
 
-      else if (
-        links.length > 1
-      ) {
-
-        const button =
-          document
-            .createElement(
-              "button"
-            );
-
-
-        button.className =
-          "product-button";
-
-
-        button.textContent =
-          "Ver "
-          +
-          links.length
-          +
-          " opções";
-
-
-        const list =
-          document
-            .createElement(
-              "div"
-            );
-
-
-        list.className =
-          "links-list";
-
-
-        links.forEach(
-          (link,index) => {
-
-            const anchor =
-              document
-                .createElement(
-                  "a"
-                );
-
-
-            anchor.href =
-              link;
-
-
-            anchor.target =
-              "_blank";
-
-
-            anchor.rel =
-              "noopener noreferrer";
-
-
-            anchor.textContent =
-              "Artigo "
-              +
-              (
-                index + 1
-              )
-              +
-              " ↗";
-
-
-            list.appendChild(
-              anchor
-            );
-
-          }
-        );
-
-
-        button.onclick =
-          () => {
-
-            list.classList.toggle(
-              "open"
-            );
-
-          };
-
-
-        footer.appendChild(
-          button
-        );
-
-
-        footer.appendChild(
-          list
-        );
-
-      }
-
-
-
-      body.appendChild(
-        title
-      );
-
-
-      body.appendChild(
+      body.append(
+        title,
         footer
       );
 
 
-      card.appendChild(
-        imageBox
-      );
-
-
-      card.appendChild(
+      card.append(
+        imageBox,
         body
       );
 
 
-      catalog.appendChild(
-        card
-      );
+      catalog
+        .appendChild(
+          card
+        );
 
     }
   );
@@ -3070,11 +3332,11 @@ function renderProducts(products) {
 
 
 /* =====================================================
-   PAGINAÇÃO
+   PAGINATION
 ===================================================== */
 
 function renderPagination(
-  totalPages
+  pages
 ) {
 
   const container =
@@ -3089,7 +3351,7 @@ function renderPagination(
 
 
   if (
-    totalPages <= 1
+    pages <= 1
   ) {
 
     return;
@@ -3097,173 +3359,74 @@ function renderPagination(
   }
 
 
-  createPageButton(
-    "‹",
-    currentPage - 1,
-    currentPage === 1
-  );
-
-
-  const start =
-    Math.max(
-      1,
-      currentPage - 2
-    );
-
-
-  const end =
-    Math.min(
-      totalPages,
-      currentPage + 2
-    );
-
-
   for (
-    let page = start;
-    page <= end;
-    page++
+    let p = 1;
+    p <= pages;
+    p++
   ) {
 
-    createPageButton(
-      page,
-      page,
-      false,
-      page === currentPage
-    );
-
-  }
+    const button =
+      document
+        .createElement(
+          "button"
+        );
 
 
-  createPageButton(
-    "›",
-    currentPage + 1,
-    currentPage ===
-      totalPages
-  );
-
-}
+    button.className =
+      "page-button";
 
 
+    if (
+      p ===
+      currentPage
+    ) {
 
-function createPageButton(
-  label,
-  page,
-  disabled,
-  active = false
-) {
+      button
+        .classList
+        .add(
+          "active"
+        );
 
-  const button =
-    document
-      .createElement(
-        "button"
+    }
+
+
+    button.textContent =
+      p;
+
+
+    button.onclick =
+      () => {
+
+        currentPage =
+          p;
+
+
+        renderPage();
+
+      };
+
+
+    container
+      .appendChild(
+        button
       );
 
-
-  button.className =
-    "page-button"
-    +
-    (
-      active
-        ? " active"
-        : ""
-    );
-
-
-  button.textContent =
-    label;
-
-
-  button.disabled =
-    disabled;
-
-
-  button.onclick =
-    () => {
-
-      currentPage =
-        page;
-
-
-      renderPage();
-
-
-      document
-        .getElementById(
-          "shop"
-        )
-        .scrollIntoView();
-
-    };
-
-
-  document
-    .getElementById(
-      "pagination"
-    )
-    .appendChild(
-      button
-    );
+  }
 
 }
 
 
 
-/* =====================================================
-   CONTADOR
-===================================================== */
-
 function updateCounter() {
-
-  const total =
-    filteredProducts.length;
-
-
-  const rawQuantity =
-    filteredProducts.reduce(
-      (
-        sum,
-        product
-      ) =>
-        sum
-        +
-        (
-          product.quantity
-          || 1
-        ),
-      0
-    );
-
-
-  let text =
-    total
-    +
-    (
-      total === 1
-        ? " produto"
-        : " produtos"
-    );
-
-
-  if (
-    rawQuantity !== total
-  ) {
-
-    text +=
-      " · "
-      +
-      rawQuantity
-      +
-      " unidades";
-
-  }
-
 
   document
     .getElementById(
       "counter"
     )
     .textContent =
-      text;
+      filteredProducts.length
+      +
+      " produtos";
 
 }
 
@@ -3271,22 +3434,15 @@ function updateCounter() {
 
 function updateHeroTotal() {
 
-  const products =
-    allProducts.length;
-
-
   const units =
     allProducts.reduce(
       (
-        sum,
+        total,
         product
       ) =>
-        sum
+        total
         +
-        (
-          product.quantity
-          || 1
-        ),
+        product.quantity,
       0
     );
 
@@ -3296,7 +3452,7 @@ function updateHeroTotal() {
       "heroTotal"
     )
     .textContent =
-      products
+      allProducts.length
       +
       " produtos · "
       +
@@ -3309,15 +3465,14 @@ function updateHeroTotal() {
 
 
 /* =====================================================
-   EVENTOS
+   EVENTS
 ===================================================== */
 
 document
   .getElementById(
     "searchInput"
   )
-  .addEventListener(
-    "input",
+  .oninput =
     function () {
 
       searchQuery =
@@ -3332,8 +3487,7 @@ document
 
       applyFilters();
 
-    }
-  );
+    };
 
 
 
@@ -3341,8 +3495,7 @@ document
   .getElementById(
     "sortSelect"
   )
-  .addEventListener(
-    "change",
+  .onchange =
     function () {
 
       sortMode =
@@ -3355,8 +3508,7 @@ document
 
       applyFilters();
 
-    }
-  );
+    };
 
 
 
@@ -3364,8 +3516,7 @@ document
   .getElementById(
     "pageSizeSelect"
   )
-  .addEventListener(
-    "change",
+  .onchange =
     function () {
 
       pageSize =
@@ -3380,8 +3531,7 @@ document
 
       renderPage();
 
-    }
-  );
+    };
 
 
 
@@ -3392,6 +3542,8 @@ document
 loadConfig();
 
 loadProducts();
+
+updateInternalUI();
 
 </script>
 
