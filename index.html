@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
 
   <meta charset="UTF-8">
@@ -16,14 +17,14 @@
 
   <meta
     name="description"
-    content="Backyard Traders - artigos selecionados a bons preços. Consulte o nosso catálogo online."
+    content="Backyard Traders - artigos selecionados a bons preços."
   >
 
   <title>Backyard Traders</title>
 
 
   <!-- =====================================================
-       GOOGLE ANALYTICS 4
+       GOOGLE ANALYTICS
   ====================================================== -->
 
   <script
@@ -32,24 +33,31 @@
   </script>
 
   <script>
-    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer =
+      window.dataLayer || [];
 
     function gtag() {
       dataLayer.push(arguments);
     }
 
-    gtag("js", new Date());
+    gtag(
+      "js",
+      new Date()
+    );
 
     gtag(
       "config",
       "G-XF07V9EBNP"
     );
+
   </script>
 
 
   <style>
 
     :root {
+
       --ink: #101113;
 
       --gold: #d59a1f;
@@ -79,10 +87,13 @@
       --radius: 20px;
 
       --shadow:
-        0 6px 22px rgba(0,0,0,.055);
+        0 6px 22px
+        rgba(0,0,0,.055);
 
       --shadow-hover:
-        0 18px 46px rgba(0,0,0,.11);
+        0 18px 46px
+        rgba(0,0,0,.11);
+
     }
 
 
@@ -97,6 +108,7 @@
 
 
     body {
+
       margin: 0;
 
       font-family:
@@ -108,10 +120,15 @@
         Arial,
         sans-serif;
 
-      background: var(--cream);
-      color: var(--text);
+      background:
+        var(--cream);
 
-      -webkit-font-smoothing: antialiased;
+      color:
+        var(--text);
+
+      -webkit-font-smoothing:
+        antialiased;
+
     }
 
 
@@ -127,19 +144,23 @@
     }
 
 
+
     /* =====================================================
        HERO
     ===================================================== */
 
     .hero {
+
       color: white;
 
       background:
+
         radial-gradient(
           circle at 82% 12%,
           rgba(213,154,31,.20),
           transparent 31%
         ),
+
         linear-gradient(
           135deg,
           #242529,
@@ -148,110 +169,173 @@
         );
 
       border-bottom:
-        2px solid rgba(213,154,31,.65);
+        2px solid
+        rgba(213,154,31,.65);
+
     }
 
 
     .hero-shell {
-      max-width: 1240px;
-      margin: auto;
+
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
-        24px 25px
-        52px;
+        24px 25px 52px;
+
     }
 
 
     .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      gap: 20px;
+      display:
+        flex;
 
-      padding-bottom: 18px;
-      margin-bottom: 37px;
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        20px;
+
+      padding-bottom:
+        18px;
+
+      margin-bottom:
+        37px;
 
       border-bottom:
-        1px solid rgba(255,255,255,.10);
+        1px solid
+        rgba(255,255,255,.10);
+
     }
 
 
     .mini-brand {
-      display: flex;
-      align-items: center;
 
-      gap: 9px;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
 
       color:
         rgba(255,255,255,.70);
 
-      text-transform: uppercase;
-      letter-spacing: .12em;
+      text-transform:
+        uppercase;
 
-      font-size: 11px;
-      font-weight: 800;
+      letter-spacing:
+        .12em;
+
+      font-size:
+        11px;
+
+      font-weight:
+        800;
+
     }
 
 
     .mini-dot {
-      width: 8px;
-      height: 8px;
 
-      border-radius: 50%;
+      width:
+        8px;
 
-      background: var(--gold);
+      height:
+        8px;
+
+      border-radius:
+        50%;
+
+      background:
+        var(--gold);
 
       box-shadow:
-        0 0 14px rgba(213,154,31,.9);
+        0 0 14px
+        rgba(213,154,31,.9);
+
     }
 
 
     .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 9px;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
     }
 
 
     .contact {
-      display: none;
 
-      padding: 9px 14px;
+      display:
+        none;
+
+      padding:
+        9px 14px;
 
       border:
-        1px solid rgba(255,255,255,.14);
+        1px solid
+        rgba(255,255,255,.14);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         rgba(255,255,255,.05);
 
-      font-size: 12px;
+      font-size:
+        12px;
+
     }
 
 
     .internal-button {
+
       border:
-        1px solid rgba(255,255,255,.15);
+        1px solid
+        rgba(255,255,255,.15);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      padding: 9px 14px;
+      padding:
+        9px 14px;
 
       background:
         rgba(255,255,255,.06);
 
-      color: white;
+      color:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 12px;
-      font-weight: 700;
+      font-size:
+        12px;
+
+      font-weight:
+        700;
+
     }
 
 
     .internal-button.logged {
+
       background:
         rgba(213,154,31,.15);
 
@@ -260,72 +344,112 @@
 
       color:
         var(--gold-light);
+
     }
 
 
     .hero-main {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         minmax(0,1fr)
         290px;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 65px;
+      gap:
+        65px;
+
     }
 
 
     .eyebrow {
-      display: flex;
-      align-items: center;
 
-      gap: 10px;
+      display:
+        flex;
 
-      margin-bottom: 15px;
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin-bottom:
+        15px;
 
       color:
         var(--gold-light);
 
-      text-transform: uppercase;
-      letter-spacing: .14em;
+      text-transform:
+        uppercase;
 
-      font-size: 11px;
-      font-weight: 850;
+      letter-spacing:
+        .14em;
+
+      font-size:
+        11px;
+
+      font-weight:
+        850;
+
     }
 
 
     .eyebrow::before {
+
       content: "";
 
-      width: 30px;
-      height: 1px;
+      width:
+        30px;
 
-      background: var(--gold);
+      height:
+        1px;
+
+      background:
+        var(--gold);
+
     }
 
 
     .hero-copy h1 {
-      margin: 0;
+
+      margin:
+        0;
 
       font-size:
-        clamp(42px,6vw,67px);
+        clamp(
+          42px,
+          6vw,
+          67px
+        );
 
-      line-height: .98;
+      line-height:
+        .98;
 
-      letter-spacing: -.045em;
+      letter-spacing:
+        -.045em;
 
-      font-weight: 850;
+      font-weight:
+        850;
+
     }
 
 
     .hero-copy h1 span {
-      color: var(--gold-light);
+
+      color:
+        var(--gold-light);
+
     }
 
 
     .hero-copy p {
-      max-width: 640px;
+
+      max-width:
+        640px;
 
       margin:
         21px 0 0;
@@ -333,34 +457,54 @@
       color:
         rgba(255,255,255,.67);
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      font-size: 17px;
+      font-size:
+        17px;
+
     }
 
 
     .hero-actions {
-      margin-top: 27px;
 
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
+      margin-top:
+        27px;
 
-      gap: 14px;
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      align-items:
+        center;
+
+      gap:
+        14px;
+
     }
 
 
     .hero-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
 
-      min-height: 47px;
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      min-height:
+        47px;
 
       padding:
         0 21px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         linear-gradient(
@@ -369,21 +513,31 @@
           var(--gold)
         );
 
-      color: #16120a;
+      color:
+        #16120a;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      font-size: 13px;
-      font-weight: 850;
+      font-size:
+        13px;
+
+      font-weight:
+        850;
+
     }
 
 
     .hero-total {
+
       color:
         rgba(255,255,255,.58);
 
-      font-size: 12px;
+      font-size:
+        12px;
+
     }
+
 
 
     /* =====================================================
@@ -391,22 +545,38 @@
     ===================================================== */
 
     .crest-area {
-      display: flex;
-      justify-content: center;
+
+      display:
+        flex;
+
+      justify-content:
+        center;
+
     }
 
 
     .crest {
-      width: 235px;
-      height: 235px;
 
-      padding: 6px;
+      width:
+        235px;
 
-      border-radius: 50%;
+      height:
+        235px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding:
+        6px;
+
+      border-radius:
+        50%;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
 
       background:
         linear-gradient(
@@ -416,33 +586,53 @@
         );
 
       box-shadow:
-        0 30px 65px rgba(0,0,0,.38),
-        0 0 0 8px rgba(213,154,31,.06);
+        0 30px 65px
+        rgba(0,0,0,.38),
+        0 0 0 8px
+        rgba(213,154,31,.06);
+
     }
 
 
     .crest-inner {
-      width: 100%;
-      height: 100%;
 
-      overflow: hidden;
+      width:
+        100%;
 
-      border-radius: 50%;
+      height:
+        100%;
 
-      background: #111;
+      overflow:
+        hidden;
+
+      border-radius:
+        50%;
+
+      background:
+        #111;
+
     }
 
 
     .crest img {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
+      width:
+        100%;
 
-      border-radius: 50%;
+      height:
+        100%;
 
-      display: none;
+      object-fit:
+        cover;
+
+      border-radius:
+        50%;
+
+      display:
+        none;
+
     }
+
 
 
     /* =====================================================
@@ -450,10 +640,15 @@
     ===================================================== */
 
     .controls-wrap {
-      position: sticky;
-      top: 0;
 
-      z-index: 30;
+      position:
+        sticky;
+
+      top:
+        0;
+
+      z-index:
+        30;
 
       background:
         rgba(250,249,246,.94);
@@ -462,180 +657,282 @@
         blur(15px);
 
       border-bottom:
-        1px solid rgba(0,0,0,.06);
+        1px solid
+        rgba(0,0,0,.06);
+
     }
 
 
     .controls {
-      max-width: 1240px;
-      margin: auto;
+
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
         16px 25px;
+
     }
 
 
     .controls-row {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         1fr
         minmax(270px,400px);
 
-      gap: 22px;
+      gap:
+        22px;
 
-      align-items: center;
+      align-items:
+        center;
+
     }
 
 
     .catalog-info h2 {
-      margin: 0;
 
-      font-size: 22px;
+      margin:
+        0;
+
+      font-size:
+        22px;
+
     }
 
 
     .counter {
-      margin-top: 5px;
 
-      color: var(--muted);
+      margin-top:
+        5px;
 
-      font-size: 12px;
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
     }
 
 
     .search-box input {
-      width: 100%;
-      height: 47px;
+
+      width:
+        100%;
+
+      height:
+        47px;
 
       padding:
         0 18px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      outline: none;
+      outline:
+        none;
 
-      background: white;
+      background:
+        white;
+
     }
 
 
+
     /* =====================================================
-       TOOLBAR
+       FILTROS
     ===================================================== */
 
     .toolbar {
-      max-width: 1240px;
-      margin: auto;
+
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
         18px 25px 3px;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display:
+        flex;
 
-      gap: 20px;
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        20px;
+
     }
 
 
     .filter-area {
-      flex: 1;
-      min-width: 0;
+
+      flex:
+        1;
+
+      min-width:
+        0;
+
     }
 
 
     .filter-label {
-      margin-bottom: 7px;
 
-      color: var(--muted);
+      margin-bottom:
+        7px;
 
-      font-size: 10px;
-      font-weight: 700;
+      color:
+        var(--muted);
 
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      font-size:
+        10px;
+
+      font-weight:
+        700;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .08em;
+
     }
 
 
     .categories,
     .conditions {
-      display: flex;
-      gap: 7px;
 
-      overflow-x: auto;
+      display:
+        flex;
 
-      scrollbar-width: none;
+      gap:
+        7px;
+
+      overflow-x:
+        auto;
+
+      scrollbar-width:
+        none;
+
     }
 
 
     .categories::-webkit-scrollbar,
     .conditions::-webkit-scrollbar {
-      display: none;
+
+      display:
+        none;
+
     }
 
 
     .conditions {
-      margin-top: 8px;
+
+      margin-top:
+        8px;
+
     }
 
 
     .category-button,
     .condition-button {
-      flex: 0 0 auto;
+
+      flex:
+        0 0 auto;
 
       padding:
         8px 13px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 11px;
-      font-weight: 650;
+      font-size:
+        11px;
+
+      font-weight:
+        650;
+
     }
 
 
     .category-button.active,
     .condition-button.active {
-      background: var(--ink);
-      color: white;
 
-      border-color: var(--ink);
+      background:
+        var(--ink);
+
+      color:
+        white;
+
+      border-color:
+        var(--ink);
+
     }
 
 
     .selectors {
-      display: flex;
-      align-items: center;
-      gap: 9px;
 
-      padding-top: 19px;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
+      padding-top:
+        19px;
+
     }
 
 
     select {
-      height: 38px;
+
+      height:
+        38px;
 
       padding:
         0 12px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
+
     }
+
 
 
     /* =====================================================
@@ -643,18 +940,24 @@
     ===================================================== */
 
     .main {
-      max-width: 1240px;
 
-      margin: auto;
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
         26px 25px
         65px;
+
     }
 
 
     .catalog {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(
@@ -665,8 +968,11 @@
       gap:
         23px 20px;
 
-      align-items: stretch;
+      align-items:
+        stretch;
+
     }
+
 
 
     /* =====================================================
@@ -674,198 +980,296 @@
     ===================================================== */
 
     .product {
-      overflow: hidden;
 
-      display: flex;
-      flex-direction: column;
+      overflow:
+        hidden;
 
-      height: 100%;
+      display:
+        flex;
 
-      background: white;
+      flex-direction:
+        column;
+
+      height:
+        100%;
+
+      background:
+        white;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: var(--radius);
+      border-radius:
+        var(--radius);
 
-      box-shadow: var(--shadow);
+      box-shadow:
+        var(--shadow);
 
       transition:
         transform .22s,
         box-shadow .22s;
+
     }
 
 
     .product:hover {
+
       transform:
         translateY(-4px);
 
       box-shadow:
         var(--shadow-hover);
+
     }
 
 
     .image-link {
-      display: block;
 
-      text-decoration: none;
+      display:
+        block;
 
-      cursor: pointer;
+      text-decoration:
+        none;
+
+      cursor:
+        pointer;
+
     }
 
 
     .image-box {
-      position: relative;
+
+      position:
+        relative;
 
       aspect-ratio:
         1 / 1;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
 
       background:
         var(--surface-soft);
+
     }
 
 
     .image-box img {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
 
       transition:
         transform .3s ease;
+
     }
 
 
     .image-link:hover img {
+
       transform:
         scale(1.035);
+
     }
 
 
     .category-badge,
     .quantity-badge {
-      position: absolute;
 
-      top: 12px;
+      position:
+        absolute;
 
-      z-index: 2;
+      top:
+        12px;
+
+      z-index:
+        2;
 
       padding:
         6px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      font-size: 10px;
-      font-weight: 700;
+      font-size:
+        10px;
+
+      font-weight:
+        700;
+
     }
 
 
     .category-badge {
-      left: 12px;
+
+      left:
+        12px;
 
       background:
         rgba(15,16,18,.78);
 
-      color: white;
+      color:
+        white;
+
     }
 
 
     .quantity-badge {
-      right: 12px;
+
+      right:
+        12px;
 
       background:
         var(--gold);
 
       color:
         #241b09;
+
     }
 
 
     .no-image {
-      color: #999;
 
-      font-size: 13px;
+      color:
+        #999;
+
+      font-size:
+        13px;
+
     }
 
 
     .product-body {
-      flex: 1;
 
-      padding: 16px;
+      flex:
+        1;
 
-      display: flex;
-      flex-direction: column;
+      padding:
+        16px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
     }
 
 
     .product-title-link {
-      color: inherit;
 
-      text-decoration: none;
+      color:
+        inherit;
+
+      text-decoration:
+        none;
+
     }
 
 
     .product-name {
+
       margin:
         0 0 14px;
 
-      min-height: 63px;
+      min-height:
+        63px;
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      line-height: 1.4;
+      line-height:
+        1.4;
 
-      font-weight: 680;
+      font-weight:
+        680;
 
-      display: -webkit-box;
+      display:
+        -webkit-box;
 
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+      -webkit-line-clamp:
+        3;
 
-      overflow: hidden;
+      -webkit-box-orient:
+        vertical;
+
+      overflow:
+        hidden;
+
     }
 
 
     .product-title-link:hover
     .product-name {
+
       color:
         var(--gold-dark);
+
     }
 
 
     .product-footer {
-      margin-top: auto;
+
+      margin-top:
+        auto;
+
     }
 
 
     .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      gap: 10px;
+      display:
+        flex;
 
-      margin-bottom: 8px;
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin-bottom:
+        8px;
+
     }
 
 
     .price {
-      font-size: 21px;
-      font-weight: 850;
+
+      font-size:
+        21px;
+
+      font-weight:
+        850;
+
     }
 
 
     .status {
+
       padding:
         6px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         var(--green-bg);
@@ -873,25 +1277,36 @@
       color:
         var(--green);
 
-      font-size: 10px;
-      font-weight: 750;
+      font-size:
+        10px;
+
+      font-weight:
+        750;
+
     }
 
 
     .condition-row {
-      min-height: 29px;
 
-      margin-bottom: 10px;
+      min-height:
+        29px;
+
+      margin-bottom:
+        10px;
+
     }
 
 
     .condition-tag {
-      display: inline-flex;
+
+      display:
+        inline-flex;
 
       padding:
         5px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         var(--blue-bg);
@@ -899,70 +1314,113 @@
       color:
         var(--blue);
 
-      font-size: 10px;
-      font-weight: 750;
+      font-size:
+        10px;
+
+      font-weight:
+        750;
+
     }
 
 
+
+    /* =====================================================
+       INTERNO
+    ===================================================== */
+
     .internal-price-box {
-      display: none;
+
+      display:
+        none;
 
       margin:
         3px 0 11px;
 
-      padding: 10px;
+      padding:
+        10px;
 
       border:
-        1px dashed #d6b664;
+        1px dashed
+        #d6b664;
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
       background:
         #fffaf0;
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
 
 
     body.internal-mode
     .internal-price-box {
-      display: block;
+
+      display:
+        block;
+
     }
 
 
     .internal-line {
-      display: flex;
-      justify-content: space-between;
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
 
       padding:
         2px 0;
+
     }
 
 
     .internal-line span {
+
       color:
         var(--muted);
+
     }
 
 
     .internal-line.margin strong {
+
       color:
         var(--green);
+
     }
 
 
+
+    /* =====================================================
+       BOTOES
+    ===================================================== */
+
     .product-button {
-      width: 100%;
 
-      min-height: 44px;
+      width:
+        100%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height:
+        44px;
 
-      border: 0;
+      display:
+        flex;
 
-      border-radius: 11px;
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border:
+        0;
+
+      border-radius:
+        11px;
 
       background:
         linear-gradient(
@@ -971,59 +1429,85 @@
           #c28410
         );
 
-      color: white;
+      color:
+        white;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 12px;
-      font-weight: 800;
+      font-size:
+        12px;
+
+      font-weight:
+        800;
+
     }
 
 
     .product-button:hover {
+
       background:
         linear-gradient(
           135deg,
           #d59a1f,
           #a96f08
         );
+
     }
 
 
     .links-list {
-      display: none;
 
-      margin-top: 9px;
+      display:
+        none;
 
-      padding-top: 9px;
+      margin-top:
+        9px;
+
+      padding-top:
+        9px;
 
       border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
+
     }
 
 
     .links-list.open {
-      display: grid;
 
-      gap: 6px;
+      display:
+        grid;
+
+      gap:
+        6px;
+
     }
 
 
     .links-list a {
+
       padding:
         8px 10px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 8px;
+      border-radius:
+        8px;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
+
 
 
     /* =====================================================
@@ -1031,49 +1515,79 @@
     ===================================================== */
 
     .pagination {
-      margin-top: 38px;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      margin-top:
+        38px;
 
-      gap: 7px;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      gap:
+        7px;
+
+      flex-wrap:
+        wrap;
+
     }
 
 
     .page-button {
-      min-width: 39px;
-      height: 39px;
+
+      min-width:
+        39px;
+
+      height:
+        39px;
 
       padding:
         0 10px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
+
     }
 
 
     .page-button.active {
-      background: var(--ink);
-      color: white;
 
-      border-color: var(--ink);
+      background:
+        var(--ink);
+
+      color:
+        white;
+
+      border-color:
+        var(--ink);
+
     }
 
 
     .page-button:disabled {
-      opacity: .35;
 
-      cursor: default;
+      opacity:
+        .35;
+
+      cursor:
+        default;
+
     }
+
 
 
     /* =====================================================
@@ -1081,129 +1595,192 @@
     ===================================================== */
 
     .modal-overlay {
-      position: fixed;
-      inset: 0;
 
-      z-index: 100;
+      position:
+        fixed;
 
-      display: none;
-      justify-content: center;
-      align-items: center;
+      inset:
+        0;
 
-      padding: 20px;
+      z-index:
+        100;
+
+      display:
+        none;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      padding:
+        20px;
 
       background:
         rgba(0,0,0,.65);
 
       backdrop-filter:
         blur(8px);
+
     }
 
 
     .modal-overlay.open {
-      display: flex;
+
+      display:
+        flex;
+
     }
 
 
     .login-modal {
+
       width:
         min(390px,100%);
 
-      padding: 27px;
+      padding:
+        27px;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
-      background: white;
+      background:
+        white;
+
     }
 
 
     .login-field {
-      margin-bottom: 13px;
+
+      margin-bottom:
+        13px;
+
     }
 
 
     .login-field label {
-      display: block;
 
-      margin-bottom: 5px;
+      display:
+        block;
 
-      font-size: 11px;
-      font-weight: 700;
+      margin-bottom:
+        5px;
+
+      font-size:
+        11px;
+
+      font-weight:
+        700;
+
     }
 
 
     .login-field input {
-      width: 100%;
-      height: 43px;
+
+      width:
+        100%;
+
+      height:
+        43px;
 
       padding:
         0 12px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
+
     }
 
 
     .login-error {
-      min-height: 20px;
+
+      min-height:
+        20px;
 
       color:
         var(--red);
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
 
 
     .login-actions {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         1fr 1fr;
 
-      gap: 9px;
+      gap:
+        9px;
+
     }
 
 
     .login-actions button {
-      min-height: 42px;
 
-      border-radius: 10px;
+      min-height:
+        42px;
 
-      cursor: pointer;
+      border-radius:
+        10px;
+
+      cursor:
+        pointer;
+
     }
 
 
     .cancel-login {
-      border:
-        1px solid var(--border);
 
-      background: white;
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        white;
+
     }
 
 
     .submit-login {
-      border: 0;
+
+      border:
+        0;
 
       background:
         var(--ink);
 
-      color: white;
+      color:
+        white;
+
     }
 
 
     .message {
-      text-align: center;
+
+      text-align:
+        center;
 
       color:
         var(--muted);
 
-      padding: 40px;
+      padding:
+        40px;
+
     }
 
 
     footer {
+
       padding:
         32px 20px;
 
@@ -1213,81 +1790,119 @@
       color:
         rgba(255,255,255,.45);
 
-      text-align: center;
+      text-align:
+        center;
+
     }
+
 
 
     @media
     (max-width:850px) {
 
       .hero-main {
+
         grid-template-columns:
           1fr;
 
-        text-align: center;
+        text-align:
+          center;
+
       }
+
 
       .crest-area {
         order: 1;
       }
 
+
       .hero-copy {
         order: 2;
       }
 
+
       .controls-row {
+
         grid-template-columns:
           1fr;
+
       }
+
 
       .toolbar {
+
         flex-direction:
           column;
+
       }
 
+
       .selectors {
-        padding-top: 0;
+
+        padding-top:
+          0;
+
       }
 
     }
+
 
 
     @media
     (max-width:650px) {
 
       .catalog {
+
         grid-template-columns:
           repeat(
             2,
             minmax(0,1fr)
           );
 
-        gap: 12px;
+        gap:
+          12px;
+
       }
+
 
       .product-body {
-        padding: 12px;
+
+        padding:
+          12px;
+
       }
+
 
       .product-name {
-        min-height: 55px;
 
-        font-size: 13px;
+        min-height:
+          55px;
+
+        font-size:
+          13px;
+
       }
 
+
       .status {
-        display: none;
+
+        display:
+          none;
+
       }
 
     }
+
 
 
     @media
     (max-width:390px) {
 
       .catalog {
+
         grid-template-columns:
           1fr;
+
       }
 
     }
@@ -1321,8 +1936,11 @@
           id="contactArea"
           class="contact"
         >
+
           Contacto:
+
           <strong id="contact"></strong>
+
         </div>
 
 
@@ -1330,7 +1948,9 @@
           id="internalButton"
           class="internal-button"
         >
+
           🔒 Área interna
+
         </button>
 
       </div>
@@ -1343,7 +1963,9 @@
       <div class="hero-copy">
 
         <div class="eyebrow">
+
           Backyard Traders
+
         </div>
 
 
@@ -1359,7 +1981,9 @@
 
 
         <p id="subtitle">
+
           Artigos selecionados a bons preços
+
         </p>
 
 
@@ -1369,7 +1993,9 @@
             href="#shop"
             class="hero-button"
           >
+
             Explorar artigos ↓
+
           </a>
 
 
@@ -1377,7 +2003,9 @@
             id="heroTotal"
             class="hero-total"
           >
+
             A carregar catálogo...
+
           </span>
 
         </div>
@@ -1495,10 +2123,9 @@
 
   <div class="selectors">
 
-
     <select
       id="sortSelect"
-      aria-label="Ordenação"
+      aria-label="Ordenar"
     >
 
       <option value="default">
@@ -1551,7 +2178,9 @@
     id="message"
     class="message"
   >
+
     A carregar artigos...
+
   </div>
 
 
@@ -1593,9 +2222,9 @@
       Área interna
     </h3>
 
+
     <p>
-      Introduz as credenciais definidas
-      na folha Config.
+      Introduz as credenciais definidas na folha Config.
     </p>
 
 
@@ -1660,13 +2289,14 @@
 
 <script>
 
+
 /* =====================================================
    GOOGLE SHEETS
 ===================================================== */
 
 const CSV_PRODUCTS =
 
-// URL ANTIGO DE TESTES
+// ANTIGO
 // "https://docs.google.com/spreadsheets/d/e/2PACX-1vRbU1RthfXL6QBD0NgNVJYVgxBwIm4mldrzXSZRsjd8TQIhCOf4YeOiq1NiOW1oaNRysD173Y_ZXBJN/pub?gid=0&single=true&output=csv";
 
 "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0ju22RtZejeef_9fYTLibHTBt2WOBqBZwz9XM7-vF9CCgCHwx6y3kFMMDWfG6gwJXa2fJnQTVRBUD/pub?gid=740546855&single=true&output=csv";
@@ -1678,52 +2308,67 @@ const CSV_CONFIG =
 
 
 /* =====================================================
-   ESTADO
+   VARIAVEIS
 ===================================================== */
 
 let configuredUser = "";
+
 let configuredPassword = "";
 
 let allProducts = [];
+
 let filteredProducts = [];
 
-let activeCategory = "Todos";
-let activeCondition = "Todos";
+let activeCategory =
+  "Todos";
 
-let searchQuery = "";
-let sortMode = "default";
+let activeCondition =
+  "Todos";
 
-let currentPage = 1;
+let searchQuery =
+  "";
+
+let sortMode =
+  "default";
+
+let currentPage =
+  1;
+
 
 let pageSize =
   Number(
     localStorage.getItem(
       "backyard_page_size"
     )
-  ) || 20;
+  )
+  ||
+  20;
 
 
 let internalMode =
   sessionStorage.getItem(
     "backyard_internal"
-  ) === "1";
+  )
+  ===
+  "1";
 
 
-let searchAnalyticsTimer = null;
+let searchTimer =
+  null;
+
 
 
 /* =====================================================
-   GOOGLE ANALYTICS
+   ANALYTICS
 ===================================================== */
 
-function analyticsEvent(
+function sendAnalytics(
   eventName,
   parameters = {}
 ) {
 
   if (
-    typeof window.gtag
-    !==
+    typeof gtag !==
     "function"
   ) {
 
@@ -1731,32 +2376,54 @@ function analyticsEvent(
 
   }
 
-  window.gtag(
-    "event",
-    eventName,
-    parameters
-  );
+
+  try {
+
+    gtag(
+      "event",
+      eventName,
+      {
+
+        ...parameters,
+
+        send_to:
+          "G-XF07V9EBNP",
+
+        transport_type:
+          "beacon"
+
+      }
+    );
+
+  }
+
+  catch (error) {
+
+    console.warn(
+      "Erro Analytics",
+      error
+    );
+
+  }
 
 }
 
 
 
-/*
-  Tenta identificar automaticamente
-  a plataforma do anúncio.
-*/
+function detectPlatform(
+  url
+) {
 
-function detectPlatform(url) {
-
-  const value =
+  const link =
     (
-      url || ""
+      url ||
+      ""
     )
     .toLowerCase();
 
 
   if (
-    value.includes(
+    link.includes(
       "vinted."
     )
   ) {
@@ -1767,7 +2434,7 @@ function detectPlatform(url) {
 
 
   if (
-    value.includes(
+    link.includes(
       "wallapop."
     )
   ) {
@@ -1778,7 +2445,7 @@ function detectPlatform(url) {
 
 
   if (
-    value.includes(
+    link.includes(
       "olx."
     )
   ) {
@@ -1789,12 +2456,12 @@ function detectPlatform(url) {
 
 
   if (
-    value.includes(
-      "facebook."
+    link.includes(
+      "amazon."
     )
   ) {
 
-    return "Facebook";
+    return "Amazon";
 
   }
 
@@ -1804,121 +2471,6 @@ function detectPlatform(url) {
 }
 
 
-
-function productAnalyticsData(
-  product
-) {
-
-  return {
-
-    item_id:
-      product["ID"]
-      ||
-      normalizeText(
-        product["Produto"]
-      )
-      .replace(
-        /\s+/g,
-        "-"
-      ),
-
-    item_name:
-      product["Produto"]
-      ||
-      "Sem nome",
-
-    item_category:
-      product["Categoria"]
-      ||
-      "Sem categoria",
-
-    item_variant:
-      (
-        product.conditions
-        &&
-        product.conditions.length
-      )
-      ?
-        product.conditions.join(
-          " / "
-        )
-      :
-        "Sem condição",
-
-    price:
-      getPrice(
-        product
-      ),
-
-    quantity:
-      product.quantity
-      ||
-      1
-
-  };
-
-}
-
-
-
-/*
-  Evento GA4 recomendado:
-  utilizador visualizou uma lista de produtos.
-*/
-
-function trackProductListView(
-  products
-) {
-
-  if (
-    !products.length
-  ) {
-
-    return;
-
-  }
-
-  analyticsEvent(
-    "view_item_list",
-    {
-
-      item_list_id:
-        "backyard_catalog",
-
-      item_list_name:
-        "Catálogo Backyard Traders",
-
-      catalog_page:
-        currentPage,
-
-      page_size:
-        pageSize,
-
-      active_category:
-        activeCategory,
-
-      active_condition:
-        activeCondition,
-
-      items:
-        products
-          .map(
-            product =>
-              productAnalyticsData(
-                product
-              )
-          )
-
-    }
-  );
-
-}
-
-
-
-/*
-  Produto selecionado.
-*/
 
 function trackProductClick(
   product,
@@ -1932,47 +2484,25 @@ function trackProductClick(
     );
 
 
-  analyticsEvent(
-    "select_item",
-    {
-
-      item_list_id:
-        "backyard_catalog",
-
-      item_list_name:
-        "Catálogo Backyard Traders",
-
-      click_area:
-        clickArea,
-
-      destination_platform:
-        platform,
-
-      items: [
-        productAnalyticsData(
-          product
-        )
-      ]
-
-    }
-  );
-
-
-  analyticsEvent(
-    "outbound_product_click",
+  sendAnalytics(
+    "product_click",
     {
 
       product_name:
-        product["Produto"]
+        product[
+          "Produto"
+        ]
         ||
-        "",
+        "Sem nome",
 
-      category:
-        product["Categoria"]
+      product_category:
+        product[
+          "Categoria"
+        ]
         ||
-        "",
+        "Sem categoria",
 
-      condition:
+      product_condition:
         (
           product.conditions
           ||
@@ -1980,14 +2510,16 @@ function trackProductClick(
         )
         .join(
           " / "
-        ),
+        )
+        ||
+        "Sem condição",
 
-      price:
+      product_price:
         getPrice(
           product
         ),
 
-      quantity_available:
+      product_quantity:
         product.quantity
         ||
         1,
@@ -2001,6 +2533,30 @@ function trackProductClick(
     }
   );
 
+
+  sendAnalytics(
+    "outbound_click",
+    {
+
+      product_name:
+        product[
+          "Produto"
+        ]
+        ||
+        "Sem nome",
+
+      destination_platform:
+        platform,
+
+      destination_url:
+        url,
+
+      click_area:
+        clickArea
+
+    }
+  );
+
 }
 
 
@@ -2009,13 +2565,21 @@ function trackProductClick(
    CSV
 ===================================================== */
 
-function parseCSV(text) {
+function parseCSV(
+  text
+) {
 
-  const rows = [];
+  const rows =
+    [];
 
-  let row = [];
-  let field = "";
-  let quoted = false;
+  let row =
+    [];
+
+  let field =
+    "";
+
+  let quoted =
+    false;
 
 
   for (
@@ -2028,7 +2592,9 @@ function parseCSV(text) {
       text[i];
 
     const next =
-      text[i + 1];
+      text[
+        i + 1
+      ];
 
 
     if (
@@ -2037,7 +2603,8 @@ function parseCSV(text) {
       next === '"'
     ) {
 
-      field += '"';
+      field +=
+        '"';
 
       i++;
 
@@ -2061,7 +2628,8 @@ function parseCSV(text) {
         field
       );
 
-      field = "";
+      field =
+        "";
 
     }
 
@@ -2090,7 +2658,9 @@ function parseCSV(text) {
         field
       );
 
-      field = "";
+
+      field =
+        "";
 
 
       if (
@@ -2109,7 +2679,8 @@ function parseCSV(text) {
       }
 
 
-      row = [];
+      row =
+        [];
 
     }
 
@@ -2150,10 +2721,13 @@ function parseCSV(text) {
 
 
 
-function normalizeText(value) {
+function normalizeText(
+  value
+) {
 
   return (
-    value || ""
+    value ||
+    ""
   )
 
     .trim()
@@ -2178,7 +2752,9 @@ function normalizeText(value) {
 
 
 
-function parsePrice(value) {
+function parsePrice(
+  value
+) {
 
   if (!value) {
 
@@ -2215,24 +2791,31 @@ function parsePrice(value) {
   return Number.isFinite(
     result
   )
-    ?
-      result
-    :
-      0;
+  ?
+    result
+  :
+    0;
 
 }
 
 
 
-function formatEUR(number) {
+function formatEUR(
+  value
+) {
 
-  return number
+  return value
 
     .toLocaleString(
       "pt-PT",
       {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
+
+        minimumFractionDigits:
+          2,
+
+        maximumFractionDigits:
+          2
+
       }
     )
 
@@ -2291,7 +2874,9 @@ async function loadConfig() {
 
         if (key) {
 
-          config[key] =
+          config[
+            key
+          ] =
             value;
 
         }
@@ -2406,13 +2991,17 @@ async function loadConfig() {
 
 
     configuredUser =
-      config["user"]
+      config[
+        "user"
+      ]
       ||
       "";
 
 
     configuredPassword =
-      config["password"]
+      config[
+        "password"
+      ]
       ||
       "";
 
@@ -2421,10 +3010,11 @@ async function loadConfig() {
 
   }
 
-  catch (error) {
+  catch (
+    error
+  ) {
 
     console.error(
-      "Erro Config",
       error
     );
 
@@ -2434,7 +3024,9 @@ async function loadConfig() {
 
 
 
-function renderStoreName(name) {
+function renderStoreName(
+  name
+) {
 
   const words =
     name
@@ -2625,7 +3217,8 @@ function submitLogin() {
       .value;
 
 
-  const valid =
+  if (
+
     normalizeText(
       user
     )
@@ -2633,18 +3226,21 @@ function submitLogin() {
     normalizeText(
       configuredUser
     )
+
     &&
+
     password
     ===
     configuredPassword
+
     &&
+
     configuredUser
+
     &&
-    configuredPassword;
 
+    configuredPassword
 
-  if (
-    valid
   ) {
 
     internalMode =
@@ -2689,7 +3285,6 @@ document
     closeLogin;
 
 
-
 document
   .getElementById(
     "submitLogin"
@@ -2700,7 +3295,7 @@ document
 
 
 /* =====================================================
-   PRODUTOS
+   CARREGAR PRODUTOS
 ===================================================== */
 
 async function loadProducts() {
@@ -2733,9 +3328,7 @@ async function loadProducts() {
 
     const products =
       rows
-
         .slice(1)
-
         .map(
           values => {
 
@@ -2770,16 +3363,18 @@ async function loadProducts() {
 
           }
         )
-
         .filter(
           product => {
 
-            const name =
-              product[
+            if (
+              !product[
                 "Produto"
               ]
-              ||
-              "";
+            ) {
+
+              return false;
+
+            }
 
 
             const status =
@@ -2788,13 +3383,6 @@ async function loadProducts() {
               ]
               ||
               "";
-
-
-            if (!name) {
-
-              return false;
-
-            }
 
 
             if (
@@ -2845,7 +3433,9 @@ async function loadProducts() {
 
   }
 
-  catch (error) {
+  catch (
+    error
+  ) {
 
     console.error(
       error
@@ -2866,7 +3456,7 @@ async function loadProducts() {
 
 
 /* =====================================================
-   AGRUPAMENTO
+   AGRUPAR REPETIDOS
 ===================================================== */
 
 function groupDuplicates(
@@ -2920,19 +3510,26 @@ function groupDuplicates(
 
             ...product,
 
-            quantity: 0,
+            quantity:
+              0,
 
-            links: [],
+            links:
+              [],
 
-            prices: [],
+            prices:
+              [],
 
-            costs: [],
+            costs:
+              [],
 
-            margins: [],
+            margins:
+              [],
 
-            images: [],
+            images:
+              [],
 
-            conditions: []
+            conditions:
+              []
 
           }
         );
@@ -2956,8 +3553,7 @@ function groupDuplicates(
 
 
       if (
-        link
-        &&
+        link &&
         !group.links
           .includes(
             link
@@ -3035,8 +3631,7 @@ function groupDuplicates(
 
 
       if (
-        image
-        &&
+        image &&
         !group.images
           .includes(
             image
@@ -3063,8 +3658,7 @@ function groupDuplicates(
 
 
       if (
-        condition
-        &&
+        condition &&
         !group.conditions
           .includes(
             condition
@@ -3096,9 +3690,33 @@ function groupDuplicates(
 
 function buildCategories() {
 
-  buildFilter(
+  const categories =
+    [
+      ...new Set(
+
+        allProducts
+          .map(
+            product =>
+              (
+                product[
+                  "Categoria"
+                ]
+                ||
+                ""
+              )
+              .trim()
+          )
+          .filter(
+            Boolean
+          )
+
+      )
+    ];
+
+
+  createFilterButtons(
     "categories",
-    "Categoria",
+    categories,
     "category"
   );
 
@@ -3108,7 +3726,7 @@ function buildCategories() {
 
 function buildConditions() {
 
-  const values =
+  const conditions =
     [
       ...new Set(
 
@@ -3119,16 +3737,16 @@ function buildConditions() {
               ||
               []
           )
+          .filter(
+            Boolean
+          )
 
       )
-    ]
-    .filter(
-      Boolean
-    );
+    ];
 
 
   if (
-    !values.length
+    !conditions.length
   ) {
 
     return;
@@ -3144,9 +3762,9 @@ function buildConditions() {
       "block";
 
 
-  createButtons(
+  createFilterButtons(
     "conditions",
-    values,
+    conditions,
     "condition"
   );
 
@@ -3154,48 +3772,8 @@ function buildConditions() {
 
 
 
-function buildFilter(
-  id,
-  field,
-  type
-) {
-
-  const values =
-    [
-      ...new Set(
-
-        allProducts
-          .map(
-            product =>
-              (
-                product[
-                  field
-                ]
-                ||
-                ""
-              )
-              .trim()
-          )
-
-      )
-    ]
-    .filter(
-      Boolean
-    );
-
-
-  createButtons(
-    id,
-    values,
-    type
-  );
-
-}
-
-
-
-function createButtons(
-  id,
+function createFilterButtons(
+  containerId,
   values,
   type
 ) {
@@ -3203,7 +3781,7 @@ function createButtons(
   const container =
     document
       .getElementById(
-        id
+        containerId
       );
 
 
@@ -3211,14 +3789,11 @@ function createButtons(
     "";
 
 
-  const all =
-    [
-      "Todos",
-      ...values
-    ];
-
-
-  all.forEach(
+  [
+    "Todos",
+    ...values
+  ]
+  .forEach(
     value => {
 
       const button =
@@ -3267,12 +3842,12 @@ function createButtons(
               value;
 
 
-            analyticsEvent(
+            sendAnalytics(
               "catalog_filter",
               {
 
                 filter_type:
-                  "categoria",
+                  "category",
 
                 filter_value:
                   value
@@ -3288,12 +3863,12 @@ function createButtons(
               value;
 
 
-            analyticsEvent(
+            sendAnalytics(
               "catalog_filter",
               {
 
                 filter_type:
-                  "condicao",
+                  "condition",
 
                 filter_value:
                   value
@@ -3331,8 +3906,6 @@ function createButtons(
 
           applyFilters();
 
-          scrollToCatalogTop();
-
         };
 
 
@@ -3349,7 +3922,7 @@ function createButtons(
 
 
 /* =====================================================
-   FILTRAR / ORDENAR
+   FILTRAR
 ===================================================== */
 
 function applyFilters() {
@@ -3386,49 +3959,42 @@ function applyFilters() {
             .trim();
 
 
-          const searchMatch =
-            !searchQuery
-            ||
-            name.includes(
-              searchQuery
-            )
-            ||
-            description.includes(
-              searchQuery
-            );
-
-
-          const categoryMatch =
-            activeCategory
-            ===
-            "Todos"
-            ||
-            category
-            ===
-            activeCategory;
-
-
-          const conditionMatch =
-            activeCondition
-            ===
-            "Todos"
-            ||
-            (
-              product.conditions
-              ||
-              []
-            )
-            .includes(
-              activeCondition
-            );
-
-
           return (
-            searchMatch
+
+            (
+              !searchQuery
+              ||
+              name.includes(
+                searchQuery
+              )
+              ||
+              description.includes(
+                searchQuery
+              )
+            )
+
             &&
-            categoryMatch
+
+            (
+              activeCategory ===
+              "Todos"
+              ||
+              category ===
+              activeCategory
+            )
+
             &&
-            conditionMatch
+
+            (
+              activeCondition ===
+              "Todos"
+              ||
+              product.conditions
+                .includes(
+                  activeCondition
+                )
+            )
+
           );
 
         }
@@ -3436,8 +4002,7 @@ function applyFilters() {
 
 
   if (
-    sortMode
-    ===
+    sortMode ===
     "price-asc"
   ) {
 
@@ -3454,9 +4019,9 @@ function applyFilters() {
 
   }
 
+
   else if (
-    sortMode
-    ===
+    sortMode ===
     "price-desc"
   ) {
 
@@ -3473,9 +4038,9 @@ function applyFilters() {
 
   }
 
+
   else if (
-    sortMode
-    ===
+    sortMode ===
     "name-asc"
   ) {
 
@@ -3537,138 +4102,6 @@ function getPrice(
 
 
 /* =====================================================
-   PAGINACAO / TAMANHO
-===================================================== */
-
-function setPageSize(
-  value
-) {
-
-  const parsed =
-    Number.parseInt(
-      value,
-      10
-    );
-
-
-  pageSize =
-    [
-      20,
-      50,
-      100
-    ]
-    .includes(
-      parsed
-    )
-    ?
-      parsed
-    :
-      20;
-
-
-  localStorage
-    .setItem(
-      "backyard_page_size",
-      String(
-        pageSize
-      )
-    );
-
-
-  analyticsEvent(
-    "catalog_page_size",
-    {
-
-      page_size:
-        pageSize
-
-    }
-  );
-
-
-  currentPage =
-    1;
-
-
-  renderPage();
-
-  scrollToCatalogTop();
-
-}
-
-
-
-function renderPage() {
-
-  const total =
-    filteredProducts.length;
-
-
-  const pages =
-    Math.max(
-      1,
-      Math.ceil(
-        total
-        /
-        pageSize
-      )
-    );
-
-
-  if (
-    currentPage
-    >
-    pages
-  ) {
-
-    currentPage =
-      pages;
-
-  }
-
-
-  const start =
-    (
-      currentPage
-      -
-      1
-    )
-    *
-    pageSize;
-
-
-  const products =
-    filteredProducts
-      .slice(
-        start,
-        start
-        +
-        pageSize
-      );
-
-
-  renderProducts(
-    products
-  );
-
-
-  renderPagination(
-    pages
-  );
-
-
-  updateCounter();
-
-
-  trackProductListView(
-    products
-  );
-
-}
-
-
-
-/* =====================================================
    PRECO
 ===================================================== */
 
@@ -3699,107 +4132,96 @@ function rangeLabel(
     );
 
 
-  return min
-    ===
+  if (
+    min ===
     max
-    ?
-      formatEUR(
-        min
-      )
-    :
-      formatEUR(
-        min
-      )
-      +
-      " – "
-      +
-      formatEUR(
-        max
-      );
+  ) {
+
+    return formatEUR(
+      min
+    );
+
+  }
+
+
+  return (
+    formatEUR(
+      min
+    )
+    +
+    " – "
+    +
+    formatEUR(
+      max
+    )
+  );
 
 }
 
 
 
 /* =====================================================
-   LINKS
+   RENDER PAGINA
 ===================================================== */
 
-function getPrimaryLink(
-  product
-) {
+function renderPage() {
 
-  return (
-    product.links
-    &&
-    product.links.length
-  )
-  ?
-    product.links[
-      0
-    ]
-  :
-    "";
-
-}
+  const total =
+    filteredProducts.length;
 
 
-
-function createClickableWrapper(
-  product,
-  clickArea
-) {
-
-  const link =
-    getPrimaryLink(
-      product
+  const totalPages =
+    Math.max(
+      1,
+      Math.ceil(
+        total
+        /
+        pageSize
+      )
     );
 
 
-  if (!link) {
+  if (
+    currentPage >
+    totalPages
+  ) {
 
-    return document
-      .createElement(
-        "div"
-      );
+    currentPage =
+      totalPages;
 
   }
 
 
-  const anchor =
-    document
-      .createElement(
-        "a"
+  const start =
+    (
+      currentPage
+      -
+      1
+    )
+    *
+    pageSize;
+
+
+  const pageProducts =
+    filteredProducts
+      .slice(
+        start,
+        start +
+        pageSize
       );
 
 
-  anchor.href =
-    link;
-
-
-  anchor.target =
-    "_blank";
-
-
-  anchor.rel =
-    "noopener noreferrer";
-
-
-  anchor.addEventListener(
-    "click",
-    () => {
-
-      trackProductClick(
-        product,
-        clickArea,
-        link
-      );
-
-    }
+  renderProducts(
+    pageProducts
   );
 
 
-  return anchor;
+  renderPagination(
+    totalPages
+  );
+
+
+  updateCounter();
 
 }
 
@@ -3862,17 +4284,64 @@ function renderProducts(
         "product";
 
 
+      const primaryLink =
+        product.links[
+          0
+        ]
+        ||
+        "";
+
+
       /* IMAGEM */
 
       const imageWrapper =
-        createClickableWrapper(
-          product,
-          "imagem"
-        );
+        primaryLink
+        ?
+          document
+            .createElement(
+              "a"
+            )
+        :
+          document
+            .createElement(
+              "div"
+            );
 
 
       imageWrapper.className =
         "image-link";
+
+
+      if (
+        primaryLink
+      ) {
+
+        imageWrapper.href =
+          primaryLink;
+
+
+        imageWrapper.target =
+          "_blank";
+
+
+        imageWrapper.rel =
+          "noopener noreferrer";
+
+
+        imageWrapper.addEventListener(
+          "click",
+          () => {
+
+            trackProductClick(
+              product,
+              "image",
+              primaryLink
+            );
+
+          }
+        );
+
+      }
 
 
       const imageBox =
@@ -3918,8 +4387,7 @@ function renderProducts(
 
 
       if (
-        product.quantity
-        >
+        product.quantity >
         1
       ) {
 
@@ -3949,7 +4417,7 @@ function renderProducts(
 
 
       const image =
-        product.images?.[
+        product.images[
           0
         ];
 
@@ -3990,24 +4458,24 @@ function renderProducts(
 
       else {
 
-        const noImage =
+        const empty =
           document
             .createElement(
               "span"
             );
 
 
-        noImage.className =
+        empty.className =
           "no-image";
 
 
-        noImage.textContent =
+        empty.textContent =
           "Sem imagem";
 
 
         imageBox
           .appendChild(
-            noImage
+            empty
           );
 
       }
@@ -4019,7 +4487,7 @@ function renderProducts(
         );
 
 
-      /* CORPO */
+      /* BODY */
 
       const body =
         document
@@ -4033,14 +4501,53 @@ function renderProducts(
 
 
       const titleWrapper =
-        createClickableWrapper(
-          product,
-          "titulo"
-        );
+        primaryLink
+        ?
+          document
+            .createElement(
+              "a"
+            )
+        :
+          document
+            .createElement(
+              "div"
+            );
 
 
       titleWrapper.className =
         "product-title-link";
+
+
+      if (
+        primaryLink
+      ) {
+
+        titleWrapper.href =
+          primaryLink;
+
+
+        titleWrapper.target =
+          "_blank";
+
+
+        titleWrapper.rel =
+          "noopener noreferrer";
+
+
+        titleWrapper.addEventListener(
+          "click",
+          () => {
+
+            trackProductClick(
+              product,
+              "title",
+              primaryLink
+            );
+
+          }
+        );
+
+      }
 
 
       const title =
@@ -4055,12 +4562,6 @@ function renderProducts(
 
 
       title.textContent =
-        product[
-          "Produto"
-        ];
-
-
-      title.title =
         product[
           "Produto"
         ];
@@ -4083,7 +4584,7 @@ function renderProducts(
         "product-footer";
 
 
-      /* PREÇO */
+      /* PRECO */
 
       const priceRow =
         document
@@ -4140,7 +4641,7 @@ function renderProducts(
         );
 
 
-      /* CONDIÇÃO */
+      /* CONDICAO */
 
       const conditionRow =
         document
@@ -4154,8 +4655,7 @@ function renderProducts(
 
 
       if (
-        product.conditions
-        ?.length
+        product.conditions.length
       ) {
 
         const condition =
@@ -4190,7 +4690,7 @@ function renderProducts(
         );
 
 
-      /* PREÇOS INTERNOS */
+      /* INTERNO */
 
       const internal =
         document
@@ -4205,20 +4705,20 @@ function renderProducts(
 
       internal.innerHTML =
         `
-          <div class="internal-line">
-            <span>Custo</span>
-            <strong>${rangeLabel(product.costs)}</strong>
-          </div>
+        <div class="internal-line">
+          <span>Custo</span>
+          <strong>${rangeLabel(product.costs)}</strong>
+        </div>
 
-          <div class="internal-line">
-            <span>Venda</span>
-            <strong>${rangeLabel(product.prices)}</strong>
-          </div>
+        <div class="internal-line">
+          <span>Venda</span>
+          <strong>${rangeLabel(product.prices)}</strong>
+        </div>
 
-          <div class="internal-line margin">
-            <span>Margem</span>
-            <strong>${rangeLabel(product.margins)}</strong>
-          </div>
+        <div class="internal-line margin">
+          <span>Margem</span>
+          <strong>${rangeLabel(product.margins)}</strong>
+        </div>
         `;
 
 
@@ -4228,11 +4728,10 @@ function renderProducts(
         );
 
 
-      /* LINKS */
+      /* LINK */
 
       if (
-        product.links.length
-        ===
+        product.links.length ===
         1
       ) {
 
@@ -4248,9 +4747,7 @@ function renderProducts(
 
 
         button.href =
-          product.links[
-            0
-          ];
+          primaryLink;
 
 
         button.target =
@@ -4271,10 +4768,8 @@ function renderProducts(
 
             trackProductClick(
               product,
-              "botao",
-              product.links[
-                0
-              ]
+              "button",
+              primaryLink
             );
 
           }
@@ -4288,9 +4783,9 @@ function renderProducts(
 
       }
 
+
       else if (
-        product.links.length
-        >
+        product.links.length >
         1
       ) {
 
@@ -4327,27 +4822,10 @@ function renderProducts(
         button.onclick =
           () => {
 
-            list
-              .classList
+            list.classList
               .toggle(
                 "open"
               );
-
-
-            analyticsEvent(
-              "product_options_opened",
-              {
-
-                product_name:
-                  product[
-                    "Produto"
-                  ],
-
-                options_count:
-                  product.links.length
-
-              }
-            );
 
           };
 
@@ -4379,21 +4857,15 @@ function renderProducts(
 
 
               anchor.textContent =
-                "Opção "
-                +
-                (
-                  index
-                  +
-                  1
-                )
-                +
-                " · "
-                +
                 detectPlatform(
                   link
                 )
                 +
-                " ↗";
+                " · Opção "
+                +
+                (
+                  index + 1
+                );
 
 
               anchor.addEventListener(
@@ -4402,12 +4874,10 @@ function renderProducts(
 
                   trackProductClick(
                     product,
-                    "opcao_"
+                    "option_"
                     +
                     (
-                      index
-                      +
-                      1
+                      index + 1
                     ),
                     link
                   );
@@ -4425,16 +4895,10 @@ function renderProducts(
           );
 
 
-        footer
-          .appendChild(
-            button
-          );
-
-
-        footer
-          .appendChild(
-            list
-          );
+        footer.append(
+          button,
+          list
+        );
 
       }
 
@@ -4468,7 +4932,7 @@ function renderProducts(
 ===================================================== */
 
 function renderPagination(
-  pages
+  totalPages
 ) {
 
   const container =
@@ -4483,8 +4947,7 @@ function renderPagination(
 
 
   if (
-    pages
-    <=
+    totalPages <=
     1
   ) {
 
@@ -4492,6 +4955,8 @@ function renderPagination(
 
   }
 
+
+  /* ANTERIOR */
 
   const previous =
     document
@@ -4509,8 +4974,7 @@ function renderPagination(
 
 
   previous.disabled =
-    currentPage
-    ===
+    currentPage ===
     1;
 
 
@@ -4518,15 +4982,12 @@ function renderPagination(
     () => {
 
       if (
-        currentPage
-        >
+        currentPage >
         1
       ) {
 
-        changePage(
-          currentPage
-          -
-          1
+        goToPage(
+          currentPage - 1
         );
 
       }
@@ -4540,9 +5001,11 @@ function renderPagination(
     );
 
 
+  /* NUMEROS */
+
   for (
     let page = 1;
-    page <= pages;
+    page <= totalPages;
     page++
   ) {
 
@@ -4557,14 +5020,16 @@ function renderPagination(
       "page-button";
 
 
+    button.textContent =
+      page;
+
+
     if (
-      page
-      ===
+      page ===
       currentPage
     ) {
 
-      button
-        .classList
+      button.classList
         .add(
           "active"
         );
@@ -4572,14 +5037,10 @@ function renderPagination(
     }
 
 
-    button.textContent =
-      page;
-
-
     button.onclick =
       () => {
 
-        changePage(
+        goToPage(
           page
         );
 
@@ -4593,6 +5054,8 @@ function renderPagination(
 
   }
 
+
+  /* SEGUINTE */
 
   const next =
     document
@@ -4610,24 +5073,20 @@ function renderPagination(
 
 
   next.disabled =
-    currentPage
-    ===
-    pages;
+    currentPage ===
+    totalPages;
 
 
   next.onclick =
     () => {
 
       if (
-        currentPage
-        <
-        pages
+        currentPage <
+        totalPages
       ) {
 
-        changePage(
-          currentPage
-          +
-          1
+        goToPage(
+          currentPage + 1
         );
 
       }
@@ -4644,27 +5103,32 @@ function renderPagination(
 
 
 
-function changePage(
-  page
+/*
+  ESTA É A NOVA FUNÇÃO CENTRAL
+  PARA MUDAR DE PÁGINA.
+*/
+
+function goToPage(
+  newPage
 ) {
 
-  const previousPage =
+  const oldPage =
     currentPage;
 
 
   currentPage =
-    page;
+    newPage;
 
 
-  analyticsEvent(
+  sendAnalytics(
     "catalog_page_change",
     {
 
-      previous_page:
-        previousPage,
+      old_page:
+        oldPage,
 
       new_page:
-        currentPage,
+        newPage,
 
       page_size:
         pageSize
@@ -4676,71 +5140,36 @@ function changePage(
   renderPage();
 
 
-  scrollToCatalogTop();
-
-}
-
-
-
-/* =====================================================
-   SCROLL PAGINACAO
-===================================================== */
-
-function scrollToCatalogTop() {
-
   /*
-    Não usamos scrollIntoView porque
-    #shop é sticky.
+    CORREÇÃO DEFINITIVA:
 
-    offsetTop representa a posição original
-    do catálogo dentro do documento.
+    sobe literalmente para o topo
+    da página depois de renderizar
+    os novos artigos.
   */
 
-  const target =
-    document
-      .getElementById(
-        "shop"
-      );
-
-
-  if (!target) {
-
-    return;
-
-  }
-
-
-  const targetY =
-    Math.max(
-      target.offsetTop
-      -
-      8,
-      0
-    );
-
-
-  /*
-    Pequeno atraso para garantir que
-    os novos cartões já foram desenhados.
-  */
-
-  window.setTimeout(
+  requestAnimationFrame(
     () => {
 
-      window.scrollTo(
-        {
+      requestAnimationFrame(
+        () => {
 
-          top:
-            targetY,
+          window.scrollTo(
+            {
 
-          behavior:
-            "smooth"
+              top: 0,
+
+              left: 0,
+
+              behavior: "smooth"
+
+            }
+          );
 
         }
       );
 
-    },
-    50
+    }
   );
 
 }
@@ -4758,19 +5187,17 @@ function updateCounter() {
 
 
   const first =
-    total === 0
+    total
     ?
-      0
-    :
       (
-        currentPage
-        -
-        1
+        currentPage - 1
       )
       *
       pageSize
       +
-      1;
+      1
+    :
+      0;
 
 
   const last =
@@ -4787,10 +5214,8 @@ function updateCounter() {
       "counter"
     )
     .textContent =
-      total === 0
+      total
       ?
-        "0 produtos"
-      :
         first
         +
         "–"
@@ -4801,7 +5226,9 @@ function updateCounter() {
         +
         total
         +
-        " produtos";
+        " produtos"
+      :
+        "0 produtos";
 
 }
 
@@ -4865,28 +5292,22 @@ document
       applyFilters();
 
 
-      /*
-        Debounce:
-        não envia um evento a cada letra.
-      */
-
       clearTimeout(
-        searchAnalyticsTimer
+        searchTimer
       );
 
 
       if (
-        searchQuery.length
-        >=
+        searchQuery.length >=
         2
       ) {
 
-        searchAnalyticsTimer =
+        searchTimer =
           setTimeout(
             () => {
 
-              analyticsEvent(
-                "view_search_results",
+              sendAnalytics(
+                "catalog_search",
                 {
 
                   search_term:
@@ -4899,7 +5320,7 @@ document
               );
 
             },
-            850
+            800
           );
 
       }
@@ -4929,11 +5350,11 @@ document
         1;
 
 
-      analyticsEvent(
+      sendAnalytics(
         "catalog_sort",
         {
 
-          sort_mode:
+          sort_type:
             sortMode
 
         }
@@ -4942,15 +5363,13 @@ document
 
       applyFilters();
 
-      scrollToCatalogTop();
-
     }
   );
 
 
 
 /* =====================================================
-   PAGE SIZE
+   20 / 50 / 100
 ===================================================== */
 
 document
@@ -4961,8 +5380,63 @@ document
     "change",
     function () {
 
-      setPageSize(
-        this.value
+      const value =
+        Number(
+          this.value
+        );
+
+
+      pageSize =
+        [
+          20,
+          50,
+          100
+        ]
+        .includes(
+          value
+        )
+        ?
+          value
+        :
+          20;
+
+
+      localStorage
+        .setItem(
+          "backyard_page_size",
+          String(
+            pageSize
+          )
+        );
+
+
+      sendAnalytics(
+        "catalog_page_size",
+        {
+
+          page_size:
+            pageSize
+
+        }
+      );
+
+
+      currentPage =
+        1;
+
+
+      renderPage();
+
+
+      window.scrollTo(
+        {
+
+          top: 0,
+
+          behavior:
+            "smooth"
+
+        }
       );
 
     }
@@ -4980,8 +5454,10 @@ loadProducts();
 
 updateInternalUI();
 
+
 </script>
 
 
 </body>
+
 </html>
