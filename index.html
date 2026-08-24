@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -15,9 +16,44 @@
 
   <title>Backyard Traders</title>
 
+
+  <!-- =====================================================
+       GOOGLE ANALYTICS
+  ====================================================== -->
+
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XF07V9EBNP">
+  </script>
+
+  <script>
+
+    window.dataLayer =
+      window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag(
+      'js',
+      new Date()
+    );
+
+    gtag(
+      'config',
+      'G-XF07V9EBNP'
+    );
+
+  </script>
+
+
   <style>
+
     :root {
+
       --ink: #101113;
+
       --gold: #d59a1f;
       --gold-light: #f2c75c;
       --gold-dark: #a96f08;
@@ -45,21 +81,28 @@
       --radius: 20px;
 
       --shadow:
-        0 6px 22px rgba(0,0,0,.055);
+        0 6px 22px
+        rgba(0,0,0,.055);
 
       --shadow-hover:
-        0 18px 46px rgba(0,0,0,.11);
+        0 18px 46px
+        rgba(0,0,0,.11);
+
     }
+
 
     * {
       box-sizing: border-box;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
 
+
     body {
+
       margin: 0;
 
       font-family:
@@ -72,34 +115,46 @@
         sans-serif;
 
       background: var(--cream);
+
       color: var(--text);
 
-      -webkit-font-smoothing: antialiased;
+      -webkit-font-smoothing:
+        antialiased;
+
     }
+
 
     button,
     input,
     select {
+
       font: inherit;
+
     }
+
 
     a {
       color: inherit;
     }
+
+
 
     /* =====================================================
        HERO
     ===================================================== */
 
     .hero {
+
       color: white;
 
       background:
+
         radial-gradient(
           circle at 82% 12%,
           rgba(213,154,31,.20),
           transparent 31%
         ),
+
         linear-gradient(
           135deg,
           #242529,
@@ -108,88 +163,132 @@
         );
 
       border-bottom:
-        2px solid rgba(213,154,31,.65);
+        2px solid
+        rgba(213,154,31,.65);
+
     }
 
+
     .hero-shell {
+
       max-width: 1240px;
+
       margin: auto;
 
       padding:
         24px 25px
         52px;
+
     }
 
+
     .topbar {
+
       display: flex;
-      justify-content: space-between;
+
+      justify-content:
+        space-between;
+
       align-items: center;
 
       gap: 20px;
 
       padding-bottom: 18px;
+
       margin-bottom: 37px;
 
       border-bottom:
-        1px solid rgba(255,255,255,.10);
+        1px solid
+        rgba(255,255,255,.10);
+
     }
 
+
     .mini-brand {
+
       display: flex;
+
       align-items: center;
+
       gap: 9px;
 
       color:
         rgba(255,255,255,.70);
 
-      text-transform: uppercase;
-      letter-spacing: .12em;
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .12em;
 
       font-size: 11px;
+
       font-weight: 800;
+
     }
 
+
     .mini-dot {
+
       width: 8px;
       height: 8px;
 
       border-radius: 50%;
 
-      background: var(--gold);
+      background:
+        var(--gold);
 
       box-shadow:
-        0 0 14px rgba(213,154,31,.9);
+        0 0 14px
+        rgba(213,154,31,.9);
+
     }
+
 
     .top-actions {
+
       display: flex;
+
       align-items: center;
+
       gap: 9px;
+
     }
 
+
     .contact {
+
       display: none;
 
-      padding: 9px 14px;
+      padding:
+        9px 14px;
 
       border:
-        1px solid rgba(255,255,255,.14);
+        1px solid
+        rgba(255,255,255,.14);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         rgba(255,255,255,.05);
 
       font-size: 12px;
+
     }
 
+
     .internal-button {
+
       border:
-        1px solid rgba(255,255,255,.15);
+        1px solid
+        rgba(255,255,255,.15);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      padding: 9px 14px;
+      padding:
+        9px 14px;
 
       background:
         rgba(255,255,255,.06);
@@ -199,20 +298,29 @@
       cursor: pointer;
 
       font-size: 12px;
+
       font-weight: 700;
+
     }
 
+
     .internal-button.logged {
+
       background:
         rgba(213,154,31,.15);
 
       border-color:
         rgba(213,154,31,.55);
 
-      color: var(--gold-light);
+      color:
+        var(--gold-light);
+
     }
 
+
+
     .hero-main {
+
       display: grid;
 
       grid-template-columns:
@@ -222,52 +330,82 @@
       align-items: center;
 
       gap: 65px;
+
     }
 
+
     .eyebrow {
+
       display: flex;
+
       align-items: center;
 
       gap: 10px;
 
       margin-bottom: 15px;
 
-      color: var(--gold-light);
+      color:
+        var(--gold-light);
 
-      text-transform: uppercase;
-      letter-spacing: .14em;
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .14em;
 
       font-size: 11px;
+
       font-weight: 850;
+
     }
 
+
     .eyebrow::before {
+
       content: "";
 
       width: 30px;
       height: 1px;
 
-      background: var(--gold);
+      background:
+        var(--gold);
+
     }
 
+
     .hero-copy h1 {
+
       margin: 0;
 
       font-size:
-        clamp(42px, 6vw, 67px);
+        clamp(
+          42px,
+          6vw,
+          67px
+        );
 
-      line-height: .98;
+      line-height:
+        .98;
 
-      letter-spacing: -.045em;
+      letter-spacing:
+        -.045em;
 
-      font-weight: 850;
+      font-weight:
+        850;
+
     }
+
 
     .hero-copy h1 span {
-      color: var(--gold-light);
+
+      color:
+        var(--gold-light);
+
     }
 
+
     .hero-copy p {
+
       max-width: 640px;
 
       margin:
@@ -276,32 +414,53 @@
       color:
         rgba(255,255,255,.67);
 
-      line-height: 1.65;
+      line-height:
+        1.65;
 
-      font-size: 17px;
+      font-size:
+        17px;
+
     }
+
 
     .hero-actions {
-      margin-top: 27px;
+
+      margin-top:
+        27px;
 
       display: flex;
-      flex-wrap: wrap;
-      align-items: center;
 
-      gap: 14px;
+      flex-wrap:
+        wrap;
+
+      align-items:
+        center;
+
+      gap:
+        14px;
+
     }
 
-    .hero-button {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
 
-      min-height: 47px;
+    .hero-button {
+
+      display:
+        inline-flex;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      min-height:
+        47px;
 
       padding:
         0 21px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         linear-gradient(
@@ -310,41 +469,69 @@
           var(--gold)
         );
 
-      color: #16120a;
+      color:
+        #16120a;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      font-size: 13px;
-      font-weight: 850;
+      font-size:
+        13px;
+
+      font-weight:
+        850;
+
     }
 
+
     .hero-total {
+
       color:
         rgba(255,255,255,.58);
 
-      font-size: 12px;
+      font-size:
+        12px;
+
     }
 
+
+
     /* =====================================================
-       LOGO
+       LOGOTIPO
     ===================================================== */
 
     .crest-area {
+
       display: flex;
-      justify-content: center;
+
+      justify-content:
+        center;
+
     }
 
+
     .crest {
-      width: 235px;
-      height: 235px;
 
-      padding: 6px;
+      width:
+        235px;
 
-      border-radius: 50%;
+      height:
+        235px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding:
+        6px;
+
+      border-radius:
+        50%;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
 
       background:
         linear-gradient(
@@ -354,234 +541,390 @@
         );
 
       box-shadow:
-        0 30px 65px rgba(0,0,0,.38),
-        0 0 0 8px rgba(213,154,31,.06);
+        0 30px 65px
+        rgba(0,0,0,.38),
+        0 0 0 8px
+        rgba(213,154,31,.06);
+
     }
+
 
     .crest-inner {
+
       width: 100%;
       height: 100%;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
-      background: #111;
+      background:
+        #111;
+
     }
+
 
     .crest img {
+
       width: 100%;
       height: 100%;
 
-      object-fit: cover;
+      object-fit:
+        cover;
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
-      display: none;
+      display:
+        none;
+
     }
 
+
+
     /* =====================================================
-       SEARCH
+       PESQUISA
     ===================================================== */
 
     .controls-wrap {
-      position: sticky;
+
+      position:
+        sticky;
+
       top: 0;
 
-      z-index: 30;
+      z-index:
+        30;
 
       background:
         rgba(250,249,246,.94);
 
-      backdrop-filter: blur(15px);
+      backdrop-filter:
+        blur(15px);
 
       border-bottom:
-        1px solid rgba(0,0,0,.06);
+        1px solid
+        rgba(0,0,0,.06);
+
     }
 
+
     .controls {
-      max-width: 1240px;
-      margin: auto;
+
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
         16px 25px;
+
     }
 
+
     .controls-row {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         1fr
         minmax(270px,400px);
 
-      gap: 22px;
+      gap:
+        22px;
 
-      align-items: center;
+      align-items:
+        center;
+
     }
+
 
     .catalog-info h2 {
+
       margin: 0;
 
-      font-size: 22px;
+      font-size:
+        22px;
+
     }
+
 
     .counter {
-      margin-top: 5px;
 
-      color: var(--muted);
+      margin-top:
+        5px;
 
-      font-size: 12px;
+      color:
+        var(--muted);
+
+      font-size:
+        12px;
+
     }
 
+
     .search-box input {
-      width: 100%;
-      height: 47px;
+
+      width:
+        100%;
+
+      height:
+        47px;
 
       padding:
         0 18px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      outline: none;
+      outline:
+        none;
 
-      background: white;
+      background:
+        white;
+
     }
 
+
+
     /* =====================================================
-       TOOLBAR
+       FILTROS
     ===================================================== */
 
     .toolbar {
-      max-width: 1240px;
-      margin: auto;
+
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
-        18px 25px 3px;
+        18px 25px
+        3px;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
+      display:
+        flex;
 
-      gap: 20px;
+      justify-content:
+        space-between;
+
+      align-items:
+        flex-start;
+
+      gap:
+        20px;
+
     }
+
 
     .filter-area {
+
       flex: 1;
-      min-width: 0;
+
+      min-width:
+        0;
+
     }
+
 
     .filter-label {
-      margin-bottom: 7px;
 
-      color: var(--muted);
+      margin-bottom:
+        7px;
 
-      font-size: 10px;
-      font-weight: 700;
+      color:
+        var(--muted);
 
-      text-transform: uppercase;
-      letter-spacing: .08em;
+      font-size:
+        10px;
+
+      font-weight:
+        700;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .08em;
+
     }
+
 
     .categories,
     .conditions {
-      display: flex;
-      gap: 7px;
 
-      overflow-x: auto;
+      display:
+        flex;
 
-      scrollbar-width: none;
+      gap:
+        7px;
+
+      overflow-x:
+        auto;
+
+      scrollbar-width:
+        none;
+
     }
+
 
     .categories::-webkit-scrollbar,
     .conditions::-webkit-scrollbar {
-      display: none;
+
+      display:
+        none;
+
     }
 
+
     .conditions {
-      margin-top: 8px;
+
+      margin-top:
+        8px;
+
     }
+
 
     .category-button,
     .condition-button {
-      flex: 0 0 auto;
+
+      flex:
+        0 0 auto;
 
       padding:
         8px 13px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 11px;
-      font-weight: 650;
+      font-size:
+        11px;
+
+      font-weight:
+        650;
+
     }
+
 
     .category-button.active,
     .condition-button.active {
-      background: var(--ink);
-      color: white;
 
-      border-color: var(--ink);
+      background:
+        var(--ink);
+
+      color:
+        white;
+
+      border-color:
+        var(--ink);
+
     }
+
 
     .selectors {
-      display: flex;
-      align-items: center;
-      gap: 9px;
 
-      padding-top: 19px;
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        9px;
+
+      padding-top:
+        19px;
+
     }
+
 
     .select-wrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
 
-      color: var(--muted);
+      display:
+        flex;
 
-      font-size: 11px;
+      align-items:
+        center;
+
+      gap:
+        6px;
+
+      color:
+        var(--muted);
+
+      font-size:
+        11px;
+
     }
 
+
     select {
-      height: 38px;
+
+      height:
+        38px;
 
       padding:
         0 12px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
+
     }
 
+
+
     /* =====================================================
-       CATALOG
+       CATALOGO
     ===================================================== */
 
     .main {
-      max-width: 1240px;
 
-      margin: auto;
+      max-width:
+        1240px;
+
+      margin:
+        auto;
 
       padding:
         26px 25px
         65px;
+
     }
 
+
     .catalog {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(
@@ -592,241 +935,390 @@
       gap:
         23px 20px;
 
-      align-items: stretch;
+      align-items:
+        stretch;
+
     }
 
+
+
     /* =====================================================
-       PRODUCT CARD
+       CARTOES
     ===================================================== */
 
     .product {
-      overflow: hidden;
 
-      display: flex;
-      flex-direction: column;
+      overflow:
+        hidden;
 
-      height: 100%;
+      display:
+        flex;
 
-      background: white;
+      flex-direction:
+        column;
+
+      height:
+        100%;
+
+      background:
+        white;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: var(--radius);
+      border-radius:
+        var(--radius);
 
-      box-shadow: var(--shadow);
+      box-shadow:
+        var(--shadow);
 
       transition:
         transform .22s,
         box-shadow .22s;
+
     }
 
+
     .product:hover {
+
       transform:
         translateY(-4px);
 
       box-shadow:
         var(--shadow-hover);
+
     }
 
-    /* =====================================================
-       CLICKABLE IMAGE
-    ===================================================== */
+
+
+    /* IMAGEM CLICAVEL */
 
     .image-link {
-      display: block;
 
-      text-decoration: none;
+      display:
+        block;
 
-      cursor: pointer;
+      text-decoration:
+        none;
+
+      cursor:
+        pointer;
+
     }
 
+
     .image-box {
-      position: relative;
 
-      aspect-ratio: 1 / 1;
+      position:
+        relative;
 
-      overflow: hidden;
+      aspect-ratio:
+        1 / 1;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      overflow:
+        hidden;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
 
       background:
         var(--surface-soft);
+
     }
 
-    .image-box img {
-      width: 100%;
-      height: 100%;
 
-      object-fit: cover;
+    .image-box img {
+
+      width:
+        100%;
+
+      height:
+        100%;
+
+      object-fit:
+        cover;
 
       transition:
         transform .3s ease;
+
     }
 
+
     .image-link:hover img {
+
       transform:
         scale(1.035);
+
     }
+
 
     .category-badge,
     .quantity-badge {
-      position: absolute;
 
-      top: 12px;
+      position:
+        absolute;
 
-      z-index: 2;
+      top:
+        12px;
+
+      z-index:
+        2;
 
       padding:
         6px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      font-size: 10px;
-      font-weight: 700;
+      font-size:
+        10px;
+
+      font-weight:
+        700;
+
     }
 
+
     .category-badge {
-      left: 12px;
+
+      left:
+        12px;
 
       background:
         rgba(15,16,18,.78);
 
-      color: white;
+      color:
+        white;
+
     }
 
+
     .quantity-badge {
-      right: 12px;
+
+      right:
+        12px;
 
       background:
         var(--gold);
 
-      color: #241b09;
+      color:
+        #241b09;
+
     }
+
 
     .no-image {
-      color: #999;
 
-      font-size: 13px;
+      color:
+        #999;
+
+      font-size:
+        13px;
+
     }
 
+
+
     /* =====================================================
-       CARD BODY - UNIFORM HEIGHT
+       CORPO DO CARTAO
     ===================================================== */
 
     .product-body {
-      flex: 1;
 
-      padding: 16px;
+      flex:
+        1;
 
-      display: flex;
-      flex-direction: column;
+      padding:
+        16px;
+
+      display:
+        flex;
+
+      flex-direction:
+        column;
+
     }
+
 
     .product-title-link {
-      color: inherit;
 
-      text-decoration: none;
+      color:
+        inherit;
 
-      cursor: pointer;
+      text-decoration:
+        none;
+
+      cursor:
+        pointer;
+
     }
 
+
     .product-name {
+
       margin:
         0 0 14px;
 
-      min-height: 63px;
+      min-height:
+        63px;
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      line-height: 1.4;
+      line-height:
+        1.4;
 
-      font-weight: 680;
+      font-weight:
+        680;
 
-      display: -webkit-box;
+      display:
+        -webkit-box;
 
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
+      -webkit-line-clamp:
+        3;
 
-      overflow: hidden;
+      -webkit-box-orient:
+        vertical;
+
+      overflow:
+        hidden;
+
     }
+
 
     .product-title-link:hover
     .product-name {
-      color: var(--gold-dark);
+
+      color:
+        var(--gold-dark);
+
     }
+
 
     .product-footer {
-      margin-top: auto;
+
+      margin-top:
+        auto;
+
     }
 
+
+
     /* =====================================================
-       PRICE
+       PRECO
     ===================================================== */
 
     .price-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      gap: 10px;
+      display:
+        flex;
 
-      margin-bottom: 8px;
+      justify-content:
+        space-between;
+
+      align-items:
+        center;
+
+      gap:
+        10px;
+
+      margin-bottom:
+        8px;
+
     }
+
 
     .price {
-      font-size: 21px;
-      font-weight: 850;
+
+      font-size:
+        21px;
+
+      font-weight:
+        850;
+
     }
 
+
     .status {
+
       padding:
         6px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: var(--green-bg);
-      color: var(--green);
+      background:
+        var(--green-bg);
 
-      font-size: 10px;
-      font-weight: 750;
+      color:
+        var(--green);
+
+      font-size:
+        10px;
+
+      font-weight:
+        750;
+
     }
 
+
+
     /* =====================================================
-       CONDITION
+       CONDICAO
     ===================================================== */
 
     .condition-row {
-      min-height: 29px;
 
-      margin-bottom: 10px;
+      min-height:
+        29px;
+
+      margin-bottom:
+        10px;
+
     }
 
+
     .condition-tag {
-      display: inline-flex;
+
+      display:
+        inline-flex;
 
       padding:
         5px 9px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
       background:
         var(--blue-bg);
 
-      color: var(--blue);
+      color:
+        var(--blue);
 
-      font-size: 10px;
-      font-weight: 750;
+      font-size:
+        10px;
+
+      font-weight:
+        750;
+
     }
 
+
     /* =====================================================
-       INTERNAL
+       AREA INTERNA
     ===================================================== */
 
     .internal-price-box {
-      display: none;
+
+      display:
+        none;
 
       margin:
         3px 0 11px;
@@ -835,55 +1327,88 @@
         10px;
 
       border:
-        1px dashed #d6b664;
+        1px dashed
+        #d6b664;
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
       background:
         #fffaf0;
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
+
 
     body.internal-mode
     .internal-price-box {
-      display: block;
+
+      display:
+        block;
+
     }
 
+
     .internal-line {
-      display: flex;
-      justify-content: space-between;
+
+      display:
+        flex;
+
+      justify-content:
+        space-between;
 
       padding:
         2px 0;
+
     }
+
 
     .internal-line span {
+
       color:
         var(--muted);
+
     }
 
-    .internal-line.margin strong {
+
+    .internal-line.margin
+    strong {
+
       color:
         var(--green);
+
     }
 
+
+
     /* =====================================================
-       PRODUCT BUTTON
+       BOTAO
     ===================================================== */
 
     .product-button {
-      width: 100%;
 
-      min-height: 44px;
+      width:
+        100%;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      min-height:
+        44px;
 
-      border: 0;
+      display:
+        flex;
 
-      border-radius: 11px;
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      border:
+        0;
+
+      border-radius:
+        11px;
 
       background:
         linear-gradient(
@@ -892,210 +1417,367 @@
           #c28410
         );
 
-      color: white;
+      color:
+        white;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 12px;
-      font-weight: 800;
+      font-size:
+        12px;
+
+      font-weight:
+        800;
+
     }
 
+
     .product-button:hover {
+
       background:
         linear-gradient(
           135deg,
           #d59a1f,
           #a96f08
         );
+
     }
+
+
 
     .links-list {
-      display: none;
 
-      margin-top: 9px;
+      display:
+        none;
 
-      padding-top: 9px;
+      margin-top:
+        9px;
+
+      padding-top:
+        9px;
 
       border-top:
-        1px solid var(--border);
+        1px solid
+        var(--border);
+
     }
+
 
     .links-list.open {
-      display: grid;
 
-      gap: 6px;
+      display:
+        grid;
+
+      gap:
+        6px;
+
     }
 
+
     .links-list a {
+
       padding:
         8px 10px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 8px;
+      border-radius:
+        8px;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
 
+
+
     /* =====================================================
-       PAGINATION
+       PAGINACAO
     ===================================================== */
 
     .pagination {
-      margin-top: 38px;
 
-      display: flex;
-      justify-content: center;
+      margin-top:
+        38px;
 
-      gap: 7px;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      gap:
+        7px;
+
+      flex-wrap:
+        wrap;
+
     }
+
 
     .page-button {
-      min-width: 39px;
-      height: 39px;
+
+      min-width:
+        39px;
+
+      height:
+        39px;
+
+      padding:
+        0 10px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
 
-      background: white;
+      background:
+        white;
 
-      cursor: pointer;
+      cursor:
+        pointer;
+
     }
+
+
+    .page-button:hover {
+
+      border-color:
+        var(--gold);
+
+    }
+
 
     .page-button.active {
-      background: var(--ink);
-      color: white;
+
+      background:
+        var(--ink);
+
+      color:
+        white;
+
+      border-color:
+        var(--ink);
+
     }
 
+
     .page-button:disabled {
-      opacity: .35;
-      cursor: default;
+
+      opacity:
+        .35;
+
+      cursor:
+        default;
+
     }
+
+
 
     /* =====================================================
        LOGIN
     ===================================================== */
 
     .modal-overlay {
-      position: fixed;
-      inset: 0;
 
-      z-index: 100;
+      position:
+        fixed;
 
-      display: none;
-      justify-content: center;
-      align-items: center;
+      inset:
+        0;
 
-      padding: 20px;
+      z-index:
+        100;
+
+      display:
+        none;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      padding:
+        20px;
 
       background:
         rgba(0,0,0,.65);
 
       backdrop-filter:
         blur(8px);
+
     }
+
 
     .modal-overlay.open {
-      display: flex;
+
+      display:
+        flex;
+
     }
 
+
     .login-modal {
+
       width:
         min(390px,100%);
 
-      padding: 27px;
+      padding:
+        27px;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
-      background: white;
+      background:
+        white;
+
     }
+
 
     .login-field {
-      margin-bottom: 13px;
+
+      margin-bottom:
+        13px;
+
     }
+
 
     .login-field label {
-      display: block;
 
-      margin-bottom: 5px;
+      display:
+        block;
 
-      font-size: 11px;
-      font-weight: 700;
+      margin-bottom:
+        5px;
+
+      font-size:
+        11px;
+
+      font-weight:
+        700;
+
     }
 
+
     .login-field input {
-      width: 100%;
-      height: 43px;
+
+      width:
+        100%;
+
+      height:
+        43px;
 
       padding:
         0 12px;
 
       border:
-        1px solid var(--border);
+        1px solid
+        var(--border);
 
-      border-radius: 10px;
+      border-radius:
+        10px;
+
     }
 
+
     .login-error {
-      min-height: 20px;
+
+      min-height:
+        20px;
 
       color:
         var(--red);
 
-      font-size: 11px;
+      font-size:
+        11px;
+
     }
 
+
     .login-actions {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         1fr 1fr;
 
-      gap: 9px;
+      gap:
+        9px;
+
     }
+
 
     .login-actions button {
-      min-height: 42px;
 
-      border-radius: 10px;
+      min-height:
+        42px;
 
-      cursor: pointer;
+      border-radius:
+        10px;
+
+      cursor:
+        pointer;
+
     }
+
 
     .cancel-login {
-      border:
-        1px solid var(--border);
 
-      background: white;
+      border:
+        1px solid
+        var(--border);
+
+      background:
+        white;
+
     }
 
+
     .submit-login {
-      border: 0;
+
+      border:
+        0;
 
       background:
         var(--ink);
 
-      color: white;
+      color:
+        white;
+
     }
+
 
     .message {
-      text-align: center;
 
-      color: var(--muted);
+      text-align:
+        center;
 
-      padding: 40px;
+      color:
+        var(--muted);
+
+      padding:
+        40px;
+
     }
 
+
     footer {
+
       padding:
         32px 20px;
 
@@ -1105,76 +1787,138 @@
       color:
         rgba(255,255,255,.45);
 
-      text-align: center;
+      text-align:
+        center;
+
     }
 
-    @media (max-width: 850px) {
-      .hero-main {
-        grid-template-columns: 1fr;
 
-        text-align: center;
+
+    @media
+    (max-width:850px) {
+
+      .hero-main {
+
+        grid-template-columns:
+          1fr;
+
+        text-align:
+          center;
+
       }
+
 
       .crest-area {
         order: 1;
       }
 
+
       .hero-copy {
         order: 2;
       }
 
+
       .controls-row {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
 
       .toolbar {
-        flex-direction: column;
+
+        flex-direction:
+          column;
+
       }
+
 
       .selectors {
-        padding-top: 0;
+
+        padding-top:
+          0;
+
       }
+
     }
 
-    @media (max-width: 650px) {
+
+
+    @media
+    (max-width:650px) {
+
       .catalog {
+
         grid-template-columns:
           repeat(
             2,
             minmax(0,1fr)
           );
 
-        gap: 12px;
+        gap:
+          12px;
+
       }
+
 
       .product-body {
-        padding: 12px;
+
+        padding:
+          12px;
+
       }
+
 
       .product-name {
-        font-size: 13px;
 
-        min-height: 55px;
+        font-size:
+          13px;
+
+        min-height:
+          55px;
+
       }
+
 
       .status {
-        display: none;
+
+        display:
+          none;
+
       }
+
 
       .select-wrap label {
-        display: none;
+
+        display:
+          none;
+
       }
+
     }
 
-    @media (max-width: 390px) {
+
+
+    @media
+    (max-width:390px) {
+
       .catalog {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
+
       }
+
     }
+
   </style>
+
 </head>
 
+
 <body>
+
 
 <header class="hero">
 
@@ -1183,26 +1927,38 @@
     <div class="topbar">
 
       <div class="mini-brand">
+
         <span class="mini-dot"></span>
+
         Catálogo independente
+
       </div>
 
+
       <div class="top-actions">
+
 
         <div
           id="contactArea"
           class="contact"
         >
+
           Contacto:
+
           <strong id="contact"></strong>
+
         </div>
+
 
         <button
           id="internalButton"
           class="internal-button"
         >
+
           🔒 Área interna
+
         </button>
+
 
       </div>
 
@@ -1211,20 +1967,34 @@
 
     <div class="hero-main">
 
+
       <div class="hero-copy">
 
         <div class="eyebrow">
+
           Backyard Traders
+
         </div>
 
+
         <h1 id="storeName">
+
           Backyard
-          <span>Traders</span>
+
+          <span>
+            Traders
+          </span>
+
         </h1>
 
+
         <p id="subtitle">
-          Artigos selecionados a bons preços
+
+          Artigos selecionados
+          a bons preços
+
         </p>
+
 
         <div class="hero-actions">
 
@@ -1232,14 +2002,19 @@
             href="#shop"
             class="hero-button"
           >
+
             Explorar artigos ↓
+
           </a>
+
 
           <span
             id="heroTotal"
             class="hero-total"
           >
+
             A carregar catálogo...
+
           </span>
 
         </div>
@@ -1271,6 +2046,11 @@
 </header>
 
 
+
+<!-- =====================================================
+     PESQUISA
+===================================================== -->
+
 <section
   id="shop"
   class="controls-wrap"
@@ -1279,6 +2059,7 @@
   <div class="controls">
 
     <div class="controls-row">
+
 
       <div class="catalog-info">
 
@@ -1295,6 +2076,7 @@
 
       </div>
 
+
       <div class="search-box">
 
         <input
@@ -1305,6 +2087,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -1312,48 +2095,65 @@
 </section>
 
 
+
+<!-- =====================================================
+     FILTROS
+===================================================== -->
+
 <section class="toolbar">
 
+
   <div class="filter-area">
+
 
     <div class="filter-label">
       Categoria
     </div>
+
 
     <div
       id="categories"
       class="categories"
     ></div>
 
+
     <div
       id="conditionBlock"
       style="display:none"
     >
 
+
       <div
         class="filter-label"
         style="margin-top:12px"
       >
+
         Condição
+
       </div>
+
 
       <div
         id="conditions"
         class="conditions"
       ></div>
 
+
     </div>
 
   </div>
 
 
+
   <div class="selectors">
+
 
     <div class="select-wrap">
 
       <label for="sortSelect">
         Ordenar
       </label>
+
 
       <select id="sortSelect">
 
@@ -1378,11 +2178,13 @@
     </div>
 
 
+
     <div class="select-wrap">
 
       <label for="pageSizeSelect">
         Mostrar
       </label>
+
 
       <select id="pageSizeSelect">
 
@@ -1402,37 +2204,52 @@
 
     </div>
 
+
   </div>
 
 </section>
 
 
+
+<!-- =====================================================
+     CATALOGO
+===================================================== -->
+
 <main class="main">
+
 
   <div
     id="message"
     class="message"
   >
+
     A carregar artigos...
+
   </div>
+
 
   <section
     id="catalog"
     class="catalog"
   ></section>
 
+
   <div
     id="pagination"
     class="pagination"
   ></div>
 
+
 </main>
+
 
 
 <footer>
 
   <strong id="footerName">
+
     Backyard Traders
+
   </strong>
 
   · Catálogo online
@@ -1440,20 +2257,30 @@
 </footer>
 
 
+
+<!-- =====================================================
+     LOGIN
+===================================================== -->
+
 <div
   id="loginOverlay"
   class="modal-overlay"
 >
 
+
   <div class="login-modal">
+
 
     <h3>
       Área interna
     </h3>
 
+
     <p>
-      Introduz as credenciais de Acesso:
+      Introduz as credenciais
+      de acesso:
     </p>
+
 
     <div class="login-field">
 
@@ -1468,6 +2295,7 @@
 
     </div>
 
+
     <div class="login-field">
 
       <label>
@@ -1481,10 +2309,12 @@
 
     </div>
 
+
     <div
       id="loginError"
       class="login-error"
     ></div>
+
 
     <div class="login-actions">
 
@@ -1495,6 +2325,7 @@
         Cancelar
       </button>
 
+
       <button
         id="submitLogin"
         class="submit-login"
@@ -1504,16 +2335,20 @@
 
     </div>
 
+
   </div>
 
 </div>
+
 
 
 <script>
 
 /* =====================================================
    GOOGLE SHEETS
-   MANTÉM AQUI OS URLs DA TUA FOLHA ATUAL
+
+   SUBSTITUI APENAS ESTES DOIS URLs
+   PELOS URLs ATUAIS DA TUA FOLHA OFICIAL.
 ===================================================== */
 
 const CSV_PRODUCTS =
@@ -1527,39 +2362,58 @@ const CSV_CONFIG =
 
 
 /* =====================================================
-   STATE
+   ESTADO
 ===================================================== */
 
-let configuredUser = "";
-let configuredPassword = "";
+let configuredUser =
+  "";
 
-let allProducts = [];
-let filteredProducts = [];
+let configuredPassword =
+  "";
 
-let activeCategory = "Todos";
-let activeCondition = "Todos";
 
-let searchQuery = "";
-let sortMode = "default";
+let allProducts =
+  [];
 
-/*
-  Melhoria:
-  recupera a preferência 20 / 50 / 100.
-*/
+let filteredProducts =
+  [];
+
+
+let activeCategory =
+  "Todos";
+
+let activeCondition =
+  "Todos";
+
+
+let searchQuery =
+  "";
+
+let sortMode =
+  "default";
+
 
 let pageSize =
   Number(
     localStorage.getItem(
       "backyard_page_size"
     )
-  ) || 20;
+  )
+  ||
+  20;
 
-let currentPage = 1;
+
+let currentPage =
+  1;
+
 
 let internalMode =
   sessionStorage.getItem(
     "backyard_internal"
-  ) === "1";
+  )
+  ===
+  "1";
+
 
 
 /* =====================================================
@@ -1571,8 +2425,13 @@ function parseCSV(text) {
   const rows = [];
 
   let row = [];
-  let field = "";
-  let quoted = false;
+
+  let field =
+    "";
+
+  let quoted =
+    false;
+
 
   for (
     let i = 0;
@@ -1580,8 +2439,12 @@ function parseCSV(text) {
     i++
   ) {
 
-    const char = text[i];
-    const next = text[i + 1];
+    const char =
+      text[i];
+
+    const next =
+      text[i + 1];
+
 
     if (
       char === '"' &&
@@ -1590,31 +2453,41 @@ function parseCSV(text) {
     ) {
 
       field += '"';
+
       i++;
 
     }
+
 
     else if (
       char === '"'
     ) {
 
-      quoted = !quoted;
+      quoted =
+        !quoted;
 
     }
+
 
     else if (
       char === "," &&
       !quoted
     ) {
 
-      row.push(field);
-      field = "";
+      row.push(
+        field
+      );
+
+      field =
+        "";
 
     }
 
+
     else if (
       (
-        char === "\n" ||
+        char === "\n"
+        ||
         char === "\r"
       )
       &&
@@ -1622,7 +2495,8 @@ function parseCSV(text) {
     ) {
 
       if (
-        char === "\r" &&
+        char === "\r"
+        &&
         next === "\n"
       ) {
 
@@ -1630,48 +2504,73 @@ function parseCSV(text) {
 
       }
 
-      row.push(field);
-      field = "";
+
+      row.push(
+        field
+      );
+
+
+      field =
+        "";
+
 
       if (
         row.some(
           value =>
-            value.trim() !== ""
+            value.trim()
+            !==
+            ""
         )
       ) {
 
-        rows.push(row);
+        rows.push(
+          row
+        );
 
       }
 
-      row = [];
+
+      row =
+        [];
 
     }
 
+
     else {
 
-      field += char;
+      field +=
+        char;
 
     }
 
   }
 
-  row.push(field);
+
+  row.push(
+    field
+  );
+
 
   if (
     row.some(
       value =>
-        value.trim() !== ""
+        value.trim()
+        !==
+        ""
     )
   ) {
 
-    rows.push(row);
+    rows.push(
+      row
+    );
 
   }
+
 
   return rows;
 
 }
+
 
 
 function normalizeText(value) {
@@ -1679,13 +2578,20 @@ function normalizeText(value) {
   return (
     value || ""
   )
+
     .trim()
+
     .toLowerCase()
-    .normalize("NFD")
+
+    .normalize(
+      "NFD"
+    )
+
     .replace(
       /[\u0300-\u036f]/g,
       ""
     )
+
     .replace(
       /\s+/g,
       " "
@@ -1694,44 +2600,59 @@ function normalizeText(value) {
 }
 
 
+
 function parsePrice(value) {
 
   if (!value) {
+
     return 0;
+
   }
+
 
   const cleaned =
     value
+
       .replace(
         /[^\d,.-]/g,
         ""
       )
+
       .replace(
         /\./g,
         ""
       )
+
       .replace(
         ",",
         "."
       );
+
 
   const result =
     parseFloat(
       cleaned
     );
 
+
   return Number.isFinite(
     result
   )
-    ? result
-    : 0;
+
+    ?
+      result
+
+    :
+      0;
 
 }
+
 
 
 function formatEUR(number) {
 
   return number
+
     .toLocaleString(
       "pt-PT",
       {
@@ -1739,10 +2660,12 @@ function formatEUR(number) {
         maximumFractionDigits: 2
       }
     )
+
     +
     " €";
 
 }
+
 
 
 /* =====================================================
@@ -1758,15 +2681,20 @@ async function loadConfig() {
         CSV_CONFIG
       );
 
+
     const text =
       await response.text();
+
 
     const rows =
       parseCSV(
         text
       );
 
-    const config = {};
+
+    const config =
+      {};
+
 
     rows.forEach(
       row => {
@@ -1776,10 +2704,15 @@ async function loadConfig() {
             row[0]
           );
 
+
         const value =
           (
-            row[1] || ""
-          ).trim();
+            row[1]
+            ||
+            ""
+          )
+          .trim();
+
 
         if (key) {
 
@@ -1790,6 +2723,7 @@ async function loadConfig() {
 
       }
     );
+
 
 
     if (
@@ -1803,8 +2737,10 @@ async function loadConfig() {
           "nome da loja"
         ];
 
+
       document.title =
         name;
+
 
       document
         .getElementById(
@@ -1813,11 +2749,13 @@ async function loadConfig() {
         .textContent =
           name;
 
+
       renderStoreName(
         name
       );
 
     }
+
 
 
     if (
@@ -1832,10 +2770,12 @@ async function loadConfig() {
             "logo"
           );
 
+
       logo.src =
         config[
           "logotipo"
         ];
+
 
       logo.onload =
         () => {
@@ -1846,6 +2786,7 @@ async function loadConfig() {
         };
 
     }
+
 
 
     if (
@@ -1866,6 +2807,7 @@ async function loadConfig() {
     }
 
 
+
     if (
       config[
         "contacto"
@@ -1881,6 +2823,7 @@ async function loadConfig() {
             "contacto"
           ];
 
+
       document
         .getElementById(
           "contactArea"
@@ -1891,29 +2834,41 @@ async function loadConfig() {
     }
 
 
+
     if (
-      config["user"]
+      config[
+        "user"
+      ]
     ) {
 
       configuredUser =
-        config["user"];
+        config[
+          "user"
+        ];
 
     }
+
 
 
     if (
-      config["password"]
+      config[
+        "password"
+      ]
     ) {
 
       configuredPassword =
-        config["password"];
+        config[
+          "password"
+        ];
 
     }
+
 
 
     updateInternalUI();
 
   }
+
 
   catch (error) {
 
@@ -1927,33 +2882,51 @@ async function loadConfig() {
 }
 
 
+
 function renderStoreName(name) {
 
   const words =
     name
+
       .trim()
-      .split(/\s+/);
+
+      .split(
+        /\s+/
+      );
+
 
   const last =
     words.pop();
 
+
   const first =
-    words.join(" ");
+    words.join(
+      " "
+    );
+
 
   document
     .getElementById(
       "storeName"
     )
     .innerHTML =
+
       first
+
       +
+
       " <span>"
+
       +
+
       last
+
       +
+
       "</span>";
 
 }
+
 
 
 /* =====================================================
@@ -1968,6 +2941,7 @@ function updateInternalUI() {
         "internalButton"
       );
 
+
   if (
     internalMode
   ) {
@@ -1978,16 +2952,19 @@ function updateInternalUI() {
         "internal-mode"
       );
 
+
     button
       .classList
       .add(
         "logged"
       );
 
+
     button.textContent =
       "🔓 Modo interno · Sair";
 
   }
+
 
   else {
 
@@ -1997,11 +2974,13 @@ function updateInternalUI() {
         "internal-mode"
       );
 
+
     button
       .classList
       .remove(
         "logged"
       );
+
 
     button.textContent =
       "🔒 Área interna";
@@ -2011,12 +2990,14 @@ function updateInternalUI() {
 }
 
 
+
 document
   .getElementById(
     "internalButton"
   )
   .onclick =
     () => {
+
 
       if (
         internalMode
@@ -2025,18 +3006,23 @@ document
         internalMode =
           false;
 
+
         sessionStorage
           .removeItem(
             "backyard_internal"
           );
 
+
         updateInternalUI();
 
+
         renderPage();
+
 
         return;
 
       }
+
 
       document
         .getElementById(
@@ -2050,6 +3036,7 @@ document
     };
 
 
+
 function closeLogin() {
 
   document
@@ -2061,12 +3048,14 @@ function closeLogin() {
       "open"
     );
 
+
   document
     .getElementById(
       "loginPassword"
     )
     .value =
       "";
+
 
   document
     .getElementById(
@@ -2076,6 +3065,7 @@ function closeLogin() {
       "";
 
 }
+
 
 
 function submitLogin() {
@@ -2088,6 +3078,7 @@ function submitLogin() {
       .value
       .trim();
 
+
   const password =
     document
       .getElementById(
@@ -2095,28 +3086,40 @@ function submitLogin() {
       )
       .value;
 
+
   const userOK =
+
     normalizeText(
       user
     )
+
     ===
+
     normalizeText(
       configuredUser
     );
 
+
   const passwordOK =
-    password ===
+
+    password
+    ===
     configuredPassword;
 
+
   if (
-    userOK &&
-    passwordOK &&
-    configuredUser &&
+    userOK
+    &&
+    passwordOK
+    &&
+    configuredUser
+    &&
     configuredPassword
   ) {
 
     internalMode =
       true;
+
 
     sessionStorage
       .setItem(
@@ -2124,13 +3127,17 @@ function submitLogin() {
         "1"
       );
 
+
     closeLogin();
 
+
     updateInternalUI();
+
 
     renderPage();
 
   }
+
 
   else {
 
@@ -2146,12 +3153,14 @@ function submitLogin() {
 }
 
 
+
 document
   .getElementById(
     "cancelLogin"
   )
   .onclick =
     closeLogin;
+
 
 
 document
@@ -2162,8 +3171,9 @@ document
     submitLogin;
 
 
+
 /* =====================================================
-   PRODUCTS
+   PRODUTOS
 ===================================================== */
 
 async function loadProducts() {
@@ -2175,13 +3185,16 @@ async function loadProducts() {
         CSV_PRODUCTS
       );
 
+
     const text =
       await response.text();
+
 
     const rows =
       parseCSV(
         text
       );
+
 
     const headers =
       rows[0]
@@ -2190,48 +3203,66 @@ async function loadProducts() {
             h.trim()
         );
 
+
     const products =
       rows
+
         .slice(1)
+
         .map(
           values => {
 
-            const product = {};
+            const product =
+              {};
 
-            headers.forEach(
-              (
-                header,
-                index
-              ) => {
 
-                product[
-                  header
-                ] =
-                  (
-                    values[
-                      index
-                    ] || ""
-                  ).trim();
+            headers
+              .forEach(
+                (
+                  header,
+                  index
+                ) => {
 
-              }
-            );
+                  product[
+                    header
+                  ] =
+                    (
+                      values[
+                        index
+                      ]
+                      ||
+                      ""
+                    )
+                    .trim();
+
+                }
+              );
+
 
             return product;
 
           }
         )
+
+
         .filter(
           product => {
 
             const name =
               product[
                 "Produto"
-              ] || "";
+              ]
+              ||
+              "";
+
 
             const status =
               product[
                 "Disponibilidade"
-              ] || "";
+              ]
+              ||
+              "";
+
 
             if (!name) {
 
@@ -2239,8 +3270,10 @@ async function loadProducts() {
 
             }
 
+
             if (
-              status &&
+              status
+              &&
               normalizeText(
                 status
               )
@@ -2252,23 +3285,23 @@ async function loadProducts() {
 
             }
 
+
             return true;
 
           }
         );
+
 
     allProducts =
       groupDuplicates(
         products
       );
 
+
     buildCategories();
+
     buildConditions();
 
-    /*
-      Sincroniza visualmente
-      o seletor com pageSize.
-    */
 
     document
       .getElementById(
@@ -2279,15 +3312,21 @@ async function loadProducts() {
           pageSize
         );
 
+
     applyFilters();
+
 
     updateHeroTotal();
 
   }
 
+
   catch (error) {
 
-    console.error(error);
+    console.error(
+      error
+    );
+
 
     document
       .getElementById(
@@ -2301,8 +3340,9 @@ async function loadProducts() {
 }
 
 
+
 /* =====================================================
-   GROUP DUPLICATES
+   AGRUPAR ARTIGOS REPETIDOS
 ===================================================== */
 
 function groupDuplicates(products) {
@@ -2310,8 +3350,10 @@ function groupDuplicates(products) {
   const groups =
     new Map();
 
+
   products.forEach(
     product => {
+
 
       const name =
         normalizeText(
@@ -2320,6 +3362,7 @@ function groupDuplicates(products) {
           ]
         );
 
+
       const description =
         normalizeText(
           product[
@@ -2327,16 +3370,22 @@ function groupDuplicates(products) {
           ]
         );
 
+
       const key =
         description
+
           ?
+
             name
             +
             "|"
             +
             description
+
           :
+
             name;
+
 
       if (
         !groups.has(
@@ -2347,51 +3396,69 @@ function groupDuplicates(products) {
         groups.set(
           key,
           {
+
             ...product,
 
-            quantity: 0,
+            quantity:
+              0,
 
-            links: [],
+            links:
+              [],
 
-            prices: [],
+            prices:
+              [],
 
-            costs: [],
+            costs:
+              [],
 
-            margins: [],
+            margins:
+              [],
 
-            images: [],
+            images:
+              [],
 
-            conditions: []
+            conditions:
+              []
+
           }
         );
 
       }
+
 
       const group =
         groups.get(
           key
         );
 
+
       group.quantity++;
+
+
 
       const link =
         product[
           "Link Venda"
         ];
 
+
       if (
-        link &&
+        link
+        &&
         !group.links
           .includes(
             link
           )
       ) {
 
-        group.links.push(
-          link
-        );
+        group.links
+          .push(
+            link
+          );
 
       }
+
+
 
       const price =
         parsePrice(
@@ -2400,6 +3467,7 @@ function groupDuplicates(products) {
           ]
         );
 
+
       const cost =
         parsePrice(
           product[
@@ -2407,79 +3475,100 @@ function groupDuplicates(products) {
           ]
         );
 
+
       if (
         price > 0
       ) {
 
-        group.prices.push(
-          price
-        );
+        group.prices
+          .push(
+            price
+          );
 
       }
+
 
       if (
         cost > 0
       ) {
 
-        group.costs.push(
-          cost
-        );
+        group.costs
+          .push(
+            cost
+          );
 
       }
 
+
       if (
-        price > 0 &&
+        price > 0
+        &&
         cost > 0
       ) {
 
-        group.margins.push(
-          price - cost
-        );
+        group.margins
+          .push(
+            price - cost
+          );
 
       }
+
+
 
       const image =
         product[
           "Imagem"
         ];
 
+
       if (
-        image &&
+        image
+        &&
         !group.images
           .includes(
             image
           )
       ) {
 
-        group.images.push(
-          image
-        );
+        group.images
+          .push(
+            image
+          );
 
       }
+
+
 
       const condition =
         (
           product[
             "Condição"
-          ] || ""
-        ).trim();
+          ]
+          ||
+          ""
+        )
+        .trim();
+
 
       if (
-        condition &&
+        condition
+        &&
         !group.conditions
           .includes(
             condition
           )
       ) {
 
-        group.conditions.push(
-          condition
-        );
+        group.conditions
+          .push(
+            condition
+          );
 
       }
 
     }
   );
+
 
   return [
     ...groups.values()
@@ -2488,8 +3577,9 @@ function groupDuplicates(products) {
 }
 
 
+
 /* =====================================================
-   FILTERS
+   FILTROS
 ===================================================== */
 
 function buildCategories() {
@@ -2503,6 +3593,7 @@ function buildCategories() {
 }
 
 
+
 function buildConditions() {
 
   const values =
@@ -2511,13 +3602,18 @@ function buildConditions() {
 
         allProducts
           .flatMap(
-            p =>
-              p.conditions || []
+            product =>
+              product.conditions
+              ||
+              []
           )
 
       )
     ]
-    .filter(Boolean);
+    .filter(
+      Boolean
+    );
+
 
   if (
     !values.length
@@ -2527,12 +3623,14 @@ function buildConditions() {
 
   }
 
+
   document
     .getElementById(
       "conditionBlock"
     )
     .style.display =
       "block";
+
 
   createButtons(
     "conditions",
@@ -2541,6 +3639,7 @@ function buildConditions() {
   );
 
 }
+
 
 
 function buildFilter(
@@ -2555,15 +3654,23 @@ function buildFilter(
 
         allProducts
           .map(
-            p =>
+            product =>
               (
-                p[field] || ""
-              ).trim()
+                product[
+                  field
+                ]
+                ||
+                ""
+              )
+              .trim()
           )
 
       )
     ]
-    .filter(Boolean);
+    .filter(
+      Boolean
+    );
+
 
   createButtons(
     id,
@@ -2572,6 +3679,7 @@ function buildFilter(
   );
 
 }
+
 
 
 function createButtons(
@@ -2586,8 +3694,10 @@ function createButtons(
         id
       );
 
+
   container.innerHTML =
     "";
+
 
   const all =
     [
@@ -2595,8 +3705,10 @@ function createButtons(
       ...values
     ];
 
+
   all.forEach(
     value => {
+
 
       const button =
         document
@@ -2604,18 +3716,24 @@ function createButtons(
             "button"
           );
 
+
       button.textContent =
         value;
 
+
       button.className =
+
         type ===
-          "category"
+        "category"
 
           ?
+
             "category-button"
 
           :
+
             "condition-button";
+
 
       if (
         value ===
@@ -2630,8 +3748,10 @@ function createButtons(
 
       }
 
+
       button.onclick =
         () => {
+
 
           if (
             type ===
@@ -2643,6 +3763,7 @@ function createButtons(
 
           }
 
+
           else {
 
             activeCondition =
@@ -2650,17 +3771,20 @@ function createButtons(
 
           }
 
+
           container
             .querySelectorAll(
               "button"
             )
             .forEach(
-              b =>
-                b.classList
+              element =>
+                element
+                  .classList
                   .remove(
                     "active"
                   )
             );
+
 
           button
             .classList
@@ -2668,14 +3792,18 @@ function createButtons(
               "active"
             );
 
+
           currentPage =
             1;
 
+
           applyFilters();
 
-          scrollToCatalog();
+
+          scrollToCatalogTop();
 
         };
+
 
       container
         .appendChild(
@@ -2688,127 +3816,190 @@ function createButtons(
 }
 
 
+
 /* =====================================================
-   FILTER + SORT
+   FILTRAR / ORDENAR
 ===================================================== */
 
 function applyFilters() {
 
   filteredProducts =
-    allProducts.filter(
-      product => {
+    allProducts
+      .filter(
+        product => {
 
-        const name =
-          normalizeText(
-            product[
-              "Produto"
-            ]
-          );
 
-        const description =
-          normalizeText(
-            product[
-              "Descrição"
-            ]
-          );
+          const name =
+            normalizeText(
+              product[
+                "Produto"
+              ]
+            );
 
-        const category =
-          (
-            product[
-              "Categoria"
-            ] || ""
-          ).trim();
 
-        const searchMatch =
-          !searchQuery
-          ||
-          name.includes(
-            searchQuery
-          )
-          ||
-          description.includes(
-            searchQuery
-          );
+          const description =
+            normalizeText(
+              product[
+                "Descrição"
+              ]
+            );
 
-        const categoryMatch =
-          activeCategory ===
-          "Todos"
-          ||
-          category ===
-          activeCategory;
 
-        const conditionMatch =
-          activeCondition ===
-          "Todos"
-          ||
-          (
-            product.conditions
-            || []
-          )
-          .includes(
+          const category =
+            (
+              product[
+                "Categoria"
+              ]
+              ||
+              ""
+            )
+            .trim();
+
+
+          const searchMatch =
+
+            !searchQuery
+
+            ||
+
+            name.includes(
+              searchQuery
+            )
+
+            ||
+
+            description.includes(
+              searchQuery
+            );
+
+
+          const categoryMatch =
+
+            activeCategory
+            ===
+            "Todos"
+
+            ||
+
+            category
+            ===
+            activeCategory;
+
+
+          const conditionMatch =
+
             activeCondition
+            ===
+            "Todos"
+
+            ||
+
+            (
+              product.conditions
+              ||
+              []
+            )
+            .includes(
+              activeCondition
+            );
+
+
+          return (
+
+            searchMatch
+
+            &&
+
+            categoryMatch
+
+            &&
+
+            conditionMatch
+
           );
 
-        return (
-          searchMatch
-          &&
-          categoryMatch
-          &&
-          conditionMatch
-        );
+        }
+      );
 
-      }
-    );
+
 
   if (
     sortMode ===
     "price-asc"
   ) {
 
-    filteredProducts.sort(
-      (a,b) =>
-        getPrice(a)
-        -
-        getPrice(b)
-    );
+    filteredProducts
+      .sort(
+        (
+          a,
+          b
+        ) =>
+          getPrice(a)
+          -
+          getPrice(b)
+      );
 
   }
+
 
   else if (
     sortMode ===
     "price-desc"
   ) {
 
-    filteredProducts.sort(
-      (a,b) =>
-        getPrice(b)
-        -
-        getPrice(a)
-    );
+    filteredProducts
+      .sort(
+        (
+          a,
+          b
+        ) =>
+          getPrice(b)
+          -
+          getPrice(a)
+      );
 
   }
+
 
   else if (
     sortMode ===
     "name-asc"
   ) {
 
-    filteredProducts.sort(
-      (a,b) =>
+    filteredProducts
+      .sort(
         (
-          a["Produto"] || ""
-        )
+          a,
+          b
+        ) =>
+
+          (
+            a[
+              "Produto"
+            ]
+            ||
+            ""
+          )
           .localeCompare(
-            b["Produto"] || "",
+            (
+              b[
+                "Produto"
+              ]
+              ||
+              ""
+            ),
             "pt"
           )
-    );
+
+      );
 
   }
+
 
   renderPage();
 
 }
+
 
 
 function getPrice(product) {
@@ -2817,18 +4008,21 @@ function getPrice(product) {
     ?.length
 
     ?
+
       Math.min(
         ...product.prices
       )
 
     :
+
       0;
 
 }
 
 
+
 /* =====================================================
-   PAGE SIZE
+   NUMERO ARTIGOS POR PAGINA
 ===================================================== */
 
 function setPageSize(value) {
@@ -2839,11 +4033,16 @@ function setPageSize(value) {
       10
     );
 
+
   if (
-    ![20,50,100]
-      .includes(
-        parsed
-      )
+    ![
+      20,
+      50,
+      100
+    ]
+    .includes(
+      parsed
+    )
   ) {
 
     pageSize =
@@ -2851,12 +4050,14 @@ function setPageSize(value) {
 
   }
 
+
   else {
 
     pageSize =
       parsed;
 
   }
+
 
   localStorage
     .setItem(
@@ -2866,18 +4067,22 @@ function setPageSize(value) {
       )
     );
 
+
   currentPage =
     1;
 
+
   renderPage();
 
-  scrollToCatalog();
+
+  scrollToCatalogTop();
 
 }
 
 
+
 /* =====================================================
-   RENDER PAGE
+   RENDER DA PAGINA
 ===================================================== */
 
 function renderPage() {
@@ -2885,14 +4090,17 @@ function renderPage() {
   const total =
     filteredProducts.length;
 
+
   const pages =
     Math.max(
       1,
       Math.ceil(
-        total /
+        total
+        /
         pageSize
       )
     );
+
 
   if (
     currentPage >
@@ -2904,6 +4112,7 @@ function renderPage() {
 
   }
 
+
   const start =
     (
       currentPage - 1
@@ -2911,9 +4120,12 @@ function renderPage() {
     *
     pageSize;
 
+
   const end =
-    start +
+    start
+    +
     pageSize;
+
 
   const pageProducts =
     filteredProducts.slice(
@@ -2921,27 +4133,32 @@ function renderPage() {
       end
     );
 
+
   renderProducts(
     pageProducts
   );
 
+
   renderPagination(
     pages
   );
+
 
   updateCounter();
 
 }
 
 
+
 /* =====================================================
-   PRICE LABEL
+   VALORES
 ===================================================== */
 
 function rangeLabel(values) {
 
   if (
-    !values ||
+    !values
+    ||
     !values.length
   ) {
 
@@ -2949,51 +4166,70 @@ function rangeLabel(values) {
 
   }
 
+
   const min =
     Math.min(
       ...values
     );
+
 
   const max =
     Math.max(
       ...values
     );
 
+
   return min === max
 
     ?
-      formatEUR(min)
+
+      formatEUR(
+        min
+      )
 
     :
-      formatEUR(min)
+
+      formatEUR(
+        min
+      )
+
       +
+
       " – "
+
       +
-      formatEUR(max);
+
+      formatEUR(
+        max
+      );
 
 }
 
 
+
 /* =====================================================
-   LINK HELPERS
+   LINKS
 ===================================================== */
 
-function getPrimaryLink(
-  product
-) {
+function getPrimaryLink(product) {
 
   if (
-    product.links &&
+    product.links
+    &&
     product.links.length
   ) {
 
-    return product.links[0];
+    return product.links[
+      0
+    ];
 
   }
+
 
   return "";
 
 }
+
 
 
 function createClickableWrapper(
@@ -3005,9 +4241,8 @@ function createClickableWrapper(
       product
     );
 
-  if (
-    !link
-  ) {
+
+  if (!link) {
 
     return document
       .createElement(
@@ -3016,28 +4251,34 @@ function createClickableWrapper(
 
   }
 
+
   const anchor =
     document
       .createElement(
         "a"
       );
 
+
   anchor.href =
     link;
+
 
   anchor.target =
     "_blank";
 
+
   anchor.rel =
     "noopener noreferrer";
+
 
   return anchor;
 
 }
 
 
+
 /* =====================================================
-   PRODUCT CARDS
+   PRODUTOS
 ===================================================== */
 
 function renderProducts(products) {
@@ -3048,17 +4289,21 @@ function renderProducts(products) {
         "catalog"
       );
 
+
   const message =
     document
       .getElementById(
         "message"
       );
 
+
   catalog.innerHTML =
     "";
 
+
   message.textContent =
     "";
+
 
   if (
     !products.length
@@ -3067,12 +4312,16 @@ function renderProducts(products) {
     message.textContent =
       "Não foram encontrados artigos.";
 
+
     return;
 
   }
 
+
+
   products.forEach(
     product => {
+
 
       const card =
         document
@@ -3080,18 +4329,23 @@ function renderProducts(products) {
             "article"
           );
 
+
       card.className =
         "product";
 
-      /* IMAGE */
+
+
+      /* IMAGEM */
 
       const imageWrapper =
         createClickableWrapper(
           product
         );
 
+
       imageWrapper.className =
         "image-link";
+
 
       const imageBox =
         document
@@ -3099,8 +4353,10 @@ function renderProducts(products) {
             "div"
           );
 
+
       imageBox.className =
         "image-box";
+
 
 
       if (
@@ -3115,13 +4371,16 @@ function renderProducts(products) {
               "span"
             );
 
+
         badge.className =
           "category-badge";
+
 
         badge.textContent =
           product[
             "Categoria"
           ];
+
 
         imageBox
           .appendChild(
@@ -3131,8 +4390,10 @@ function renderProducts(products) {
       }
 
 
+
       if (
-        product.quantity >
+        product.quantity
+        >
         1
       ) {
 
@@ -3142,13 +4403,16 @@ function renderProducts(products) {
               "span"
             );
 
+
         quantity.className =
           "quantity-badge";
+
 
         quantity.textContent =
           product.quantity
           +
           " unidades";
+
 
         imageBox
           .appendChild(
@@ -3158,8 +4422,12 @@ function renderProducts(products) {
       }
 
 
+
       const image =
-        product.images?.[0];
+        product.images?.[
+          0
+        ];
+
 
       if (image) {
 
@@ -3169,19 +4437,24 @@ function renderProducts(products) {
               "img"
             );
 
+
         img.src =
           image;
+
 
         img.alt =
           product[
             "Produto"
           ];
 
+
         img.loading =
           "lazy";
 
+
         img.decoding =
           "async";
+
 
         imageBox
           .appendChild(
@@ -3189,6 +4462,7 @@ function renderProducts(products) {
           );
 
       }
+
 
       else {
 
@@ -3198,11 +4472,14 @@ function renderProducts(products) {
               "span"
             );
 
+
         noImage.className =
           "no-image";
 
+
         noImage.textContent =
           "Sem imagem";
+
 
         imageBox
           .appendChild(
@@ -3211,13 +4488,15 @@ function renderProducts(products) {
 
       }
 
+
       imageWrapper
         .appendChild(
           imageBox
         );
 
 
-      /* BODY */
+
+      /* CORPO */
 
       const body =
         document
@@ -3225,8 +4504,10 @@ function renderProducts(products) {
             "div"
           );
 
+
       body.className =
         "product-body";
+
 
 
       const titleWrapper =
@@ -3234,8 +4515,10 @@ function renderProducts(products) {
           product
         );
 
+
       titleWrapper.className =
         "product-title-link";
+
 
 
       const title =
@@ -3244,23 +4527,28 @@ function renderProducts(products) {
             "h3"
           );
 
+
       title.className =
         "product-name";
+
 
       title.textContent =
         product[
           "Produto"
         ];
 
+
       title.title =
         product[
           "Produto"
         ];
 
+
       titleWrapper
         .appendChild(
           title
         );
+
 
 
       const footer =
@@ -3269,11 +4557,13 @@ function renderProducts(products) {
             "div"
           );
 
+
       footer.className =
         "product-footer";
 
 
-      /* PRICE */
+
+      /* PRECO */
 
       const priceRow =
         document
@@ -3281,8 +4571,10 @@ function renderProducts(products) {
             "div"
           );
 
+
       priceRow.className =
         "price-row";
+
 
 
       const price =
@@ -3291,13 +4583,16 @@ function renderProducts(products) {
             "span"
           );
 
+
       price.className =
         "price";
+
 
       price.textContent =
         rangeLabel(
           product.prices
         );
+
 
 
       const status =
@@ -3306,8 +4601,10 @@ function renderProducts(products) {
             "span"
           );
 
+
       status.className =
         "status";
+
 
       status.textContent =
         "Disponível";
@@ -3325,13 +4622,15 @@ function renderProducts(products) {
         );
 
 
-      /* CONDITION */
+
+      /* CONDICAO */
 
       const conditionRow =
         document
           .createElement(
             "div"
           );
+
 
       conditionRow.className =
         "condition-row";
@@ -3348,14 +4647,17 @@ function renderProducts(products) {
               "span"
             );
 
+
         condition.className =
           "condition-tag";
+
 
         condition.textContent =
           product.conditions
             .join(
               " · "
             );
+
 
         conditionRow
           .appendChild(
@@ -3371,7 +4673,8 @@ function renderProducts(products) {
         );
 
 
-      /* INTERNAL */
+
+      /* AREA INTERNA */
 
       const internal =
         document
@@ -3379,26 +4682,52 @@ function renderProducts(products) {
             "div"
           );
 
+
       internal.className =
         "internal-price-box";
 
 
       internal.innerHTML =
         `
-        <div class="internal-line">
-          <span>Custo</span>
-          <strong>${rangeLabel(product.costs)}</strong>
-        </div>
 
         <div class="internal-line">
-          <span>Venda</span>
-          <strong>${rangeLabel(product.prices)}</strong>
+
+          <span>
+            Custo
+          </span>
+
+          <strong>
+            ${rangeLabel(product.costs)}
+          </strong>
+
         </div>
+
+
+        <div class="internal-line">
+
+          <span>
+            Venda
+          </span>
+
+          <strong>
+            ${rangeLabel(product.prices)}
+          </strong>
+
+        </div>
+
 
         <div class="internal-line margin">
-          <span>Margem</span>
-          <strong>${rangeLabel(product.margins)}</strong>
+
+          <span>
+            Margem
+          </span>
+
+          <strong>
+            ${rangeLabel(product.margins)}
+          </strong>
+
         </div>
+
         `;
 
 
@@ -3408,10 +4737,12 @@ function renderProducts(products) {
         );
 
 
+
       /* LINKS */
 
       if (
-        product.links.length ===
+        product.links.length
+        ===
         1
       ) {
 
@@ -3421,20 +4752,28 @@ function renderProducts(products) {
               "a"
             );
 
+
         button.className =
           "product-button";
 
+
         button.href =
-          product.links[0];
+          product.links[
+            0
+          ];
+
 
         button.target =
           "_blank";
 
+
         button.rel =
           "noopener noreferrer";
 
+
         button.textContent =
           "Ver artigo ↗";
+
 
         footer
           .appendChild(
@@ -3444,8 +4783,10 @@ function renderProducts(products) {
       }
 
 
+
       else if (
-        product.links.length >
+        product.links.length
+        >
         1
       ) {
 
@@ -3455,8 +4796,10 @@ function renderProducts(products) {
               "button"
             );
 
+
         button.className =
           "product-button";
+
 
         button.textContent =
           "Ver "
@@ -3466,11 +4809,13 @@ function renderProducts(products) {
           " opções";
 
 
+
         const list =
           document
             .createElement(
               "div"
             );
+
 
         list.className =
           "links-list";
@@ -3483,29 +4828,37 @@ function renderProducts(products) {
               index
             ) => {
 
+
               const anchor =
                 document
                   .createElement(
                     "a"
                   );
 
+
               anchor.href =
                 link;
+
 
               anchor.target =
                 "_blank";
 
+
               anchor.rel =
                 "noopener noreferrer";
+
 
               anchor.textContent =
                 "Opção "
                 +
                 (
-                  index + 1
+                  index
+                  +
+                  1
                 )
                 +
                 " ↗";
+
 
               list
                 .appendChild(
@@ -3533,12 +4886,14 @@ function renderProducts(products) {
             button
           );
 
+
         footer
           .appendChild(
             list
           );
 
       }
+
 
 
       body.append(
@@ -3564,8 +4919,9 @@ function renderProducts(products) {
 }
 
 
+
 /* =====================================================
-   PAGINATION
+   PAGINACAO
 ===================================================== */
 
 function renderPagination(
@@ -3578,8 +4934,10 @@ function renderPagination(
         "pagination"
       );
 
+
   container.innerHTML =
     "";
+
 
   if (
     pages <= 1
@@ -3590,23 +4948,33 @@ function renderPagination(
   }
 
 
+
+  /* ANTERIOR */
+
   const previous =
     document
       .createElement(
         "button"
       );
 
+
   previous.className =
     "page-button";
+
 
   previous.textContent =
     "‹";
 
+
   previous.disabled =
-    currentPage === 1;
+    currentPage
+    ===
+    1;
+
 
   previous.onclick =
     () => {
+
 
       if (
         currentPage > 1
@@ -3614,13 +4982,16 @@ function renderPagination(
 
         currentPage--;
 
+
         renderPage();
 
-        scrollToCatalog();
+
+        scrollToCatalogTop();
 
       }
 
     };
+
 
   container
     .appendChild(
@@ -3628,10 +4999,13 @@ function renderPagination(
     );
 
 
+
+  /* NUMEROS */
+
   for (
-    let p = 1;
-    p <= pages;
-    p++
+    let page = 1;
+    page <= pages;
+    page++
   ) {
 
     const button =
@@ -3640,11 +5014,14 @@ function renderPagination(
           "button"
         );
 
+
     button.className =
       "page-button";
 
+
     if (
-      p ===
+      page
+      ===
       currentPage
     ) {
 
@@ -3656,20 +5033,26 @@ function renderPagination(
 
     }
 
+
     button.textContent =
-      p;
+      page;
+
 
     button.onclick =
       () => {
 
+
         currentPage =
-          p;
+          page;
+
 
         renderPage();
 
-        scrollToCatalog();
+
+        scrollToCatalogTop();
 
       };
+
 
     container
       .appendChild(
@@ -3679,39 +5062,52 @@ function renderPagination(
   }
 
 
+
+  /* SEGUINTE */
+
   const next =
     document
       .createElement(
         "button"
       );
 
+
   next.className =
     "page-button";
+
 
   next.textContent =
     "›";
 
+
   next.disabled =
-    currentPage ===
+    currentPage
+    ===
     pages;
+
 
   next.onclick =
     () => {
 
+
       if (
-        currentPage <
+        currentPage
+        <
         pages
       ) {
 
         currentPage++;
 
+
         renderPage();
 
-        scrollToCatalog();
+
+        scrollToCatalogTop();
 
       }
 
     };
+
 
   container
     .appendChild(
@@ -3721,37 +5117,95 @@ function renderPagination(
 }
 
 
+
 /* =====================================================
-   SCROLL UX
+   SCROLL DA PAGINACAO
+
+   CORRECAO NOVA:
+   depois de mudar de pagina,
+   calcula a posicao real da zona
+   do catalogo e sobe automaticamente.
 ===================================================== */
 
-function scrollToCatalog() {
+function scrollToCatalogTop() {
 
-  requestAnimationFrame(
+  setTimeout(
     () => {
 
-      document
-        .getElementById(
-          "shop"
-        )
-        .scrollIntoView(
-          {
-            behavior:
-              "smooth",
 
-            block:
-              "start"
-          }
+      const target =
+        document.querySelector(
+          ".toolbar"
         );
 
-    }
+
+      const sticky =
+        document.querySelector(
+          ".controls-wrap"
+        );
+
+
+      if (!target) {
+
+        return;
+
+      }
+
+
+      const stickyHeight =
+        sticky
+        ?
+          sticky.offsetHeight
+        :
+          0;
+
+
+      const targetPosition =
+
+        target
+          .getBoundingClientRect()
+          .top
+
+        +
+
+        window.scrollY
+
+        -
+
+        stickyHeight
+
+        -
+
+        12;
+
+
+      window.scrollTo(
+        {
+
+          top:
+            Math.max(
+              targetPosition,
+              0
+            ),
+
+          behavior:
+            "smooth"
+
+        }
+      );
+
+    },
+
+    80
+
   );
 
 }
 
 
+
 /* =====================================================
-   COUNTER
+   CONTADOR
 ===================================================== */
 
 function updateCounter() {
@@ -3759,49 +5213,69 @@ function updateCounter() {
   const total =
     filteredProducts.length;
 
+
   const first =
+
     total === 0
-      ? 0
-      :
-        (
-          currentPage - 1
-        )
-        *
-        pageSize
-        +
-        1;
+
+    ?
+
+      0
+
+    :
+
+      (
+        currentPage
+        -
+        1
+      )
+
+      *
+
+      pageSize
+
+      +
+
+      1;
+
 
   const last =
     Math.min(
-      currentPage *
+      currentPage
+      *
       pageSize,
       total
     );
+
 
   document
     .getElementById(
       "counter"
     )
     .textContent =
+
       total === 0
 
-        ?
-          "0 produtos"
+      ?
 
-        :
-          first
-          +
-          "–"
-          +
-          last
-          +
-          " de "
-          +
-          total
-          +
-          " produtos";
+        "0 produtos"
+
+      :
+
+        first
+        +
+        "–"
+        +
+        last
+        +
+        " de "
+        +
+        total
+        +
+        " produtos";
 
 }
+
 
 
 function updateHeroTotal() {
@@ -3812,30 +5286,41 @@ function updateHeroTotal() {
         total,
         product
       ) =>
+
         total
         +
         product.quantity,
+
       0
     );
+
 
   document
     .getElementById(
       "heroTotal"
     )
     .textContent =
+
       allProducts.length
+
       +
+
       " produtos · "
+
       +
+
       units
+
       +
+
       " unidades disponíveis";
 
 }
 
 
+
 /* =====================================================
-   EVENTS
+   EVENTOS
 ===================================================== */
 
 document
@@ -3845,17 +5330,21 @@ document
   .oninput =
     function () {
 
+
       searchQuery =
         normalizeText(
           this.value
         );
 
+
       currentPage =
         1;
+
 
       applyFilters();
 
     };
+
 
 
 document
@@ -3865,17 +5354,22 @@ document
   .onchange =
     function () {
 
+
       sortMode =
         this.value;
+
 
       currentPage =
         1;
 
+
       applyFilters();
 
-      scrollToCatalog();
+
+      scrollToCatalogTop();
 
     };
+
 
 
 document
@@ -3885,6 +5379,7 @@ document
   .onchange =
     function () {
 
+
       setPageSize(
         this.value
       );
@@ -3892,8 +5387,9 @@ document
     };
 
 
+
 /* =====================================================
-   START
+   INICIAR SITE
 ===================================================== */
 
 loadConfig();
@@ -3903,6 +5399,7 @@ loadProducts();
 updateInternalUI();
 
 </script>
+
 
 </body>
 </html>
